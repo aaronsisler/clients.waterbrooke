@@ -1,0 +1,49 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+//Small screens - MOBILE
+@media only screen {
+  .contact-container {
+    background-image: url($imagesFolderPath+"/contact_container_mobile.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    padding: $large $small;
+    &__form {
+      background: white;
+      display: grid;
+      height: fit-content;
+      margin: 0 auto $large;
+      opacity: 0.95;
+      padding: $medium;
+      width: fit-content;
+    }
+    &__title {
+      @include font-type($mainFont, $large);
+
+      margin-bottom: $small;
+      text-align: center;
+    }
+  }
+}
+
+//Medium screens - TABLET
+@media only screen and (min-width: $mediumScreen) {
+}
+
+//Large screens - DESKTOP
+@media only screen and (min-width: $largeScreen) {
+  .contact-container {
+    background-image: url($imagesFolderPath+"/contact_container_desktop.jpg");
+  }
+}
+
+//XLarge screens
+@media only screen and (min-width: $xLargeScreen) {
+}
+
+//XXLarge screens
+@media only screen and (min-width: $xxLargeScreen) {
+}
