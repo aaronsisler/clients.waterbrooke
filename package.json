@@ -8,8 +8,8 @@
     "clear-serverless": "rm -rf ./.serverless",
     "create-domain:beta": "sls create_domain --config=serverless.beta.yml",
     "deploy:beta": "yarn build && sls deploy --config=serverless.beta.yml && yarn clear-serverless && yarn clear-next",
-    "gentempcomp": "node ./utils --isContainer=false",
-    "gentempcont": "node ./utils --isContainer=true",
+    "gentemp:comp": "node ./utils --isContainer=false",
+    "gentemp:cont": "node ./utils --isContainer=true",
     "start": "yarn clear-next && next ./src",
     "xx-create-domain:prod": "sls create_domain",
     "xx-deploy:prod": "yarn build && sls deploy && yarn clear-serverless && yarn clear-next"

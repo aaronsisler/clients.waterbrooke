@@ -19,37 +19,20 @@
       color: white;
       cursor: pointer;
     }
-    &__brand {
-      &-link {
-        color: white;
-        font-size: $midlarge;
-        font-weight: bold;
-        letter-spacing: 0.1rem;
-        text-decoration: none;
-        text-transform: uppercase;
-      }
+    &__logo {
     }
     &__links {
-      background-color: $mainColor;
+      background-color: $darkGrey;
       height: 100%;
       padding-top: $large;
       position: fixed;
-      right: -$navMenuWidth;
+      left: -$navMenuWidth;
       top: $navMenuHeight;
-      transition: right 0.3s ease;
+      transition: left 0.3s ease;
       width: $navMenuWidth;
       &.navbar__links--open {
-        right: 0;
+        left: 0;
       }
-    }
-    &__link {
-      color: white;
-      display: block;
-      font-size: $medium;
-      padding: $small;
-      text-align: center;
-      text-decoration: none;
-      text-transform: uppercase;
     }
   }
 }
@@ -63,16 +46,10 @@
 //min-width 1025px, large screens
 @media only screen and (min-width: $largeScreen) {
   .navbar {
-    &__brand {
-      &-link {
-        &:hover {
-          color: $lightenMainColor;
-          transition: color 0.25s ease-in;
-        }
-      }
-    }
     &__toggle {
       display: none;
+    }
+    &__logo {
     }
     &__links {
       align-items: center;
@@ -87,12 +64,6 @@
       width: inherit;
       &-close {
         display: none;
-      }
-    }
-    &__link {
-      &:hover {
-        color: $lightenMainColor;
-        transition: color 0.25s ease-in;
       }
     }
   }

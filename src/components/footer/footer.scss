@@ -7,19 +7,20 @@
   .footer {
     @include font-type();
 
-    align-items: center;
     background-color: $darkGrey;
-    color: white;
-    display: flex;
-    justify-content: space-evenly;
     padding: $small;
-    text-align: center;
-    &__link {
+    &__links {
       color: white;
-      text-decoration: none;
-      &:hover {
-        color: $lightenMainColor;
-        transition: color 0.5s ease-in;
+      display: grid;
+      justify-content: space-evenly;
+    }
+    &__legal {
+      align-items: center;
+      display: flex;
+      justify-content: space-evenly;
+      text-align: center;
+      .footer__copyright {
+        color: white;
       }
     }
   }

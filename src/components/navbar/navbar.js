@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "../../atoms/link";
+import Hyperlink from "../../atoms/hyperlink";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 
@@ -21,12 +21,8 @@ class Navbar extends React.Component {
     const isNavOpenClass = this.state.isNavOpen ? "navbar__links--open" : "";
     return (
       <nav className="navbar">
-        <div className="navbar__brand">
-          <Link
-            className="navbar__brand-link"
-            href="/"
-            children="Waterbrooke"
-          />
+        <div className="navbar__logo">
+          <Hyperlink href="/" title="Waterbrooke" />
         </div>
         <div className="navbar__toggle">
           {!this.state.isNavOpen && (
@@ -47,18 +43,7 @@ class Navbar extends React.Component {
           )}
         </div>
         <div className={`navbar__links ${isNavOpenClass}`}>
-          <Link
-            className="navbar__link"
-            href="/"
-            onClick={this.closeSideMenu}
-            children="Home"
-          />
-          <Link
-            className="navbar__link"
-            href="/contact"
-            onClick={this.closeSideMenu}
-            children="Contact"
-          />
+          <Hyperlink href="/contact" title="Contact" />
         </div>
       </nav>
     );
