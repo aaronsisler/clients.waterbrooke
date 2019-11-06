@@ -3,16 +3,12 @@
   "parserOptions": {
     "ecmaVersion": 6
   },
-  "extends": [
-    "react-app",
-    "prettier"
-  ],
+  "extends": ["react-app", "prettier"],
   "env": {
     "jest": true,
     "node": true
   },
   "rules": {
-    "import/prefer-default-export": "warn",
     "prettier/prettier": [
       "error",
       {
@@ -20,8 +16,14 @@
       }
     ]
   },
-  "plugins": [
-    "import",
-    "prettier"
+  "plugins": ["prettier"],
+  "overrides": [
+    {
+      "files": ["packages/**/*.{js}"],
+      "excludedFiles": ["*.story.js", "*.unit.spec.js"],
+      "rules": {
+        "import/no-extraneous-dependencies": "error"
+      }
+    }
   ]
 }

@@ -10,6 +10,8 @@
     "deploy:beta": "yarn build && sls deploy --config=serverless.beta.yml && yarn clear-serverless && yarn clear-next",
     "gentemp:comp": "node ./utils --isContainer=false",
     "gentemp:cont": "node ./utils --isContainer=true",
+    "lint": "eslint \"./**/*.js\"",
+    "lint:style": "node ./node_modules/stylelint/bin/stylelint.js \"**/*.{css,scss}\"",
     "start": "yarn clear-next && next ./src",
     "xx-create-domain:prod": "sls create_domain",
     "xx-deploy:prod": "yarn build && sls deploy && yarn clear-serverless && yarn clear-next"
@@ -17,6 +19,23 @@
   "engines": {
     "node": ">=10.15.1",
     "yarn": ">=1.13.0"
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "yarn run lint -- --fix",
+      "git add"
+    ],
+    "*.{jsx,ts,tsx,css,scss,json}": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.{css,scss}": [
+      "yarn run lint:style -- --fix",
+      "git add"
+    ]
+  },
+  "eslintConfig": {
+    "extends": "react-app"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.17",
@@ -47,16 +66,19 @@
   },
   "devDependencies": {
     "babel-eslint": "^10.0.2",
-    "eslint": "^5.12.0",
-    "eslint-config-prettier": "^3.1.0",
-    "eslint-plugin-import": "^2.16.0",
-    "eslint-plugin-prettier": "^3.0.0",
+    "eslint": "^6.5.1",
+    "eslint-config-prettier": "^6.4.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-prettier": "^3.1.1",
     "fs-extra": "^8.0.1",
+    "husky": "^3.0.9",
+    "lint-staged": "^9.4.2",
     "minimist": "^1.2.0",
-    "prettier": "^1.14.2",
-    "prettier-stylelint": "^0.4.2",
+    "prettier": "^1.18.2",
     "replace-in-file": "^4.1.0",
-    "stylelint": "^9.6.0",
-    "stylelint-config-standard": "^18.2.0"
+    "stylelint": "^11.1.1",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-standard": "^19.0.0",
+    "stylelint-order": "^3.1.1"
   }
 }
