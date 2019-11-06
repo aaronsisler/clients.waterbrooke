@@ -5,8 +5,8 @@
   .logo {
     height: $navMenuHeight;
     &__image {
-      padding: $xsmall;
       max-height: 100%;
+      padding: $xsmall;
       object-fit: scale-down;
     }
   }

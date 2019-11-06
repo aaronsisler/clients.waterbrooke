@@ -5,32 +5,31 @@
 //max-width 640px, small screens
 @media only screen {
   .navbar {
-    align-items: center;
-    background-color: white;
-    display: flex;
-    height: $navMenuHeight;
-    max-height: $navMenuHeight;
-    justify-content: space-between;
-    left: 0;
-    padding: 0 $small;
     position: sticky;
     top: 0;
+    left: 0;
     z-index: 100;
+    display: flex;
+    align-items: center;
+    height: $navMenuHeight;
+    max-height: $navMenuHeight;
+    padding: 0 $small;
+    background-color: white;
+    &__logo {
+      margin: 0 auto;
+    }
     &__toggle {
-      // .favicon {
-      color: $mainColor;
-      cursor: pointer;
-      // }
+      position: absolute;
     }
     &__links {
-      background-color: $darkGrey;
+      position: fixed;
+      top: $navMenuHeight;
+      left: -$navMenuWidth;
+      width: $navMenuWidth;
       height: 100%;
       padding-top: $large;
-      position: fixed;
-      left: -$navMenuWidth;
-      top: $navMenuHeight;
+      background-color: $darkGrey;
       transition: left 0.3s ease;
-      width: $navMenuWidth;
       &.navbar__links--open {
         left: 0;
       }
@@ -47,20 +46,24 @@
 //min-width 1025px, large screens
 @media only screen and (min-width: $largeScreen) {
   .navbar {
+    justify-content: space-between;
     &__toggle {
       display: none;
     }
+    &__logo {
+      margin: 0;
+    }
     &__links {
-      align-items: center;
-      background-color: inherit;
+      position: inherit;
+      top: inherit;
+      right: inherit;
       display: flex;
+      align-items: center;
+      width: inherit;
       height: inherit;
       padding: 0;
-      position: inherit;
-      right: inherit;
-      top: inherit;
+      background-color: inherit;
       transition: none;
-      width: inherit;
       &-close {
         display: none;
       }
