@@ -1,7 +1,8 @@
 import React from "react";
+import cn from "classnames";
+import Hamburger from "../../atoms/hamburger";
 import Hyperlink from "../../atoms/hyperlink";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+import Logo from "../../components/logo";
 
 import "./navbar.scss";
 
@@ -9,41 +10,33 @@ class Navbar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isNavOpen: false
+      isMenuOpen: false
     };
   }
 
-  openSideMenu = () => this.setState({ isNavOpen: true });
-
-  closeSideMenu = () => this.setState({ isNavOpen: false });
+  handleMenuToggle = () =>
+    this.setState(prevState => ({
+      isMenuOpen: !prevState.isMenuOpen
+    }));
 
   render() {
-    const isNavOpenClass = this.state.isNavOpen ? "navbar__links--open" : "";
+    const { isMenuOpen } = this.state;
+    const isMenuOpenClass = isMenuOpen ? "navbar__links--open" : undefined;
+
     return (
       <nav className="navbar">
-        <div className="navbar__logo">
-          <Hyperlink href="/" title="Waterbrooke" />
-        </div>
         <div className="navbar__toggle">
-          {!this.state.isNavOpen && (
-            <FontAwesomeIcon
-              icon={faBars}
-              size="2x"
-              className="favicon"
-              onClick={this.openSideMenu}
-            />
-          )}
-          {this.state.isNavOpen && (
-            <FontAwesomeIcon
-              icon={faTimes}
-              size="2x"
-              className="favicon"
-              onClick={this.closeSideMenu}
-            />
-          )}
+          <Hamburger isToggled={isMenuOpen} onClick={this.handleMenuToggle} />
         </div>
-        <div className={`navbar__links ${isNavOpenClass}`}>
-          <Hyperlink href="/contact" title="Contact" />
+        <div className="navbar__logo">
+          <Logo />
+        </div>
+        <div className={cn("navbar__links", isMenuOpenClass)}>
+          <Hyperlink
+            href="/contact"
+            onClick={this.handleMenuToggle}
+            title="Contact"
+          />
         </div>
       </nav>
     );

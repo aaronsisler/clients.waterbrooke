@@ -1,14 +1,14 @@
 import axios from "axios";
 import { validate } from "email-validator";
 import {
-  pointOfContactEmail,
-  servicesApiGatewayToken,
-  servicesApiGatewayURL
+  CONTACT_EMAIL,
+  SERVICES_API_KEY,
+  SERVICES_GATEWAY_URL
 } from "../config";
 
 const headers = {
   "Content-Type": "application/json",
-  "X-Api-Key": servicesApiGatewayToken
+  "X-Api-Key": SERVICES_API_KEY
 };
 
 const emailOptions = { headers };
@@ -16,10 +16,10 @@ const emailOptions = { headers };
 export const isEmailValid = emailAddress => validate(emailAddress);
 
 export const sendEmail = async (data, done, fail) => {
-  const emailData = { pointOfContactEmail, ...data };
+  const emailData = { pointOfContactEmail: CONTACT_EMAIL, ...data };
 
   try {
-    await axios.post(servicesApiGatewayURL, emailData, emailOptions);
+    await axios.post(SERVICES_GATEWAY_URL, emailData, emailOptions);
     done();
   } catch (e) {
     fail();

@@ -7,7 +7,8 @@
     @include font-type($mainFont, $medium);
 
     align-items: center;
-    color: white;
+    // color: white;
+    color: $mainColor;
     cursor: pointer;
     display: grid;
     min-height: $xlarge;
@@ -15,7 +16,8 @@
     text-decoration: none;
     text-transform: uppercase;
     &:hover {
-      color: $mainColor;
+      // color: $mainColor;
+      color: black;
       transition: color 0.15s ease-in-out;
     }
     &:disabled {

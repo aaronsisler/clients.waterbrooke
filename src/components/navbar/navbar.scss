@@ -6,20 +6,21 @@
 @media only screen {
   .navbar {
     align-items: center;
-    background-color: $darkGrey;
+    background-color: white;
     display: flex;
     height: $navMenuHeight;
+    max-height: $navMenuHeight;
     justify-content: space-between;
     left: 0;
-    padding: $small;
+    padding: 0 $small;
     position: sticky;
     top: 0;
     z-index: 100;
-    .favicon {
-      color: white;
+    &__toggle {
+      // .favicon {
+      color: $mainColor;
       cursor: pointer;
-    }
-    &__logo {
+      // }
     }
     &__links {
       background-color: $darkGrey;
@@ -48,8 +49,6 @@
   .navbar {
     &__toggle {
       display: none;
-    }
-    &__logo {
     }
     &__links {
       align-items: center;
