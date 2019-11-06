@@ -6,25 +6,25 @@
   .button-link {
     @include font-type($mainFont, $medium);
 
-    align-items: center;
-    background-color: $mainColor;
-    border-radius: $xsmall;
-    color: white;
-    cursor: pointer;
     display: grid;
+    align-items: center;
     min-height: $xlarge;
     padding: $small $midlarge;
+    color: white;
     text-align: center;
-    text-decoration: none;
     text-transform: uppercase;
+    text-decoration: none;
+    background-color: $mainColor;
+    border-radius: $xsmall;
+    cursor: pointer;
     &:hover {
       background-color: $lightenMainColor;
       transition: background-color 0.5s ease-in-out;
     }
     &:disabled {
+      color: white;
       background: $mainColor;
       cursor: not-allowed;
-      color: white;
       opacity: 0.5;
     }
   }

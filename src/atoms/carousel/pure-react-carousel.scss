@@ -17,13 +17,13 @@
   left: calc(50% - 15px);
   width: 30px;
   height: 30px;
+  border: 4px solid #a9a9a9;
+  border-top-color: #000;
+  border-radius: 30px;
   animation-name: spin___S3UuE;
   animation-duration: 1s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
-  border: 4px solid #a9a9a9;
-  border-top-color: #000;
-  border-radius: 30px;
 }
 
 @keyframes spin___S3UuE {
@@ -36,18 +36,18 @@
 }
 .container___2O72F {
   position: relative;
-  overflow: hidden;
-  height: 100%;
   width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 .overlay___IV4qY {
   position: absolute;
   top: 0;
-  left: 0;
-  bottom: 0;
   right: 0;
-  opacity: 0;
+  bottom: 0;
+  left: 0;
   cursor: zoom-in;
+  opacity: 0;
   transition: opacity 0.3s, transform 0.3s;
 }
 .hover___MYy31,
@@ -90,10 +90,10 @@
   right: 5px;
   bottom: 5px;
   left: 5px;
-  pointer-events: none;
   outline-width: 5px;
   outline-style: solid;
   outline-color: Highlight;
+  pointer-events: none;
 }
 
 @media (-webkit-min-device-pixel-ratio: 0) {
@@ -107,8 +107,8 @@
   overflow: hidden;
 }
 .horizontalSliderTray___1L-0W {
-  overflow: hidden;
   width: 100%;
+  overflow: hidden;
 }
 .verticalSlider___34ZFD {
   position: relative;
@@ -125,9 +125,9 @@
 }
 .sliderTray___-vHFQ {
   display: block;
-  list-style: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  list-style: none;
 }
 .sliderAnimation___300FY {
   transition: transform 0.5s;

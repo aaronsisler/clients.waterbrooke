@@ -11,13 +11,13 @@
     @include font-type();
 
     box-sizing: border-box;
-    line-height: 1.5;
     margin: 0;
     padding: 0;
+    line-height: 1.5;
   }
   html {
-    font-size: 62.5%;
     height: 100%;
+    font-size: 62.5%;
   }
   body {
     #__next {
@@ -26,8 +26,8 @@
       min-height: 100vh;
       main {
         display: flex;
-        flex-flow: column;
         flex: 1 1 auto;
+        flex-flow: column;
         min-height: 200px;
       }
     }

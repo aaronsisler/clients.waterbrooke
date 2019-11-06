@@ -4,22 +4,22 @@
 //Small screens - MOBILE
 @media only screen {
   .contact-container {
-    // background-image: url($imagesFolderPath+"/contact_container--mobile.jpg");
-    background-size: cover;
-    background-position: center;
     display: flex;
     flex: 1 1 auto;
     flex-direction: column;
     padding: $large $small;
+    background-position: center;
+    // background-image: url($imagesFolderPath+"/contact_container--mobile.jpg");
+    background-size: cover;
     &__form {
-      background: white;
       display: grid;
-      filter: $dropShadow;
+      width: fit-content;
       height: fit-content;
       margin: 0 auto $large;
-      opacity: 0.95;
       padding: $medium;
-      width: fit-content;
+      background: white;
+      opacity: 0.95;
+      filter: $dropShadow;
     }
     &__title {
       @include font-type($mainFont, $large);

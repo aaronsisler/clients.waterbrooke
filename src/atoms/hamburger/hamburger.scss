@@ -4,11 +4,11 @@
 @media only screen {
   .hamburger {
     &__line {
-      background-color: $mainColor;
+      width: 25px;
       height: 3px;
       margin: 5px;
+      background-color: $mainColor;
       transition: all 0.3s ease;
-      width: 25px;
     }
     &.hamburger--toggled {
       .hamburger__line:nth-child(1) {

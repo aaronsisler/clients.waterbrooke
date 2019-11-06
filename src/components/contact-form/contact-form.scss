@@ -6,8 +6,8 @@
   .contact-form {
     @include font-type();
 
-    height: 100%;
     width: 100%;
+    height: 100%;
     &__header {
       margin: 0 auto;
       text-align: center;
@@ -22,13 +22,13 @@
       grid-gap: $medium;
       grid-template-columns: 100%;
       justify-content: center;
-      margin: $medium auto;
       width: 100%;
+      margin: $medium auto;
       &-input {
         display: grid;
-        font-size: $medium;
-        margin: 0 auto;
         width: 100%;
+        margin: 0 auto;
+        font-size: $medium;
       }
       &-message {
         @include textarea();
@@ -43,8 +43,8 @@
       padding: $small 0 $medium;
       text-align: center;
       &--error {
-        border-bottom: $border;
         margin-bottom: $small;
+        border-bottom: $border;
       }
     }
   }

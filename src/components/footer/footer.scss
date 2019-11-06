@@ -7,16 +7,16 @@
   .footer {
     @include font-type();
 
-    background-color: $darkGrey;
     padding: $small;
+    background-color: $darkGrey;
     &__links {
-      color: white;
       display: grid;
       justify-content: space-evenly;
+      color: white;
     }
     &__legal {
-      align-items: center;
       display: flex;
+      align-items: center;
       justify-content: space-evenly;
       text-align: center;
       .footer__copyright {

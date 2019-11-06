@@ -1,41 +1,41 @@
 @import "./variables.scss";
 
 @mixin font-type($fontFamily: $mainFont, $fontSize: $medium, $fontWeight: 400) {
-  font-family: $fontFamily;
-  font-size: $fontSize;
   font-weight: $fontWeight;
+  font-size: $fontSize;
+  font-family: $fontFamily;
 }
 
 @mixin button() {
   @include font-type($mainFont, $medium);
 
-  align-items: center;
-  background-color: $mainColor;
-  border-radius: $xsmall;
-  color: white;
-  cursor: pointer;
   display: grid;
+  align-items: center;
   min-height: $xlarge;
   padding: $small $midlarge;
+  color: white;
   text-align: center;
-  text-decoration: none;
   text-transform: uppercase;
+  text-decoration: none;
+  background-color: $mainColor;
+  border-radius: $xsmall;
+  cursor: pointer;
   &:hover {
     background-color: $darkenMainColor;
     background-color: $lightenMainColor;
     transition: background-color 0.5s ease-in-out;
   }
   &:disabled {
+    color: white;
     background: $mainColor;
     cursor: not-allowed;
-    color: white;
     opacity: 0.5;
   }
 }
 
 @mixin textarea() {
+  padding: $small $xsmall;
+  font-size: $medium;
   border: $border;
   border-radius: 5px;
-  font-size: $medium;
-  padding: $small $xsmall;
 }
