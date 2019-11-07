@@ -3,6 +3,17 @@
 
 //Small screens - MOBILE
 @media only screen {
+  .footer-link-group {
+    &__title {
+      @include font-type($mainFont, $midlarge, bold);
+
+      color: $mainColor;
+    }
+    &__links {
+      display: flex;
+      flex-flow: column;
+    }
+  }
 }
 
 //Medium screens - TABLET

@@ -6,22 +6,14 @@
   .hyperlink {
     @include font-type($mainFont, $medium);
 
-    display: grid;
-    align-items: center;
-    min-height: $xlarge;
-    // color: white;
     color: $mainColor;
-    text-align: center;
-    text-transform: uppercase;
     text-decoration: none;
     cursor: pointer;
     &:hover {
-      // color: $mainColor;
-      color: black;
+      color: $invertMainColor;
       transition: color 0.15s ease-in-out;
     }
     &:disabled {
-      color: white;
       cursor: not-allowed;
       opacity: 0.5;
     }

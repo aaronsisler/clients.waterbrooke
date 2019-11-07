@@ -6,7 +6,7 @@ import "./footer-link-group.scss";
 
 const FooterLinkGroup = ({ links, title }) => (
   <div className="footer-link-group">
-    <div className="footer-link-group__title">{title}</div>
+    <h3 className="footer-link-group__title">{title}</h3>
     <div className="footer-link-group__links">
       {links.map((link, index) => (
         <Hyperlink key={index} {...link} />

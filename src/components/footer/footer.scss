@@ -5,22 +5,24 @@
 //max-width 640px, small screens
 @media only screen {
   .footer {
-    @include font-type();
-
     padding: $small;
-    background-color: $darkGrey;
+    background-color: white;
     &__links {
       display: grid;
-      justify-content: space-evenly;
-      color: white;
+      grid-row-gap: $small;
+      justify-items: center;
+      margin-bottom: $large;
+      text-align: center;
     }
     &__legal {
       display: flex;
       align-items: center;
       justify-content: space-evenly;
+      padding-top: $small;
       text-align: center;
+      border-top: solid 1px $mainColor;
       .footer__copyright {
-        color: white;
+        color: $mainColor;
       }
     }
   }

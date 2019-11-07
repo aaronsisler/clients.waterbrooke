@@ -1,10 +1,10 @@
 exports.validateArgs = ({ isContainer, name }) => {
-  if (isContainer == undefined || name == undefined) {
+  if (isContainer === undefined || name === undefined) {
     console.log("name' is required\ni.e. --name=taco (2 dashes)");
     process.exit(1);
   }
 
-  if (name.length == 0) {
+  if (name.length === 0) {
     console.log("'name' must be populated");
     console.log("name: ", name);
     process.exit(1);
