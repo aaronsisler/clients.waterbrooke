@@ -2,12 +2,12 @@ import React from "react";
 import NextLink from "next/link";
 import { IMAGES_FOLDER_PATH } from "../../config";
 
+import "./logo.scss";
+
 const logo = {
   alt: "Waterbrooke Assisted Living",
   src: `${IMAGES_FOLDER_PATH}/logo.png`
 };
-
-import "./logo.scss";
 
 const Logo = () => (
   <div className="logo">
