@@ -3,8 +3,22 @@
 
 //Small screens - MOBILE
 @media only screen {
-  .accordian {
-    color: greenyellow;
+  .accordion {
+    position: relative;
+    transform: translateZ(0);
+    transition: all 0.2s;
+    &__content {
+      // position: absolute;
+      // display: none;
+      max-height: 0;
+      overflow: hidden;
+      background-color: white;
+      &--toggled {
+        display: block;
+        max-height: 500px;
+        padding: $small;
+      }
+    }
   }
 }
 
@@ -14,9 +28,6 @@
 
 //Large screens - DESKTOP
 @media only screen and (min-width: $largeScreen) {
-  .accordian {
-    color: rebeccapurple;
-  }
 }
 
 //XLarge screens

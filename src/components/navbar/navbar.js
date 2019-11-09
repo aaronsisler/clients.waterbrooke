@@ -1,7 +1,8 @@
 import React from "react";
 import cn from "classnames";
+import Accordion from "../../atoms/accordion";
 import Hamburger from "../../atoms/hamburger";
-import Hyperlink from "../../atoms/hyperlink";
+// import Hyperlink from "../../atoms/hyperlink";
 import Logo from "../../components/logo";
 
 import "./navbar.scss";
@@ -10,7 +11,7 @@ class Navbar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isMenuOpen: false
+      isMenuOpen: true
     };
   }
 
@@ -32,11 +33,14 @@ class Navbar extends React.Component {
           <Logo />
         </div>
         <div className={cn("navbar__links", isMenuOpenClass)}>
-          <Hyperlink
+          <Accordion title="Section 1" />
+          <Accordion title="Section 2" />
+          <Accordion title="Section 3" />
+          {/* <Hyperlink
             href="/contact"
             onClick={this.handleMenuToggle}
             title="Contact"
-          />
+          /> */}
         </div>
       </nav>
     );

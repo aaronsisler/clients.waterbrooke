@@ -25,10 +25,12 @@
       position: fixed;
       top: $navMenuHeight;
       left: -$navMenuWidth;
+      display: flex;
+      flex-flow: column;
       width: $navMenuWidth;
       height: 100%;
       padding-top: $large;
-      background-color: $darkGrey;
+      background-color: white;
       transition: left 0.3s ease;
       &.navbar__links--open {
         left: 0;
