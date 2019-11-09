@@ -18,6 +18,9 @@
 
 //Medium screens - TABLET
 @media only screen and (min-width: $mediumScreen) {
+  .footer-link-group {
+    margin-right: $small;
+  }
 }
 
 //Large screens - DESKTOP

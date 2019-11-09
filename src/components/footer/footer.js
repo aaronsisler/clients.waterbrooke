@@ -12,6 +12,7 @@ const Footer = () => (
         <FooterLinkGroup {...linksObj} />
       ))}
     </div>
+    <hr />
     <div className="footer__legal">
       <div className="footer__copyright">
         Copyright &copy; {new Date().getFullYear()}
