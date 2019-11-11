@@ -6,26 +6,14 @@
 @media only screen {
   .landing {
     &__splash {
-      align-items: center;
-      background-image: url($imagesFolderPath+"/landing_mobile.jpg");
-      background-position: center;
-      background-size: cover;
       display: grid;
-      min-height: 94vh;
+      align-items: center;
       justify-content: center;
       width: 100%;
-      &-text {
-        color: white;
-        font-size: $xlarge;
-        font-weight: bold;
-        padding-top: 30vh;
-        text-align: center;
-        text-transform: uppercase;
-      }
-      &-link {
-        align-self: flex-start;
-        margin: 0 auto;
-      }
+      min-height: 94vh;
+      background-image: url($imagesFolderPath+"/landing--mobile.jpg");
+      background-position: center;
+      background-size: cover;
     }
   }
 }
@@ -39,21 +27,11 @@
 @media only screen and (min-width: $largeScreen) {
   .landing {
     &__splash {
-      background-image: url($imagesFolderPath+"/landing_desktop.jpg");
       display: grid;
-      height: 75vh;
       justify-content: center;
       width: 100%;
-      &-text {
-        font-size: $xxlarge;
-        padding-top: 35vh;
-      }
-      &-link {
-        a {
-          font-size: $large;
-          padding: $medium $large;
-        }
-      }
+      height: 75vh;
+      background-image: url($imagesFolderPath+"/landing--desktop.jpg");
     }
   }
 }

@@ -3,20 +3,28 @@
 
 //Small screens - MOBILE
 @media only screen {
-  .accordian {
-    color: greenyellow;
+  .footer-link-group {
+    &__title {
+      @include font-type($mainFont, $midlarge, bold);
+
+      color: $mainColor;
+    }
+    &__links {
+      display: flex;
+      flex-flow: column;
+    }
   }
 }
 
 //Medium screens - TABLET
 @media only screen and (min-width: $mediumScreen) {
+  .footer-link-group {
+    margin-right: $small;
+  }
 }
 
 //Large screens - DESKTOP
 @media only screen and (min-width: $largeScreen) {
-  .accordian {
-    color: rebeccapurple;
-  }
 }
 
 //XLarge screens

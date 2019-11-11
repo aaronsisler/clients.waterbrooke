@@ -3,29 +3,18 @@
 
 //Small screens - MOBILE
 @media only screen {
-  .link {
+  .hyperlink {
     @include font-type($mainFont, $medium);
 
-    align-items: center;
-    background-color: $mainColor;
-    border-radius: $xsmall;
-    color: white;
-    cursor: pointer;
-    display: grid;
-    min-height: $xlarge;
-    padding: $small $midlarge;
-    text-align: center;
+    color: $mainColor;
     text-decoration: none;
-    text-transform: uppercase;
+    cursor: pointer;
     &:hover {
-      background-color: $darkenMainColor;
-      background-color: $lightenMainColor;
-      transition: background-color 0.5s ease-in-out;
+      color: $invertMainColor;
+      transition: color 0.15s ease-in-out;
     }
     &:disabled {
-      background: $mainColor;
       cursor: not-allowed;
-      color: white;
       opacity: 0.5;
     }
   }

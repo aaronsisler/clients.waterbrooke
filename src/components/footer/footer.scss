@@ -1,25 +1,25 @@
 @import "../../styles/variables.scss";
-@import "../../styles/mixins.scss";
 
 //Small screens - MOBILE
 //max-width 640px, small screens
 @media only screen {
   .footer {
-    @include font-type();
-
-    align-items: center;
-    background-color: $darkGrey;
-    color: white;
-    display: flex;
-    justify-content: space-evenly;
     padding: $small;
-    text-align: center;
-    &__link {
-      color: white;
-      text-decoration: none;
-      &:hover {
-        color: $lightenMainColor;
-        transition: color 0.5s ease-in;
+    background-color: white;
+    &__links {
+      display: grid;
+      grid-row-gap: $small;
+      margin-bottom: $medium;
+      text-align: center;
+    }
+    &__legal {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      padding-top: $small;
+      text-align: center;
+      .footer__copyright {
+        color: $mainColor;
       }
     }
   }
@@ -28,6 +28,13 @@
 //Medium screens - TABLET
 //min-width 641px, medium screens
 @media only screen and (min-width: $mediumScreen) {
+  .footer {
+    padding-left: $large;
+    &__links {
+      grid-template-columns: repeat(4, 1fr);
+      text-align: left;
+    }
+  }
 }
 
 //Large screens - DESKTOP

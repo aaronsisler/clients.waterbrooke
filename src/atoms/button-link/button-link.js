@@ -3,17 +3,17 @@ import NextLink from "next/link";
 import cn from "classnames";
 import PropTypes from "prop-types";
 
-import "./link.scss";
+import "./button-link.scss";
 
-const Link = ({ children, className, href, onClick }) => (
+const ButtonLink = ({ children, className, href, onClick }) => (
   <NextLink href={href}>
-    <a className={cn(className ? className : "link")} onClick={onClick}>
+    <a className={cn(className ? className : "button-link")} onClick={onClick}>
       {children}
     </a>
   </NextLink>
 );
 
-Link.propTypes = {
+ButtonLink.propTypes = {
   children: PropTypes.oneOfType([PropTypes.element, PropTypes.string])
     .isRequired,
   className: PropTypes.string,
@@ -21,4 +21,4 @@ Link.propTypes = {
   onClick: PropTypes.func
 };
 
-export default Link;
+export default ButtonLink;

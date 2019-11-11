@@ -1,0 +1,49 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+//Small screens - MOBILE
+@media only screen {
+  .accordion {
+    position: relative;
+    transform: translateZ(0);
+    transition: all 0.2s;
+    &__title {
+      @include font-type($mainFont, $medium, bold);
+
+      padding: $medium 0 $medium $medium;
+      color: $mainColor;
+      border-bottom: solid 1px $mainColor;
+    }
+    &__content {
+      max-height: 0;
+      overflow: hidden;
+      background-color: white;
+      &-link {
+        @include font-type($mainFont, $medium, lighter);
+
+        padding: $medium;
+        border-bottom: solid 1px $midLightGrey;
+      }
+      &--toggled {
+        display: grid;
+        max-height: 500px;
+      }
+    }
+  }
+}
+
+//Medium screens - TABLET
+@media only screen and (min-width: $mediumScreen) {
+}
+
+//Large screens - DESKTOP
+@media only screen and (min-width: $largeScreen) {
+}
+
+//XLarge screens
+@media only screen and (min-width: $xLargeScreen) {
+}
+
+//XXLarge screens
+@media only screen and (min-width: $xxLargeScreen) {
+}

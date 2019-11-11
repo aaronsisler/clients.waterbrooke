@@ -5,51 +5,36 @@
 //max-width 640px, small screens
 @media only screen {
   .navbar {
-    align-items: center;
-    background-color: $darkGrey;
-    display: flex;
-    height: $navMenuHeight;
-    justify-content: space-between;
-    left: 0;
-    padding: $small;
     position: sticky;
     top: 0;
+    left: 0;
     z-index: 100;
-    .favicon {
-      color: white;
-      cursor: pointer;
+    display: flex;
+    align-items: center;
+    height: $navMenuHeight;
+    max-height: $navMenuHeight;
+    padding: 0 $small;
+    background-color: white;
+    &__logo {
+      margin: 0 auto;
     }
-    &__brand {
-      &-link {
-        color: white;
-        font-size: $midlarge;
-        font-weight: bold;
-        letter-spacing: 0.1rem;
-        text-decoration: none;
-        text-transform: uppercase;
-      }
+    &__toggle {
+      position: absolute;
     }
     &__links {
-      background-color: $mainColor;
-      height: 100%;
-      padding-top: $large;
       position: fixed;
-      right: -$navMenuWidth;
       top: $navMenuHeight;
-      transition: right 0.3s ease;
+      left: -$navMenuWidth;
+      display: flex;
+      flex-flow: column;
       width: $navMenuWidth;
+      height: 100%;
+      background-color: white;
+      border-top: solid 1px $fontGrey;
+      transition: left 0.3s ease;
       &.navbar__links--open {
-        right: 0;
+        left: 0;
       }
-    }
-    &__link {
-      color: white;
-      display: block;
-      font-size: $medium;
-      padding: $small;
-      text-align: center;
-      text-decoration: none;
-      text-transform: uppercase;
     }
   }
 }
@@ -63,36 +48,26 @@
 //min-width 1025px, large screens
 @media only screen and (min-width: $largeScreen) {
   .navbar {
-    &__brand {
-      &-link {
-        &:hover {
-          color: $lightenMainColor;
-          transition: color 0.25s ease-in;
-        }
-      }
-    }
+    justify-content: space-between;
     &__toggle {
       display: none;
     }
+    &__logo {
+      margin: 0;
+    }
     &__links {
-      align-items: center;
-      background-color: inherit;
+      position: inherit;
+      top: inherit;
+      right: inherit;
       display: flex;
+      align-items: center;
+      width: inherit;
       height: inherit;
       padding: 0;
-      position: inherit;
-      right: inherit;
-      top: inherit;
+      background-color: inherit;
       transition: none;
-      width: inherit;
       &-close {
         display: none;
-      }
-    }
-    &__link {
-      &:hover {
-        color: $lightenMainColor;
-        transition: color 0.25s ease-in;
       }
     }
   }
