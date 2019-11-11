@@ -8,8 +8,8 @@
     flex: 1 1 auto;
     flex-direction: column;
     padding: $large $small;
+    background-image: url($imagesFolderPath+"/contact_container--mobile.jpg");
     background-position: center;
-    // background-image: url($imagesFolderPath+"/contact_container--mobile.jpg");
     background-size: cover;
     &__form {
       display: grid;

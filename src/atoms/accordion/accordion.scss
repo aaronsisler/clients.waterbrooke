@@ -7,16 +7,26 @@
     position: relative;
     transform: translateZ(0);
     transition: all 0.2s;
+    &__title {
+      @include font-type($mainFont, $medium, bold);
+
+      padding: $medium 0 $medium $medium;
+      color: $mainColor;
+      border-bottom: solid 1px $mainColor;
+    }
     &__content {
-      // position: absolute;
-      // display: none;
       max-height: 0;
       overflow: hidden;
       background-color: white;
+      &-link {
+        @include font-type($mainFont, $medium, lighter);
+
+        padding: $medium;
+        border-bottom: solid 1px $midLightGrey;
+      }
       &--toggled {
-        display: block;
+        display: grid;
         max-height: 500px;
-        padding: $small;
       }
     }
   }

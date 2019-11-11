@@ -1,6 +1,7 @@
 import React from "react";
 import cn from "classnames";
 import PropTypes from "prop-types";
+import Hyperlink from "../../atoms/hyperlink";
 
 import "./accordion.scss";
 
@@ -31,9 +32,16 @@ class Accordion extends React.Component {
         // onMouseEnter={this.handleToggle}
         // onMouseLeave={this.handleToggle}
       >
-        <h1>{this.props.title}</h1>
+        <h1 className="accordion__title">{this.props.title}</h1>
         <div className={cn("accordion__content", hoverClassname)}>
-          Content for section 1
+          {this.props.links.map((link, index) => (
+            <Hyperlink
+              className="accordion__content-link"
+              key={index}
+              onClick={this.props.onContentClick}
+              {...link}
+            />
+          ))}
         </div>
       </div>
     );
@@ -41,7 +49,8 @@ class Accordion extends React.Component {
 }
 
 Accordion.propTypes = {
-  // content: PropTypes.string.isRequired,
+  links: PropTypes.array.isRequired,
+  onContentClick: PropTypes.func,
   title: PropTypes.string.isRequired
 };
 

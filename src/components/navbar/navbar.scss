@@ -29,8 +29,8 @@
       flex-flow: column;
       width: $navMenuWidth;
       height: 100%;
-      padding-top: $large;
       background-color: white;
+      border-top: solid 1px $fontGrey;
       transition: left 0.3s ease;
       &.navbar__links--open {
         left: 0;

@@ -12,9 +12,7 @@ const logo = {
 const Logo = () => (
   <div className="logo">
     <NextLink href="/">
-      <a className="logo__anchor">
-        <img className="logo__image" src={logo.src} alt={logo.alt} />
-      </a>
+      <img className="logo__image" src={logo.src} alt={logo.alt} />
     </NextLink>
   </div>
 );

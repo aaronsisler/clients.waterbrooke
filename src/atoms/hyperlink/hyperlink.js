@@ -7,7 +7,8 @@ import "./hyperlink.scss";
 
 const Hyperlink = ({ className, href, onClick, title }) => (
   <NextLink href={href}>
-    <a className={cn(className, "hyperlink")} onClick={onClick}>
+    {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+    <a className={cn("hyperlink", className)} onClick={onClick}>
       {title}
     </a>
   </NextLink>
