@@ -11,7 +11,7 @@ class Navbar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isMenuOpen: true
+      isMenuOpen: false
     };
   }
 
