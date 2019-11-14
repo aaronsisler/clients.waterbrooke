@@ -19,16 +19,16 @@
     }
     &__form {
       display: grid;
-      grid-gap: $medium;
+      grid-gap: $MEDIUM;
       grid-template-columns: 100%;
       justify-content: center;
       width: 100%;
-      margin: $medium auto;
+      margin: $MEDIUM auto;
       &-input {
         display: grid;
         width: 100%;
         margin: 0 auto;
-        font-size: $medium;
+        font-size: $MEDIUM;
       }
       &-message {
         @include textarea();
@@ -38,13 +38,13 @@
       }
     }
     &__email {
-      @include font-type($mainFont, $midlarge);
+      @include font-type($MAIN_FONT, $MIDLARGE);
 
-      padding: $small 0 $medium;
+      padding: $SMALL 0 $MEDIUM;
       text-align: center;
       &--error {
-        margin-bottom: $small;
-        border-bottom: $border;
+        margin-bottom: $SMALL;
+        border-bottom: 1px solid $BORDER_GRAY;
       }
     }
   }
@@ -59,9 +59,9 @@
   .contact-form {
     display: grid;
     max-width: 30vw;
-    padding: 0 $medium;
+    padding: 0 $MEDIUM;
     &__email {
-      padding: $medium 0;
+      padding: $MEDIUM 0;
       text-align: center;
     }
   }

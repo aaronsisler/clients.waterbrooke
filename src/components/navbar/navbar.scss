@@ -8,33 +8,45 @@
     position: sticky;
     top: 0;
     left: 0;
-    z-index: 100;
-    display: flex;
-    align-items: center;
+    z-index: 9000;
+    width: 100%;
     height: $navMenuHeight;
-    max-height: $navMenuHeight;
-    padding: 0 $small;
+    padding: 0 $SMALL;
     background-color: white;
-    &__logo {
-      margin: 0 auto;
-    }
     &__toggle {
       position: absolute;
+      top: 50%;
+      z-index: 9001;
+      transform: translateY(-50%);
     }
-    &__links {
+    &__logo {
+      position: absolute;
+      left: 50%;
+      z-index: 9001;
+      transform: translateX(-50%);
+    }
+    &__links--mobile {
       position: fixed;
-      top: $navMenuHeight;
-      left: -$navMenuWidth;
-      display: flex;
-      flex-flow: column;
-      width: $navMenuWidth;
+      top: 0;
+      left: -100%;
+      width: 100%;
       height: 100%;
+      padding-top: $navMenuHeight;
+      overflow: auto;
       background-color: white;
-      border-top: solid 1px $fontGrey;
-      transition: left 0.3s ease;
-      &.navbar__links--open {
-        left: 0;
+      transition: transform 0.3s ease;
+      .navbar__links-content {
+        height: 100%;
+        overflow-y: auto;
+        border-top: solid 1px $MAIN_COLOR;
       }
+      &.navbar__links--open {
+        z-index: 9000;
+        transform: translateX(100%);
+      }
+    }
+    &__links--desktop {
+      display: none;
     }
   }
 }
@@ -48,27 +60,22 @@
 //min-width 1025px, large screens
 @media only screen and (min-width: $largeScreen) {
   .navbar {
-    justify-content: space-between;
+    display: flex;
+    align-items: center;
     &__toggle {
       display: none;
     }
     &__logo {
-      margin: 0;
+      position: static;
+      left: auto;
+      transform: none;
     }
-    &__links {
-      position: inherit;
-      top: inherit;
-      right: inherit;
-      display: flex;
-      align-items: center;
-      width: inherit;
-      height: inherit;
-      padding: 0;
-      background-color: inherit;
-      transition: none;
-      &-close {
-        display: none;
-      }
+    &__links--mobile {
+      display: none;
+    }
+    &__links--desktop {
+      display: block;
+      margin-left: $MEDIUM;
     }
   }
 }

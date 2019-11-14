@@ -4,22 +4,22 @@
 //max-width 640px, small screens
 @media only screen {
   .footer {
-    padding: $small;
+    padding: $SMALL;
     background-color: white;
     &__links {
       display: grid;
-      grid-row-gap: $small;
-      margin-bottom: $medium;
+      grid-row-gap: $SMALL;
+      margin-bottom: $MEDIUM;
       text-align: center;
     }
     &__legal {
       display: flex;
       align-items: center;
       justify-content: space-evenly;
-      padding-top: $small;
+      padding-top: $SMALL;
       text-align: center;
       .footer__copyright {
-        color: $mainColor;
+        color: $MAIN_COLOR;
       }
     }
   }
@@ -29,7 +29,7 @@
 //min-width 641px, medium screens
 @media only screen and (min-width: $mediumScreen) {
   .footer {
-    padding-left: $large;
+    padding-left: $LARGE;
     &__links {
       grid-template-columns: repeat(4, 1fr);
       text-align: left;

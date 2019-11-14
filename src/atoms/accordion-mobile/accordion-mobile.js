@@ -3,9 +3,9 @@ import cn from "classnames";
 import PropTypes from "prop-types";
 import Hyperlink from "../../atoms/hyperlink";
 
-import "./accordion.scss";
+import "./accordion-mobile.scss";
 
-class Accordion extends React.Component {
+class AccordionMobile extends React.Component {
   constructor(props) {
     super(props);
 
@@ -21,22 +21,17 @@ class Accordion extends React.Component {
 
   render() {
     const { isExpanded } = this.state;
-    const hoverClassname = isExpanded
-      ? "accordion__content--toggled"
-      : undefined;
+    const hoverClassname = isExpanded ? "accordion-mobile--toggled" : undefined;
 
     return (
-      <div
-        className="accordion"
-        onClick={this.handleToggle}
-        // onMouseEnter={this.handleToggle}
-        // onMouseLeave={this.handleToggle}
-      >
-        <h1 className="accordion__title">{this.props.title}</h1>
-        <div className={cn("accordion__content", hoverClassname)}>
+      <div className="accordion-mobile" onClick={this.handleToggle}>
+        <h1 className={cn("accordion-mobile__title", hoverClassname)}>
+          {this.props.title}
+        </h1>
+        <div className={cn("accordion-mobile__content", hoverClassname)}>
           {this.props.links.map((link, index) => (
             <Hyperlink
-              className="accordion__content-link"
+              className="accordion-mobile__content-link"
               key={index}
               onClick={this.props.onContentClick}
               {...link}
@@ -48,10 +43,10 @@ class Accordion extends React.Component {
   }
 }
 
-Accordion.propTypes = {
+AccordionMobile.propTypes = {
   links: PropTypes.array.isRequired,
   onContentClick: PropTypes.func,
   title: PropTypes.string.isRequired
 };
 
-export default Accordion;
+export default AccordionMobile;

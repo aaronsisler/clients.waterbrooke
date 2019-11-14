@@ -4,9 +4,10 @@
 @media only screen {
   .logo {
     height: $navMenuHeight;
+    cursor: pointer;
     &__image {
       max-height: 100%;
-      padding: $xsmall;
+      padding: $XSMALL;
       object-fit: scale-down;
     }
   }

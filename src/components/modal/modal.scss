@@ -9,7 +9,7 @@
     justify-items: center;
     width: 100%;
     max-height: 100vh;
-    margin: $small;
+    margin: $SMALL;
     overflow-y: auto;
     background-color: white;
     &__overlay {
@@ -24,21 +24,21 @@
       justify-content: center;
       width: 100vw;
       height: 100vh;
-      background-color: rgba($midGrey, 0.75);
+      background-color: rgba($GRAY_400, 0.75);
     }
     &__title {
-      @include font-type($mainFont, $midlarge);
+      @include font-type($MAIN_FONT, $MIDLARGE);
 
-      margin: $medium 0;
+      margin: $MEDIUM 0;
       text-align: center;
     }
     &__close {
       display: grid;
       justify-content: center;
       width: 90%;
-      margin-top: $small;
-      padding: $medium 0;
-      border-top: 1px solid $midGrey;
+      margin-top: $SMALL;
+      padding: $MEDIUM 0;
+      border-top: 1px solid $GRAY_300;
       &-button {
         @include button();
       }
@@ -57,9 +57,9 @@
   .modal {
     width: auto;
     height: fit-content;
-    margin: $medium;
+    margin: $MEDIUM;
     &__title {
-      margin: $large $medium $small;
+      margin: $large $MEDIUM $SMALL;
     }
   }
 }

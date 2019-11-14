@@ -4,15 +4,11 @@
 //Small screens - MOBILE
 @media only screen {
   .hyperlink {
-    @include font-type($mainFont, $medium);
+    @include font-type($MAIN_FONT, $MEDIUM);
 
-    color: $mainColor;
+    color: $MAIN_COLOR;
     text-decoration: none;
     cursor: pointer;
-    &:hover {
-      color: $invertMainColor;
-      transition: color 0.15s ease-in-out;
-    }
     &:disabled {
       cursor: not-allowed;
       opacity: 0.5;
