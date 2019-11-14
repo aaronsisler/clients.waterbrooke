@@ -5,9 +5,9 @@
 @media only screen {
   .footer-link-group {
     &__title {
-      @include font-type($mainFont, $midlarge, bold);
+      @include font-type($MAIN_FONT, $MIDLARGE, bold);
 
-      color: $mainColor;
+      color: $MAIN_COLOR;
     }
     &__links {
       display: flex;
@@ -19,7 +19,7 @@
 //Medium screens - TABLET
 @media only screen and (min-width: $mediumScreen) {
   .footer-link-group {
-    margin-right: $small;
+    margin-right: $SMALL;
   }
 }
 

@@ -11,7 +11,7 @@
     z-index: 9000;
     width: 100%;
     height: $navMenuHeight;
-    padding: 0 $small;
+    padding: 0 $SMALL;
     background-color: white;
     &__toggle {
       position: absolute;
@@ -38,7 +38,7 @@
       .navbar__links-content {
         height: 100%;
         overflow-y: auto;
-        border-top: solid 1px $mainColor;
+        border-top: solid 1px $MAIN_COLOR;
       }
       &.navbar__links--open {
         z-index: 9000;
@@ -60,14 +60,22 @@
 //min-width 1025px, large screens
 @media only screen and (min-width: $largeScreen) {
   .navbar {
+    display: flex;
+    align-items: center;
     &__toggle {
       display: none;
+    }
+    &__logo {
+      position: static;
+      left: auto;
+      transform: none;
     }
     &__links--mobile {
       display: none;
     }
     &__links--desktop {
       display: block;
+      margin-left: $MEDIUM;
     }
   }
 }

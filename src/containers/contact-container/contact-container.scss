@@ -7,7 +7,7 @@
     display: flex;
     flex: 1 1 auto;
     flex-direction: column;
-    padding: $large $small;
+    padding: $LARGE $SMALL;
     background-image: url($imagesFolderPath+"/contact_container--mobile.jpg");
     background-position: center;
     background-size: cover;
@@ -15,16 +15,16 @@
       display: grid;
       width: fit-content;
       height: fit-content;
-      margin: 0 auto $large;
-      padding: $medium;
+      margin: 0 auto $LARGE;
+      padding: $MEDIUM;
       background: white;
       opacity: 0.95;
-      filter: $dropShadow;
+      filter: $DROP_SHADOW;
     }
     &__title {
-      @include font-type($mainFont, $large);
+      @include font-type($MAIN_FONT, $LARGE);
 
-      margin-bottom: $small;
+      margin-bottom: $SMALL;
       text-align: center;
     }
   }
@@ -37,6 +37,7 @@
 //Large screens - DESKTOP
 @media only screen and (min-width: $largeScreen) {
   .contact-container {
+    height: calc(100vh - #{$navMenuHeight});
     background-image: url($imagesFolderPath+"/contact_container--desktop.jpg");
   }
 }

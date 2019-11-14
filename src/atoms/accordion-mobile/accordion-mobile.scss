@@ -3,28 +3,28 @@
 
 //Small screens - MOBILE
 @media only screen {
-  .accordion {
+  .accordion-mobile {
     position: relative;
     transform: translateZ(0);
     transition: all 0.2s;
     &__title {
-      @include font-type($mainFont, $medium, bold);
+      @include font-type($MAIN_FONT, $MEDIUM, bold);
 
-      padding: $medium 0 $medium $medium;
-      color: $mainColor;
-      border-bottom: solid 1px $mainColor;
+      padding: $MEDIUM 0 $MEDIUM $MEDIUM;
+      color: $MAIN_COLOR;
+      border-bottom: solid 1px $MAIN_COLOR;
     }
     &__content {
       max-height: 0;
       overflow: hidden;
       background-color: white;
       &-link {
-        @include font-type($mainFont, $medium, lighter);
+        @include font-type($MAIN_FONT, $MEDIUM, lighter);
 
-        padding: $medium;
-        border-bottom: solid 1px $midLightGrey;
+        padding: $MEDIUM;
+        border-bottom: solid 1px $GRAY_400;
       }
-      &--toggled {
+      &.accordion-mobile--toggled {
         display: grid;
         max-height: 500px;
       }
