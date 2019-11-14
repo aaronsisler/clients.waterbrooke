@@ -22,7 +22,7 @@ class Navbar extends React.Component {
 
   render() {
     const { isMenuOpen } = this.state;
-    const isMenuOpenClass = isMenuOpen ? "navbar__links--open" : undefined;
+    const menuToggledClass = isMenuOpen ? "navbar__links--open" : undefined;
 
     return (
       <nav className="navbar">
@@ -32,7 +32,14 @@ class Navbar extends React.Component {
         <div className="navbar__logo">
           <Logo />
         </div>
-        <div className={cn("navbar__links", isMenuOpenClass)}>
+        <div className={cn("navbar__links--mobile", menuToggledClass)}>
+          <div className={cn("navbar__links-content")}>
+            {navigationLinks.map(navLink => (
+              <Accordion onContentClick={this.handleMenuToggle} {...navLink} />
+            ))}
+          </div>
+        </div>
+        <div className={cn("navbar__links--desktop", menuToggledClass)}>
           {navigationLinks.map(navLink => (
             <Accordion onContentClick={this.handleMenuToggle} {...navLink} />
           ))}
