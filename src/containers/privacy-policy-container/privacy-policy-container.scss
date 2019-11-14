@@ -4,16 +4,16 @@
 //Small screens - MOBILE
 @media only screen {
   .privacy-policy-container {
-    padding: $medium;
+    padding: $MEDIUM;
     &__title {
-      @include font-type($mainFont, $midlarge, bold);
+      @include font-type($MAIN_FONT, $MIDLARGE, bold);
 
-      margin-bottom: $medium;
+      margin-bottom: $MEDIUM;
     }
     &__policy-heading {
-      @include font-type($secFont, $medium);
+      @include font-type($SEC_FONT, $MEDIUM);
 
-      margin: $medium 0 $xsmall;
+      margin: $MEDIUM 0 $XSMALL;
     }
   }
 }
