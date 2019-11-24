@@ -1,11 +1,23 @@
 import React from "react";
 import amenities from "../../content/amenities";
+import { IMAGES_FOLDER_PATH } from "../../config";
 
 import "./amenities-container.scss";
 
+const spalshImage = {
+  alt: "Waterbrooke Assisted Living",
+  src: `${IMAGES_FOLDER_PATH}/amenities__salon.jpg`
+};
+
 const AmenitiesContainer = () => (
   <div className="amenities-container">
-    <div className="amenities-container__splash-image"></div>
+    <div className="amenities-container__splash">
+      <img
+        className="amenities-container__splash-image"
+        src={spalshImage.src}
+        alt={spalshImage.alt}
+      />
+    </div>
     <div className="amenities-container__content">
       <h1 className="amenities-container__title">Amenities</h1>
       <p>
