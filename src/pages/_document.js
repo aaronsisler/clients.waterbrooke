@@ -1,6 +1,6 @@
 import React from "react";
 import Document, { Html, Head, Main, NextScript } from "next/document";
-import { IMAGES_FOLDER_PATH } from "../config";
+import { IMAGES_CDN } from "../config";
 
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -19,7 +19,7 @@ class MyDocument extends Document {
           <link
             rel="icon"
             type="image/x-icon"
-            href={`${IMAGES_FOLDER_PATH}/favicon.ico`}
+            href={`${IMAGES_CDN}/favicon.ico`}
           />
         </Head>
         <body>

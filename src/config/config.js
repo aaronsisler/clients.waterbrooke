@@ -1,5 +1,6 @@
 // Images folder
-export const IMAGES_FOLDER_PATH = "/_next/static/images";
+export const IMAGES_CDN =
+  "https://cdn-e-and-b-solutions.s3.amazonaws.com/waterbrooke";
 
 // Contact Email
 export const CONTACT_EMAIL = "aaron.sisler@eandbsolutions.com";
