@@ -3,7 +3,6 @@ service: waterbrooke
 provider:
   name: aws
   runtime: nodejs10.x
-  profile: serverless
   stage: prod
   region: us-east-1
   environment:

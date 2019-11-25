@@ -11,7 +11,7 @@
       justify-content: center;
       width: 100%;
       min-height: calc(100vh - #{$navMenuHeight});
-      background-image: url($imagesFolderPath+"/landing--mobile.jpg");
+      background-image: url($IMAGES_CDN+"/landing--mobile.jpg");
       background-position: center;
       background-size: cover;
     }
@@ -31,7 +31,7 @@
       justify-content: center;
       width: 100%;
       height: 75vh;
-      background-image: url($imagesFolderPath+"/landing--desktop.jpg");
+      background-image: url($IMAGES_CDN+"/landing--desktop.jpg");
     }
   }
 }

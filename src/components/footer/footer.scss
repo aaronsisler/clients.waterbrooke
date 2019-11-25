@@ -5,7 +5,7 @@
 @media only screen {
   .footer {
     padding: $SMALL;
-    background-color: white;
+    background-color: $GRAY_100;
     &__links {
       display: grid;
       grid-row-gap: $SMALL;

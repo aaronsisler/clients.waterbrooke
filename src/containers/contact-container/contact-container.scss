@@ -8,7 +8,7 @@
     flex: 1 1 auto;
     flex-direction: column;
     padding: $LARGE $SMALL;
-    background-image: url($imagesFolderPath+"/contact_container--mobile.jpg");
+    background-image: url($IMAGES_CDN+"/contact_container--mobile.jpg");
     background-position: center;
     background-size: cover;
     &__form {
@@ -38,7 +38,7 @@
 @media only screen and (min-width: $largeScreen) {
   .contact-container {
     height: calc(100vh - #{$navMenuHeight});
-    background-image: url($imagesFolderPath+"/contact_container--desktop.jpg");
+    background-image: url($IMAGES_CDN+"/contact_container--desktop.jpg");
   }
 }
 
