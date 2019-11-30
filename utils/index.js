@@ -22,14 +22,14 @@ fse.copySync(`${__dirname}/templates`, nameDirectory);
 //Replace the upper and lower name using crafted name
 replaceNamesInFiles(nameDirectory, lowerName, upperName);
 
-//Rename the JS and SCSS files
+//Rename the JSX and SCSS files
 fs.renameSync(
-  `${nameDirectory}/javascript.js`,
-  `${nameDirectory}/${lowerName}.js`
+  `${nameDirectory}/markup.jsx`,
+  `${nameDirectory}/${lowerName}.jsx`
 );
 
 fs.renameSync(
-  `${nameDirectory}/sass.scss`,
+  `${nameDirectory}/styles.scss`,
   `${nameDirectory}/${lowerName}.scss`
 );
 

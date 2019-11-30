@@ -1,6 +1,6 @@
 exports.replaceNamesInFiles = (nameDirectory, lowerName, upperName) => {
   const replace = require("replace-in-file");
-  const files = [`${nameDirectory}/javascript.js`, `${nameDirectory}/index.js`];
+  const files = [`${nameDirectory}/markup.jsx`, `${nameDirectory}/index.js`];
 
   const upperOptions = {
     files,
