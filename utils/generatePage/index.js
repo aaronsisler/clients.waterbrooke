@@ -17,11 +17,11 @@ const upperName = generateUpperName(name, templateType);
 
 //Create a copy of template
 fse.copySync(
-  `${__dirname}/template/page.js`,
-  `${__dirname}/template/${lowerName}.js`
+  `${__dirname}/../templates/page.js`,
+  `${__dirname}/${lowerName}.js`
 );
 
-const file = `${__dirname}/template/${lowerName}.js`;
+const file = `${__dirname}/${lowerName}.js`;
 const files = [file];
 
 //Replace the upper, lower, and page names using crafted names
