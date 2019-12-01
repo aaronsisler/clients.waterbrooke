@@ -1,4 +1,4 @@
-exports.generateUpperName = (name, isContainer) => {
+exports.generateUpperName = (name, templateType) => {
   const matchIndices = [];
   const nameLength = name.length;
 
@@ -18,9 +18,13 @@ exports.generateUpperName = (name, isContainer) => {
     }
   }
 
-  if (isContainer) {
-    return upperName.join("") + "Container";
-  } else {
-    return upperName.join("");
+  switch (templateType) {
+    case "PAGE":
+    case "CONTAINER":
+      return `${upperName.join("")}Container`;
+    case "COMPONENT":
+      return upperName.join("");
+    default:
+      throw new Error("templateType not found");
   }
 };

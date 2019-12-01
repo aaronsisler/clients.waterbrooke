@@ -1,7 +1,5 @@
-exports.replaceNamesInFiles = (nameDirectory, lowerName, upperName) => {
+exports.replaceNamesInFiles = (files, lowerName, upperName, pageName) => {
   const replace = require("replace-in-file");
-  const files = [`${nameDirectory}/javascript.js`, `${nameDirectory}/index.js`];
-
   const upperOptions = {
     files,
     from: /UPPER_NAME/g,
@@ -14,7 +12,17 @@ exports.replaceNamesInFiles = (nameDirectory, lowerName, upperName) => {
     to: lowerName
   };
 
+  const pageOptions = {
+    files,
+    from: /PAGE_NAME/g,
+    to: pageName
+  };
+
   try {
+    if (pageName) {
+      replace.sync(pageOptions);
+    }
+
     replace.sync(upperOptions);
     replace.sync(lowerOptions);
     console.log("File variables have been replaced");

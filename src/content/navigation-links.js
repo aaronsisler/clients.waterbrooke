@@ -12,8 +12,7 @@ const navigationLinks = [
     title: "Our Services",
     links: [
       { title: "Assisted Living", href: "/assisted-living" },
-      { title: "Memory Care", href: "/memory-care" },
-      { title: "Health Care Services", href: "/health-care-services" }
+      { title: "Memory Care", href: "/memory-care" }
     ]
   },
   {
@@ -21,8 +20,8 @@ const navigationLinks = [
     title: "Waterbrooke Life",
     links: [
       { title: "A Day in the Life", href: "/daily-life" },
-      { title: "Signature Programs", href: "/signature-programs" },
-      { title: "Dining Experience", href: "/dining-experience" },
+      { title: "Activities", href: "/activities" },
+      { title: "Dining Experience", href: "/dining" },
       { title: "Amenities", href: "/amenities" }
     ]
   },

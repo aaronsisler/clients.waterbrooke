@@ -1,11 +1,33 @@
-exports.validateArgs = ({ isContainer, name }) => {
-  if (isContainer === undefined || name === undefined) {
+exports.validateArgs = ({ templateType, name }) => {
+  const validTemplateTypes = ["PAGE", "CONTAINER", "COMPONENT"];
+
+  if (templateType === undefined) {
+    console.log(
+      "templateType' is required\ni.e. --templateType=PAGE (2 dashes)"
+    );
+    process.exit(1);
+  }
+
+  if (!validTemplateTypes.includes(templateType)) {
+    console.log(
+      "templateType' must be PAGE, CONTAINER, or COMPONENT\ni.e. --templateType=PAGE (2 dashes)"
+    );
+    process.exit(1);
+  }
+
+  if (name === undefined) {
     console.log("name' is required\ni.e. --name=taco (2 dashes)");
     process.exit(1);
   }
 
   if (name.length === 0) {
     console.log("'name' must be populated");
+    console.log("name: ", name);
+    process.exit(1);
+  }
+
+  if (name.includes("page")) {
+    console.log("'name' does not need 'page' added");
     console.log("name: ", name);
     process.exit(1);
   }
@@ -19,13 +41,6 @@ exports.validateArgs = ({ isContainer, name }) => {
   if (name.substr(-1) === "-") {
     console.log("'name' should not end with a hyphen");
     console.log("name: ", name);
-    process.exit(1);
-  }
-
-  if (isContainer !== "true" && isContainer !== "false") {
-    console.log("'isContainer' must be true or false");
-    console.log("isContainer: ", isContainer);
-    console.log("isContainer type: ", typeof isContainer);
     process.exit(1);
   }
 };
