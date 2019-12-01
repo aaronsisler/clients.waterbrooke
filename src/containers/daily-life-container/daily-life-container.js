@@ -1,4 +1,5 @@
 import React from "react";
+import Hyperlink from "../../atoms/hyperlink";
 
 import "./daily-life-container.scss";
 
@@ -30,11 +31,12 @@ const DailyLifeContainer = () => (
           Engaging Activities
         </h2>
         <p className="daily-life-container__topic-content">
-          Every single community offers residents a personalized monthly
-          calendar of events. The available activities are selected based on the
-          interests of each senior, and are designed to be enriching and fun for
-          the residents. Activities are scheduled around-the-clock, so your
-          loved one will never feel bored.
+          Our community offers residents a personalized monthly calendar of
+          events. The available activities are selected based on the interests
+          of each senior. They are designed to be enriching and fun for the
+          residents. Activities are scheduled around-the-clock, so your loved
+          one will never feel bored.&nbsp;
+          <Hyperlink href="/activities" title="Learn More" />
         </p>
       </div>
       <hr />
@@ -45,7 +47,8 @@ const DailyLifeContainer = () => (
           believe dining well is part of living well. Your loved one will enjoy
           restaurant-style dining with chef-prepared meals. Each day features a
           variety of menu options that changes daily. So your loved one won’t
-          get bored with the food choices.
+          get bored with the food choices.&nbsp;
+          <Hyperlink href="/dining" title="Learn More" />
         </p>
       </div>
       <hr />
@@ -55,8 +58,9 @@ const DailyLifeContainer = () => (
           We strive to bring your loved one's interests to life through programs
           and outings that reflect their talents and personalities, while also
           offering new experiences that will challenge them and keep them
-          mentally healthy. From wellness programs to cultural and social events
-          — there are opportunities for everyone to be involved.
+          mentally healthy. From wellness programs to cultural and social
+          events, there are opportunities for everyone to be involved.&nbsp;
+          <Hyperlink href="/amenities" title="Learn More" />
         </p>
       </div>
     </div>
