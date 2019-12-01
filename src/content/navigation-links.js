@@ -21,7 +21,7 @@ const navigationLinks = [
     title: "Waterbrooke Life",
     links: [
       { title: "A Day in the Life", href: "/daily-life" },
-      { title: "Signature Programs", href: "/signature-programs" },
+      { title: "Activities", href: "/activities" },
       { title: "Dining Experience", href: "/dining-experience" },
       { title: "Amenities", href: "/amenities" }
     ]

@@ -1,3 +1,13 @@
-exports.generateLowerName = (name, isContainer) => {
-  return isContainer ? `${name.toLowerCase()}-container` : name.toLowerCase();
+exports.generateLowerName = (name, templateType) => {
+  const lowerName = name.toLowerCase();
+
+  switch (templateType) {
+    case "COMPONENT":
+    case "PAGE":
+      return lowerName;
+    case "CONTAINER":
+      return `${lowerName}-container`;
+    default:
+      throw new Error("templateType not found");
+  }
 };

@@ -26,13 +26,15 @@ const DailyLifeContainer = () => (
       </p>
       <hr />
       <div className="daily-life-container__topic">
-        <h2 className="daily-life-container__topic-title">Dining Experience</h2>
+        <h2 className="daily-life-container__topic-title">
+          Engaging Activities
+        </h2>
         <p className="daily-life-container__topic-content">
-          A great meal is one of life’s simple pleasures. At Waterbrooke, we
-          believe dining well is part of living well. Your loved one will enjoy
-          restaurant-style dining with chef-prepared meals. Each day features a
-          variety of menu options that changes daily. So your loved one won’t
-          get bored with the food choices.
+          Every single community offers residents a personalized monthly
+          calendar of events. The available activities are selected based on the
+          interests of each senior, and are designed to be enriching and fun for
+          the residents. Activities are scheduled around-the-clock, so your
+          loved one will never feel bored.
         </p>
       </div>
       <hr />
