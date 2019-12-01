@@ -19,9 +19,12 @@ exports.replaceNamesInFiles = (files, lowerName, upperName, pageName) => {
   };
 
   try {
+    if (pageName) {
+      replace.sync(pageOptions);
+    }
+
     replace.sync(upperOptions);
     replace.sync(lowerOptions);
-    replace.sync(pageOptions);
     console.log("File variables have been replaced");
   } catch (error) {
     console.error("Error occurred:", error);

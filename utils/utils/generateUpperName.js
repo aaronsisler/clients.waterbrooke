@@ -20,7 +20,10 @@ exports.generateUpperName = (name, templateType) => {
 
   switch (templateType) {
     case "PAGE":
+    case "CONTAINER":
       return `${upperName.join("")}Container`;
+    case "COMPONENT":
+      return upperName.join("");
     default:
       throw new Error("templateType not found");
   }
