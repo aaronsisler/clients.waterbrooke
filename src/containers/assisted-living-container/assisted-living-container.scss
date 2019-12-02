@@ -3,14 +3,58 @@
 
 //Small screens - MOBILE
 @media only screen {
+  .assisted-living-container {
+    &__splash-image {
+      width: 100%;
+      min-height: 50vh;
+      max-height: 450px;
+      background-image: url($IMAGES_CDN+"/amenities__salon--mobile.jpg");
+      background-position: center;
+      background-size: cover;
+    }
+    &__content {
+      padding: 0 $MEDIUM $LARGE;
+    }
+    &__title {
+      @include font-type($MAIN_FONT, $LARGE, bold);
+
+      margin-top: $MEDIUM;
+    }
+    p {
+      margin: $SMALL 0 $LARGE 0;
+    }
+    &__list-title {
+      @include font-type($MAIN_FONT, $MIDLARGE, bold);
+
+      margin: $SMALL 0;
+    }
+    &__list {
+      margin-left: $MEDIUM;
+      &-item {
+        @include font-type($MAIN_FONT, $MEDIUM, bold);
+
+        margin-bottom: $SMALL;
+      }
+    }
+  }
 }
 
 //Medium screens - TABLET
 @media only screen and (min-width: $mediumScreen) {
+  .assisted-living-container {
+    &__content {
+      padding: 0 15% $XLARGE;
+    }
+  }
 }
 
 //Large screens - DESKTOP
 @media only screen and (min-width: $largeScreen) {
+  .assisted-living-container {
+    &__splash-image {
+      background-image: url($IMAGES_CDN+"/amenities__salon--desktop.jpg");
+    }
+  }
 }
 
 //XLarge screens
