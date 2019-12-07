@@ -20,6 +20,11 @@
 
       margin-top: $MEDIUM;
     }
+    &__sec-title {
+      @include font-type($MAIN_FONT, $MIDLARGE, bold);
+
+      margin-top: $MEDIUM;
+    }
     p {
       margin: $SMALL 0 $LARGE 0;
     }
@@ -53,6 +58,9 @@
   .assisted-living-container {
     &__splash-image {
       background-image: url($IMAGES_CDN+"/amenities__salon--desktop.jpg");
+    }
+    &__content {
+      padding: 0 25% $XLARGE;
     }
   }
 }

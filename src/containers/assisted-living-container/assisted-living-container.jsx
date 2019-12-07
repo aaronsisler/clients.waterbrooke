@@ -17,6 +17,18 @@ const AssistedLivingContainer = () => (
         maintain connections with people and interests that are meaningful to
         them.
       </p>
+      <h2 className="assisted-living-container__sec-title">Live freely</h2>
+      <p>
+        Our Assisted Living program is designed to provide the perfect balance
+        of support and independence. Whether you’re a social butterfly or prefer
+        the peace and quiet of your own space, our community provides life
+        engagement programs to meet your needs.
+      </p>
+      <p>
+        Live your life as you always have… minus the mundane. No daily upkeep,
+        maintenance calls or repairs. Simply enjoy the most remarkable parts of
+        the life you lead.
+      </p>
       <hr />
       <h2 className="assisted-living-container__list-title">
         Assisted Living services

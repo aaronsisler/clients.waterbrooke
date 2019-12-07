@@ -50,6 +50,9 @@
     &__splash-image {
       background-image: url($IMAGES_CDN+"/amenities__salon--desktop.jpg");
     }
+    &__content {
+      padding: 0 25% $XLARGE;
+    }
   }
 }
 
