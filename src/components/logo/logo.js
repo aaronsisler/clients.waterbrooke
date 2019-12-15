@@ -6,7 +6,7 @@ import "./logo.scss";
 
 const logo = {
   alt: "Waterbrooke Assisted Living",
-  src: `${IMAGES_CDN}/logo.jpg`
+  src: `${IMAGES_CDN}/logo.png`
 };
 
 const Logo = () => (

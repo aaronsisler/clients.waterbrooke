@@ -31,7 +31,7 @@ const navigationLinks = [
     links: [
       { title: "Contact Us", href: "/contact" },
       { title: "Our Mission", href: "/our-mission" },
-      { title: "Waterbrooke Leadership", href: "/leadership" },
+      { title: "Leadership", href: "/leadership" },
       { title: "Careers", href: "/careers" }
     ]
   }
