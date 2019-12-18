@@ -4,16 +4,19 @@
 //Small screens - MOBILE
 @media only screen {
   .our-mission-container {
+    padding: 0 $MEDIUM;
     &__splash-image {
       width: 100%;
       min-height: 50vh;
       max-height: 450px;
-      background-image: url($IMAGES_CDN+"/amenities__salon--mobile.jpg");
+      margin-top: $SMALL;
+      background-image: url($IMAGES_CDN+"/our-mission-container--mobile.jpg");
+      background-repeat: no-repeat;
       background-position: center;
-      background-size: cover;
+      background-size: contain;
     }
     &__content {
-      padding: 0 $MEDIUM $LARGE;
+      padding: 0 $SMALL $LARGE;
     }
     &__title {
       @include font-type($MAIN_FONT, $LARGE, bold);
@@ -34,8 +37,13 @@
 //Medium screens - TABLET
 @media only screen and (min-width: $mediumScreen) {
   .our-mission-container {
+    &__splash-image {
+      margin-top: $LARGE;
+      background-image: url($IMAGES_CDN+"/our-mission-container--desktop.jpg");
+      background-position: top;
+    }
     &__content {
-      padding: 0 15% $XLARGE;
+      padding: 0 $XLARGE;
     }
   }
 }
@@ -43,11 +51,21 @@
 //Large screens - DESKTOP
 @media only screen and (min-width: $largeScreen) {
   .our-mission-container {
+    display: flex;
+    justify-content: center;
+    padding: $MEDIUM $XLARGE $XLARGE;
     &__splash-image {
-      background-image: url($IMAGES_CDN+"/amenities__salon--desktop.jpg");
+      max-width: 300px;
+      margin-top: 0;
+      background-image: url($IMAGES_CDN+"/our-mission-container--desktop.jpg");
     }
     &__content {
-      padding: 0 25% $XLARGE;
+      max-width: 800px;
+      margin-left: $XLARGE;
+      padding: 0;
+    }
+    &__title {
+      margin-top: 0;
     }
   }
 }
