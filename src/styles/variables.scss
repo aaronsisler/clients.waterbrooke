@@ -14,7 +14,8 @@ $GRAY_100: #f5f5f5;
 $FONT_GRAY: rgba(0, 0, 0, 0.7);
 $BORDER_GRAY: rgba(0, 0, 0, 0.5);
 $BOX_SHADOW_GRAY: rgba(189, 195, 199, 0.6);
-$DROP_SHADOW: drop-shadow(3px 3px 6px $BOX_SHADOW_GRAY);
+// $DROP_SHADOW: drop-shadow(3px 3px 6px $BOX_SHADOW_GRAY);
+$DROP_SHADOW: drop-shadow(1px 2px 1px $BOX_SHADOW_GRAY);
 
 // Spacing
 $XXSMALL: 0.3rem;

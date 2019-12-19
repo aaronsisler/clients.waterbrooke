@@ -62,6 +62,7 @@
   .navbar {
     display: flex;
     align-items: center;
+    filter: $DROP_SHADOW;
     &__toggle {
       display: none;
     }

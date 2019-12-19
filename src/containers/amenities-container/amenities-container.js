@@ -12,6 +12,7 @@ const AmenitiesContainer = () => (
         Living at Waterbrooke gives you perks you would never have living at
         home.
       </p>
+      <h1 className="amenities-container__sec-title">What we provide</h1>
       <dl className="amenities-container__list">
         {amenities.map((amenity, index) => (
           <React.Fragment key={index}>

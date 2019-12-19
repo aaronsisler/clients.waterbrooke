@@ -4,21 +4,27 @@
 //Small screens - MOBILE
 @media only screen {
   .amenities-container {
+    padding: 0 $MEDIUM;
     &__splash-image {
       width: 100%;
-      min-height: 50vh;
+      min-height: 35vh;
       max-height: 450px;
-      background-image: url($IMAGES_CDN+"/amenities__salon--mobile.jpg");
+      background-image: url($IMAGES_CDN+"/amenities-container--mobile.png");
       background-position: center;
       background-size: cover;
     }
     &__content {
-      padding: 0 $MEDIUM $LARGE;
+      padding: 0 $SMALL $LARGE;
     }
     &__title {
       @include font-type($MAIN_FONT, $LARGE, bold);
 
       margin-top: $MEDIUM;
+    }
+    &__sec-title {
+      @include font-type($MAIN_FONT, $MIDLARGE, bold);
+
+      margin: $SMALL 0;
     }
     p {
       margin: $SMALL 0 $LARGE 0;
@@ -39,6 +45,10 @@
 //Medium screens - TABLET
 @media only screen and (min-width: $mediumScreen) {
   .amenities-container {
+    padding: $MEDIUM;
+    &__splash-image {
+      height: 500px;
+    }
     &__content {
       padding: 0 15% $XLARGE;
     }
@@ -49,7 +59,11 @@
 @media only screen and (min-width: $largeScreen) {
   .amenities-container {
     &__splash-image {
-      background-image: url($IMAGES_CDN+"/amenities__salon--desktop.jpg");
+      height: 750px;
+      background-image: url($IMAGES_CDN+"/amenities-container--desktop.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
     }
     &__content {
       padding: 0 25% $XLARGE;
