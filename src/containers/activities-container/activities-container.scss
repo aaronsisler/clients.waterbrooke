@@ -3,6 +3,22 @@
 
 //Small screens - MOBILE
 @media only screen {
+  .activities-container {
+    padding: $MEDIUM;
+    &__title {
+      @include font-type($MAIN_FONT, $LARGE, bold);
+    }
+    p {
+      margin: $SMALL 0;
+    }
+    &__content {
+      &-images {
+      }
+      &-image {
+        margin-bottom: $XSMALL;
+      }
+    }
+  }
 }
 
 //Medium screens - TABLET
