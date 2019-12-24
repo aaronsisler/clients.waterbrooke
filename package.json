@@ -51,6 +51,7 @@
     "prop-types": "^15.6.1",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
+    "react-media": "^1.10.0",
     "serverless-apigw-binary": "^0.4.4",
     "serverless-domain-manager": "^2.6.0",
     "serverless-http": "^1.6.0"
