@@ -1,12 +1,11 @@
 import React from "react";
 import Image from "../../atoms/image";
-import { eventImages, headerImage } from "../../content/activities";
+import { eventImages } from "../../content/activities";
 
 import "./activities-container.scss";
 
 const ActivitiesContainer = () => (
   <div className="activities-container">
-    <Image className="activities-container__header-image" {...headerImage} />
     <h1 className="activities-container__title">Making new memories</h1>
     <p>
       By creating new memories together, we experience close connections that

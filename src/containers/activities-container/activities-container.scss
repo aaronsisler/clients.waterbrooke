@@ -12,8 +12,6 @@
       margin: $SMALL 0;
     }
     &__content {
-      &-images {
-      }
       &-image {
         margin-bottom: $XSMALL;
       }
@@ -23,10 +21,38 @@
 
 //Medium screens - TABLET
 @media only screen and (min-width: $mediumScreen) {
+  .activities-container {
+    padding: $MEDIUM 15% $XLARGE;
+    &__header-image {
+      width: 100%;
+      height: 25vh;
+    }
+    &__content {
+      &-images {
+        display: grid;
+        grid-column-gap: $SMALL;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+        margin-top: $LARGE;
+      }
+      &-image {
+        width: 100%;
+        max-height: 350px;
+      }
+    }
+  }
 }
 
 //Large screens - DESKTOP
 @media only screen and (min-width: $largeScreen) {
+  .activities-container {
+    // padding: $MEDIUM 25% $XLARGE;
+    &__section {
+      &-image {
+        max-width: 450px;
+      }
+    }
+  }
 }
 
 //XLarge screens

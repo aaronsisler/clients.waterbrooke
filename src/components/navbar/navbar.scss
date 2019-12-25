@@ -13,6 +13,7 @@
     height: $navMenuHeight;
     padding: 0 $SMALL;
     background-color: white;
+    filter: $DROP_SHADOW;
     &__toggle {
       position: absolute;
       top: 50%;
@@ -62,7 +63,6 @@
   .navbar {
     display: flex;
     align-items: center;
-    filter: $DROP_SHADOW;
     &__toggle {
       display: none;
     }

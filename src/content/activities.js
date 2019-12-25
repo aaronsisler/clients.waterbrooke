@@ -1,11 +1,5 @@
 import { IMAGES_CDN } from "../config";
 
-const headerImage = {
-  altText: "Header image",
-  desktopImgSrc: `${IMAGES_CDN}/amenities-container__library--desktop.jpg`,
-  mobileImgSrc: `${IMAGES_CDN}/amenities-container__library--mobile.png`
-};
-
 const eventImages = [
   {
     altText: "Disco party for residents",
@@ -24,4 +18,4 @@ const eventImages = [
   }
 ];
 
-export { eventImages, headerImage };
+export { eventImages };

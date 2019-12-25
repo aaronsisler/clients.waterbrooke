@@ -37,7 +37,7 @@
 //Medium screens - TABLET
 @media only screen and (min-width: $mediumScreen) {
   .amenities-container {
-    padding: 0 15% $XLARGE;
+    padding: $MEDIUM 15% $XLARGE;
     &__section {
       &-list {
         max-width: 700px;
@@ -52,7 +52,7 @@
 //Large screens - DESKTOP
 @media only screen and (min-width: $largeScreen) {
   .amenities-container {
-    padding: 0 25% $XLARGE;
+    padding: $MEDIUM 25% $XLARGE;
     &__section {
       &-image {
         max-width: 450px;
