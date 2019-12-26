@@ -46,7 +46,6 @@
 //Large screens - DESKTOP
 @media only screen and (min-width: $largeScreen) {
   .activities-container {
-    // padding: $MEDIUM 25% $XLARGE;
     &__section {
       &-image {
         max-width: 450px;
