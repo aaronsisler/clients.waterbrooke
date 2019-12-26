@@ -47,7 +47,7 @@
         display: grid;
         width: 250px;
         max-height: 500px;
-        filter: $DROP_SHADOW;
+        box-shadow: $BOX_SHADOW;
       }
     }
   }
