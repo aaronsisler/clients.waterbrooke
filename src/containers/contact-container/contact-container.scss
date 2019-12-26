@@ -18,8 +18,8 @@
       margin: 0 auto $LARGE;
       padding: $MEDIUM;
       background: white;
+      box-shadow: $BOX_SHADOW;
       opacity: 0.95;
-      filter: $DROP_SHADOW;
     }
     &__title {
       @include font-type($MAIN_FONT, $LARGE);

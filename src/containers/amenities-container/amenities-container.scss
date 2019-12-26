@@ -4,32 +4,30 @@
 //Small screens - MOBILE
 @media only screen {
   .amenities-container {
-    &__splash-image {
-      width: 100%;
-      min-height: 50vh;
-      max-height: 450px;
-      background-image: url($IMAGES_CDN+"/amenities__salon--mobile.jpg");
-      background-position: center;
-      background-size: cover;
-    }
-    &__content {
-      padding: 0 $MEDIUM $LARGE;
-    }
+    padding: $MEDIUM;
     &__title {
       @include font-type($MAIN_FONT, $LARGE, bold);
+    }
+    &__sec-title {
+      @include font-type($MAIN_FONT, $MIDLARGE, bold);
 
-      margin-top: $MEDIUM;
+      margin: $SMALL 0;
     }
     p {
-      margin: $SMALL 0 $LARGE 0;
+      margin: $SMALL 0;
     }
-    &__list {
-      &-item {
-        &-title {
-          @include font-type($MAIN_FONT, $MEDIUM, bold);
-        }
-        &-content {
-          margin-bottom: $SMALL;
+    &__section {
+      &-image {
+        margin-bottom: $XSMALL;
+      }
+      &-list {
+        &-item {
+          &-title {
+            @include font-type($MAIN_FONT, $MEDIUM, bold);
+          }
+          &-content {
+            margin-bottom: $SMALL;
+          }
         }
       }
     }
@@ -39,8 +37,14 @@
 //Medium screens - TABLET
 @media only screen and (min-width: $mediumScreen) {
   .amenities-container {
-    &__content {
-      padding: 0 15% $XLARGE;
+    padding: $MEDIUM 15% $XLARGE;
+    &__section {
+      &-list {
+        max-width: 700px;
+      }
+      &-image {
+        max-width: 350px;
+      }
     }
   }
 }
@@ -48,11 +52,11 @@
 //Large screens - DESKTOP
 @media only screen and (min-width: $largeScreen) {
   .amenities-container {
-    &__splash-image {
-      background-image: url($IMAGES_CDN+"/amenities__salon--desktop.jpg");
-    }
-    &__content {
-      padding: 0 25% $XLARGE;
+    padding: $MEDIUM 25% $XLARGE;
+    &__section {
+      &-image {
+        max-width: 450px;
+      }
     }
   }
 }

@@ -6,7 +6,6 @@ import "./leadership-container.scss";
 
 const LeadershipContainer = () => (
   <div className="leadership-container">
-    <div className="leadership-container__splash-image" />
     <div className="leadership-container__content">
       <h1 className="leadership-container__title">Getting to know your team</h1>
       <p>

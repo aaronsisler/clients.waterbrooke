@@ -13,6 +13,7 @@
     height: $navMenuHeight;
     padding: 0 $SMALL;
     background-color: white;
+    box-shadow: $BOX_SHADOW;
     &__toggle {
       position: absolute;
       top: 50%;
