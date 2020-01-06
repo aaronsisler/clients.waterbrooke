@@ -8,4 +8,4 @@ export const IMAGES_CDN =
   "https://cdn-e-and-b-solutions.s3.amazonaws.com/waterbrooke";
 
 // Services Gateway
-export const SERVICES_GATEWAY_URL = "https://services.eandbsolutions.com/prod";
+export const SERVICES_GATEWAY_URL = "https://services.eandbsolutions.com/beta";

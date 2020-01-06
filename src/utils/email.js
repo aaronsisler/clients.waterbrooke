@@ -19,7 +19,23 @@ export const sendEmail = async (data, done, fail) => {
   const emailData = { pointOfContactEmail: CONTACT_EMAIL, ...data };
 
   try {
-    await axios.post(SERVICES_GATEWAY_URL, emailData, emailOptions);
+    await axios.post(`${SERVICES_GATEWAY_URL}/email`, emailData, emailOptions);
+    done();
+  } catch (e) {
+    fail();
+  }
+};
+
+export const sendEmailWithAttachment = async (data, done, fail) => {
+  const emailData = { pointOfContactEmail: CONTACT_EMAIL, ...data };
+
+  console.log(emailData);
+  try {
+    await axios.post(
+      `${SERVICES_GATEWAY_URL}/email-with-attachment`,
+      emailData,
+      emailOptions
+    );
     done();
   } catch (e) {
     fail();
