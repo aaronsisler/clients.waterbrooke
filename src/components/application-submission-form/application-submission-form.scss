@@ -3,6 +3,22 @@
 
 //Small screens - MOBILE
 @media only screen {
+  .application-submission-form {
+    display: grid;
+    grid-gap: $MEDIUM;
+    grid-template-columns: 100%;
+    width: 100%;
+    // background-color: rebeccapurple;
+    &__input {
+      font-size: $MEDIUM;
+    }
+    &__message {
+      @include textarea();
+    }
+    &__button {
+      @include button();
+    }
+  }
 }
 
 //Medium screens - TABLET

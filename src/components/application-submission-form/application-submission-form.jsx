@@ -1,10 +1,11 @@
 import React from "react";
 import FileUpload from "../file-upload";
+import FormError from "../../atoms/form-error";
 import Input from "../../atoms/input";
 import { sendEmailWithAttachment } from "../../utils/email";
+import encodeBase64 from "../../utils/encodeBase64";
 
 import "./application-submission-form.scss";
-import encodeBase64 from "../../utils/encodeBase64";
 
 class ApplicationSubmissionForm extends React.Component {
   constructor(props) {
@@ -16,6 +17,8 @@ class ApplicationSubmissionForm extends React.Component {
       emailSent: false,
       error: {},
       isSendButtonDisabled: true,
+      message: "",
+      name: "",
       rawFile: undefined
     };
   }
@@ -23,21 +26,49 @@ class ApplicationSubmissionForm extends React.Component {
   handleFileUpload = event => {
     const [rawFile] = event.target.files;
 
-    return this.setState({ rawFile, isSendButtonDisabled: false });
+    return this.setState({ rawFile });
+  };
+
+  handleInput = e => {
+    const { name: inputName, value: inputValue } = e.target;
+
+    return this.setState(prevState => ({
+      ...prevState,
+      [inputName]: inputValue
+    }));
+  };
+
+  handleNameValidation = () => {
+    if (!this.state.name) {
+      return this.setState(
+        prevState => ({
+          ...prevState,
+          error: { ...prevState.error, name: "Please enter your name" }
+        }),
+        this.validateRequiredFields()
+      );
+    }
+
+    return this.setState(
+      prevState => ({
+        ...prevState,
+        error: { ...prevState.error, name: undefined }
+      }),
+      this.validateRequiredFields()
+    );
   };
 
   handleSubmitApplicationForm = async () => {
     this.setState({ buttonText: "Sending", isSendButtonDisabled: true });
 
-    const { rawFile } = this.state;
+    const { name, message, rawFile } = this.state;
 
     const encodedFile = await encodeBase64(rawFile);
 
     const data = {
-      phoneNumber: "9106030899",
-      message: "I love the tacos!",
-      encodedFile
-      // name: "Test name"
+      encodedFile,
+      message,
+      name
     };
 
     const done = () => this.setState({ emailError: false, emailSent: true });
@@ -51,19 +82,58 @@ class ApplicationSubmissionForm extends React.Component {
     sendEmailWithAttachment(data, done, fail);
   };
 
+  validateRequiredFields = () => {
+    const { error, name, rawFile } = this.state;
+    const { name: nameError } = error;
+
+    if (name && rawFile && !nameError) {
+      return this.setState({ isSendButtonDisabled: false });
+    }
+
+    return this.setState({ isSendButtonDisabled: true });
+  };
+
   render() {
-    const { buttonText, isSendButtonDisabled } = this.state;
+    const {
+      buttonText,
+      emailSent,
+      emailError,
+      error,
+      isSendButtonDisabled,
+      message,
+      name
+    } = this.state;
+
     return (
       <div className="application-submission-form">
-        ApplicationSubmissionForm
-        <FileUpload onFileUpload={this.handleFileUpload} />
-        <button
-          className="application-submission-form__button"
-          disabled={isSendButtonDisabled}
-          onClick={this.handleSubmitApplicationForm}
-        >
-          {buttonText}
-        </button>
+        <React.Fragment>
+          <FileUpload onFileUpload={this.handleFileUpload} />
+          <div className="application-submission-form__input">
+            {error.name && <FormError error={error.name} />}
+            <Input
+              label="Name"
+              name="name"
+              onBlur={this.handleNameValidation}
+              onChange={this.handleInput}
+              value={name}
+            />
+          </div>
+          <textarea
+            className="application-submission-form__message"
+            name="message"
+            onChange={this.handleInput}
+            placeholder="What's on your mind?"
+            rows="4"
+            value={message}
+          />
+          <button
+            className="application-submission-form__button"
+            disabled={isSendButtonDisabled}
+            onClick={this.handleSubmitApplicationForm}
+          >
+            {buttonText}
+          </button>
+        </React.Fragment>
       </div>
     );
   }
