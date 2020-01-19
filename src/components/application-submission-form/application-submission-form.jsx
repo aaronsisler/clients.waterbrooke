@@ -1,4 +1,5 @@
 import React from "react";
+import cn from "classnames";
 import FileUpload from "../file-upload";
 import FormError from "../../atoms/form-error";
 import Input from "../../atoms/input";
@@ -101,39 +102,61 @@ class ApplicationSubmissionForm extends React.Component {
       error,
       isSendButtonDisabled,
       message,
-      name
+      name,
+      rawFile
     } = this.state;
 
     return (
       <div className="application-submission-form">
-        <React.Fragment>
-          <FileUpload onFileUpload={this.handleFileUpload} />
-          <div className="application-submission-form__input">
-            {error.name && <FormError error={error.name} />}
-            <Input
-              label="Name"
-              name="name"
-              onBlur={this.handleNameValidation}
-              onChange={this.handleInput}
-              value={name}
-            />
+        {emailSent && (
+          <div className="application-submission-form__email">
+            Thank you for reaching out! We are excited to get back in touch with
+            you.
           </div>
-          <textarea
-            className="application-submission-form__message"
-            name="message"
-            onChange={this.handleInput}
-            placeholder="What's on your mind?"
-            rows="4"
-            value={message}
-          />
-          <button
-            className="application-submission-form__button"
-            disabled={isSendButtonDisabled}
-            onClick={this.handleSubmitApplicationForm}
+        )}
+        {emailError && (
+          <div
+            className={cn(
+              "application-submission-form__email",
+              "application-submission-form__email--error"
+            )}
           >
-            {buttonText}
-          </button>
-        </React.Fragment>
+            Something went wrong unfortunately. Please try sending again.
+          </div>
+        )}
+        {!emailSent && (
+          <React.Fragment>
+            <div className="application-submission-form__input">
+              {error.name && <FormError error={error.name} />}
+              <Input
+                label="Name"
+                name="name"
+                onBlur={this.handleNameValidation}
+                onChange={this.handleInput}
+                value={name}
+              />
+            </div>
+            <div className="application-submission-form__file-upload">
+              {rawFile && <span>File Uploaded Successfully!</span>}
+              <FileUpload onFileUpload={this.handleFileUpload} />
+            </div>
+            <textarea
+              className="application-submission-form__message"
+              name="message"
+              onChange={this.handleInput}
+              placeholder="Is there anything extra you'd like to tell us?"
+              rows="4"
+              value={message}
+            />
+            <button
+              className="application-submission-form__button"
+              disabled={isSendButtonDisabled}
+              onClick={this.handleSubmitApplicationForm}
+            >
+              {buttonText}
+            </button>
+          </React.Fragment>
+        )}
       </div>
     );
   }

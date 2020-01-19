@@ -8,7 +8,14 @@
     grid-gap: $MEDIUM;
     grid-template-columns: 100%;
     width: 100%;
-    // background-color: rebeccapurple;
+    padding: $SMALL;
+    outline: 1px solid $GRAY_300;
+    &__file-upload {
+      span {
+        display: inline-block;
+        margin-bottom: $SMALL;
+      }
+    }
     &__input {
       font-size: $MEDIUM;
     }
@@ -17,6 +24,15 @@
     }
     &__button {
       @include button();
+    }
+    &__email {
+      @include font-type($MAIN_FONT, $MIDLARGE);
+
+      padding: $SMALL 0 $MEDIUM;
+      text-align: center;
+      &--error {
+        border-bottom: 1px solid $BORDER_GRAY;
+      }
     }
   }
 }

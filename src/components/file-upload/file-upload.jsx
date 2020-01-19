@@ -5,9 +5,15 @@ import "./file-upload.scss";
 
 const FileUpload = ({ onFileUpload }) => (
   <div className="file-upload">
-    FileUpload
-    <br />
-    <input type="file" onChange={onFileUpload} />
+    <input
+      id="file-upload__input"
+      type="file"
+      className="file-upload__input"
+      onChange={onFileUpload}
+    />
+    <label htmlFor="file-upload__input" className="file-upload__label">
+      Upload Application
+    </label>
   </div>
 );
 

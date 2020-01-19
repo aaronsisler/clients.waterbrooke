@@ -1,12 +1,12 @@
 import React from "react";
 import NextLink from "next/link";
-import { IMAGES_CDN } from "../../config";
+import { CDN_URL } from "../../config";
 
 import "./logo.scss";
 
 const logo = {
   alt: "Waterbrooke Assisted Living",
-  src: `${IMAGES_CDN}/logo.png`
+  src: `${CDN_URL}/logo.png`
 };
 
 const Logo = () => (

@@ -169,8 +169,7 @@ class ContactForm extends React.Component {
           <React.Fragment>
             <div className="contact-form__header">
               <div className="contact-form__header-content">
-                We are more than happy to answer any questions you may have. We
-                promise that your email won&apos;t disappear into the nether.
+                We are more than happy to answer any questions you may have.
               </div>
             </div>
             <div className="contact-form__form">

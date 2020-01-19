@@ -29,7 +29,6 @@ export const sendEmail = async (data, done, fail) => {
 export const sendEmailWithAttachment = async (data, done, fail) => {
   const emailData = { pointOfContactEmail: CONTACT_EMAIL, ...data };
 
-  console.log(emailData);
   try {
     await axios.post(
       `${SERVICES_GATEWAY_URL}/email-with-attachment`,

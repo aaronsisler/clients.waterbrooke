@@ -4,17 +4,59 @@
 //Small screens - MOBILE
 @media only screen {
   .careers-container {
-    padding: $SMALL;
-    // background-color: greenyellow;
+    display: grid;
+    grid-gap: $MEDIUM;
+    padding: $MEDIUM $MEDIUM $XLARGE;
+    &__header {
+      text-align: center;
+      &-content {
+        h1 {
+          @include font-type($MAIN_FONT, $LARGE, bold);
+
+          margin-bottom: $SMALL;
+        }
+        p {
+          margin-bottom: $SMALL;
+        }
+      }
+    }
+    &__content {
+      display: grid;
+      grid-gap: $MEDIUM;
+    }
+    &__form {
+      &-title {
+        @include font-type($MAIN_FONT, $MIDLARGE, bold);
+
+        margin: $SMALL 0;
+        text-align: center;
+      }
+    }
+    &__email {
+      @include font-type($MAIN_FONT, $MIDLARGE);
+
+      padding: $SMALL 0 $MEDIUM;
+      text-align: center;
+      &--error {
+        margin-bottom: $SMALL;
+        border-bottom: 1px solid $BORDER_GRAY;
+      }
+    }
   }
 }
 
 //Medium screens - TABLET
 @media only screen and (min-width: $mediumScreen) {
+  .careers-container {
+    padding: $MEDIUM 20% $XLARGE;
+  }
 }
 
 //Large screens - DESKTOP
 @media only screen and (min-width: $largeScreen) {
+  .careers-container {
+    padding: $MEDIUM 30% $XLARGE;
+  }
 }
 
 //XLarge screens
