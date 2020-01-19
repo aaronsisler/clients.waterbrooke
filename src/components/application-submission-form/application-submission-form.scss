@@ -3,34 +3,27 @@
 
 //Small screens - MOBILE
 @media only screen {
-  .careers-container {
+  .application-submission-form {
     display: grid;
     grid-gap: $MEDIUM;
-    padding: $MEDIUM $MEDIUM $XLARGE;
-    &__header {
-      text-align: center;
-      &-content {
-        h1 {
-          @include font-type($MAIN_FONT, $LARGE, bold);
-
-          margin-bottom: $SMALL;
-        }
-        p {
-          margin-bottom: $SMALL;
-        }
+    grid-template-columns: 100%;
+    width: 100%;
+    padding: $SMALL;
+    outline: 1px solid $GRAY_300;
+    &__file-upload {
+      span {
+        display: inline-block;
+        margin-bottom: $SMALL;
       }
     }
-    &__content {
-      display: grid;
-      grid-gap: $MEDIUM;
+    &__input {
+      font-size: $MEDIUM;
     }
-    &__form {
-      &-title {
-        @include font-type($MAIN_FONT, $MIDLARGE, bold);
-
-        margin: $SMALL 0;
-        text-align: center;
-      }
+    &__message {
+      @include textarea();
+    }
+    &__button {
+      @include button();
     }
     &__email {
       @include font-type($MAIN_FONT, $MIDLARGE);
@@ -38,7 +31,6 @@
       padding: $SMALL 0 $MEDIUM;
       text-align: center;
       &--error {
-        margin-bottom: $SMALL;
         border-bottom: 1px solid $BORDER_GRAY;
       }
     }
@@ -47,16 +39,10 @@
 
 //Medium screens - TABLET
 @media only screen and (min-width: $mediumScreen) {
-  .careers-container {
-    padding: $MEDIUM 20% $XLARGE;
-  }
 }
 
 //Large screens - DESKTOP
 @media only screen and (min-width: $largeScreen) {
-  .careers-container {
-    padding: $MEDIUM 30% $XLARGE;
-  }
 }
 
 //XLarge screens

@@ -1,6 +1,6 @@
 import React from "react";
 import Document, { Html, Head, Main, NextScript } from "next/document";
-import { IMAGES_CDN } from "../config";
+import { CDN_URL } from "../config";
 
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -19,7 +19,7 @@ class MyDocument extends Document {
           <link
             rel="icon"
             type="image/x-icon"
-            href={`${IMAGES_CDN}/favicon.ico`}
+            href={`${CDN_URL}/favicon.ico`}
           />
         </Head>
         <body>

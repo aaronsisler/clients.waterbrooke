@@ -6,6 +6,7 @@
   .footer {
     padding: $SMALL;
     background-color: $GRAY_100;
+    border-top: 1px solid $GRAY_200;
     &__links {
       display: grid;
       grid-row-gap: $SMALL;
