@@ -4,16 +4,32 @@
 //Small screens - MOBILE
 @media only screen {
   .activities-container {
-    padding: $MEDIUM;
-    &__title {
-      @include font-type($MAIN_FONT, $LARGE, bold);
+    padding: $MEDIUM $MEDIUM $LARGE;
+    &__header {
+      &-title {
+        @include font-type($MAIN_FONT, $LARGE, bold);
+      }
+      p {
+        margin: $SMALL 0;
+      }
     }
-    p {
+    &__image {
+      margin-bottom: $XSMALL;
+    }
+    hr {
       margin: $SMALL 0;
     }
-    &__content {
-      &-image {
-        margin-bottom: $XSMALL;
+    &__sec-title {
+      @include font-type($MAIN_FONT, $MIDLARGE, bold);
+
+      margin: $SMALL 0;
+    }
+    &__list {
+      margin-left: $MEDIUM;
+      &-item {
+        @include font-type($MAIN_FONT, $MEDIUM, bold);
+
+        margin-bottom: $SMALL;
       }
     }
   }
@@ -22,23 +38,24 @@
 //Medium screens - TABLET
 @media only screen and (min-width: $mediumScreen) {
   .activities-container {
-    padding: $MEDIUM 15% $XLARGE;
-    &__header-image {
-      width: 100%;
-      height: 25vh;
+    &__header,
+    &__activities {
+      padding: 0 15%;
     }
-    &__content {
-      &-images {
-        display: grid;
-        grid-column-gap: $SMALL;
-        grid-template-columns: repeat(3, 1fr);
-        align-items: center;
-        margin-top: $LARGE;
-      }
-      &-image {
-        width: 100%;
-        max-height: 350px;
-      }
+    &__images {
+      display: grid;
+      grid-column-gap: $SMALL;
+      grid-template-columns: repeat(3, 1fr);
+      align-items: center;
+      margin-top: $LARGE;
+      padding: 0 $XXLARGE;
+    }
+    &__image {
+      width: 100%;
+      max-height: 350px;
+    }
+    hr {
+      margin: $MEDIUM 5%;
     }
   }
 }
@@ -46,10 +63,8 @@
 //Large screens - DESKTOP
 @media only screen and (min-width: $largeScreen) {
   .activities-container {
-    &__section {
-      &-image {
-        max-width: 450px;
-      }
+    &__header {
+      // padding: $MEDIUM 25% $XXLARGE;
     }
   }
 }
