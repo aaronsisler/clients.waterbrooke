@@ -10,7 +10,7 @@
       min-height: 50vh;
       max-height: 450px;
       margin-top: $SMALL;
-      background-image: url($IMAGES_CDN+"/our-mission-container--mobile.jpg");
+      background-image: url($IMAGES_CDN+"/our-mission/our-mission-container--mobile.jpg");
       background-repeat: no-repeat;
       background-position: center;
       background-size: contain;
@@ -39,7 +39,7 @@
   .our-mission-container {
     &__splash-image {
       margin-top: $LARGE;
-      background-image: url($IMAGES_CDN+"/our-mission-container--desktop.jpg");
+      background-image: url($IMAGES_CDN+"/our-mission/our-mission-container--desktop.jpg");
       background-position: top;
     }
     &__content {
