@@ -1,10 +1,22 @@
 import React from "react";
+import Image from "../../atoms/image";
+import { getCdnUrl } from "../../config";
 
 import "./memory-care-container.scss";
 
+const CDN_URL = getCdnUrl("/memory-care");
+
+const splashImage = {
+  altText: "Hand holding projector slide containing an older couple",
+  desktopImgSrc: `${CDN_URL}/memory-care-container--desktop.jpg`,
+  mobileImgSrc: `${CDN_URL}/memory-care-container--mobile.png`
+};
+
 const MemoryCareContainer = () => (
   <div className="memory-care-container">
-    <div className="memory-care-container__splash-image" />
+    <div className="memory-care-container__splash">
+      <Image className="memory-care-container__splash-image" {...splashImage} />
+    </div>
     <div className="memory-care-container__content">
       <h1 className="memory-care-container__title">What is memory care?</h1>
       <p>

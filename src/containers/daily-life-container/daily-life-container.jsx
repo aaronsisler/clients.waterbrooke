@@ -1,11 +1,23 @@
 import React from "react";
 import Hyperlink from "../../atoms/hyperlink";
+import Image from "../../atoms/image";
+import { getCdnUrl } from "../../config";
 
 import "./daily-life-container.scss";
 
+const CDN_URL = getCdnUrl("/daily-life");
+
+const splashImage = {
+  altText: "Two smiling senior ladies giving each other a high five",
+  desktopImgSrc: `${CDN_URL}/daily-life-container--desktop.jpg`,
+  mobileImgSrc: `${CDN_URL}/daily-life-container--mobile.png`
+};
+
 const DailyLifeContainer = () => (
   <div className="daily-life-container">
-    <div className="daily-life-container__splash-image" />
+    <div className="daily-life-container__splash">
+      <Image className="daily-life-container__splash-image" {...splashImage} />
+    </div>
     <div className="daily-life-container__content">
       <h1 className="daily-life-container__title">A day in the life</h1>
       <p>

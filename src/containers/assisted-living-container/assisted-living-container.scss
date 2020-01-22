@@ -4,13 +4,10 @@
 //Small screens - MOBILE
 @media only screen {
   .assisted-living-container {
-    &__splash-image {
-      width: 100%;
-      min-height: 50vh;
-      max-height: 450px;
-      background-image: url($IMAGES_CDN+"/amenities__salon--mobile.jpg");
-      background-position: center;
-      background-size: cover;
+    &__splash {
+      &-image {
+        height: 100%;
+      }
     }
     &__content {
       padding: 0 $MEDIUM $LARGE;
@@ -56,8 +53,10 @@
 //Large screens - DESKTOP
 @media only screen and (min-width: $largeScreen) {
   .assisted-living-container {
-    &__splash-image {
-      background-image: url($IMAGES_CDN+"/amenities__salon--desktop.jpg");
+    &__splash {
+      &-image {
+        height: 45vh;
+      }
     }
     &__content {
       padding: 0 25% $XLARGE;
