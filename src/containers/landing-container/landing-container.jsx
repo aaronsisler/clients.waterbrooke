@@ -1,14 +1,16 @@
 import React from "react";
 import Image from "../../atoms/image";
 import Hyperlink from "../../atoms/hyperlink";
-import { CDN_URL } from "../../config";
+import { getCdnUrl } from "../../config";
 
 import "./landing-container.scss";
 
+const CDN_URL = getCdnUrl("/landing");
+
 const splashImage = {
   altText: "Flowers on the front outdoor porch",
-  desktopImgSrc: `${CDN_URL}/landing-container__splash--mobile.png`,
-  mobileImgSrc: `${CDN_URL}/landing-container__splash--mobile.png`
+  desktopImgSrc: `${CDN_URL}/landing-container--mobile.png`,
+  mobileImgSrc: `${CDN_URL}/landing-container--desktop.jpg`
 };
 
 const LandingContainer = () => (

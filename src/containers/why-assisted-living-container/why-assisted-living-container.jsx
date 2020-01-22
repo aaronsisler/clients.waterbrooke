@@ -1,11 +1,26 @@
 import React from "react";
+import Image from "../../atoms/image";
 import Hyperlink from "../../atoms/hyperlink";
+import { getCdnUrl } from "../../config";
 
 import "./why-assisted-living-container.scss";
 
+const CDN_URL = getCdnUrl("/why-assisted-living");
+
+const splashImage = {
+  altText: "Man holding hands together in thought",
+  desktopImgSrc: `${CDN_URL}/why-assisted-living-container--desktop.jpg`,
+  mobileImgSrc: `${CDN_URL}/why-assisted-living-container--mobile.png`
+};
+
 const WhyAssistedLivingContainer = () => (
   <div className="why-assisted-living-container">
-    <div className="why-assisted-living-container__splash-image" />
+    <div className="why-assisted-living-container__splash">
+      <Image
+        className="why-assisted-living-container__splash-image"
+        {...splashImage}
+      />
+    </div>
     <div className="why-assisted-living-container__content">
       <h1 className="why-assisted-living-container__title">
         Where do I start?
