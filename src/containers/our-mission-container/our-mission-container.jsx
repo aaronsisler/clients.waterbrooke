@@ -1,14 +1,24 @@
 import React from "react";
 import Hyperlink from "../../atoms/hyperlink";
+import Image from "../../atoms/image";
+import { getCdnUrl } from "../../config";
 
 import "./our-mission-container.scss";
 
+const CDN_URL = getCdnUrl("/our-mission");
+
+const headerImage = {
+  altText: "Staff member hugging a resident",
+  desktopImgSrc: `${CDN_URL}/our-mission-container--desktop.jpg`,
+  mobileImgSrc: `${CDN_URL}/our-mission-container--desktop.jpg`
+};
+
 const OurMissionContainer = () => (
   <div className="our-mission-container">
-    <div className="our-mission-container__splash-image" />
+    <Image className="our-mission-container__header-image" {...headerImage} />
     <div className="our-mission-container__content">
       <h1 className="our-mission-container__title">
-        Waterbrooke's mission is caring for you.
+        Our mission is caring for you.
       </h1>
       <p>
         Our mission is to create an atmosphere of comfort and security while

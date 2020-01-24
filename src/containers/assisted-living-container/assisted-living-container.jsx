@@ -1,11 +1,26 @@
 import React from "react";
 import assistedLivingServices from "../../content/assisted-living-services";
+import Image from "../../atoms/image";
+import { getCdnUrl } from "../../config";
 
 import "./assisted-living-container.scss";
 
+const CDN_URL = getCdnUrl("/assisted-living");
+
+const splashImage = {
+  altText: "Nurse holding an senior lady's hand",
+  desktopImgSrc: `${CDN_URL}/assisted-living-container--desktop.jpg`,
+  mobileImgSrc: `${CDN_URL}/assisted-living-container--mobile.png`
+};
+
 const AssistedLivingContainer = () => (
   <div className="assisted-living-container">
-    <div className="assisted-living-container__splash-image" />
+    <div className="assisted-living-container__splash">
+      <Image
+        className="assisted-living-container__splash-image"
+        {...splashImage}
+      />
+    </div>
     <div className="assisted-living-container__content">
       <h1 className="assisted-living-container__title">
         Our services make the difference

@@ -1,10 +1,12 @@
-import { CDN_URL } from "../config";
+import { getCdnUrl } from "../config";
+
+const CDN_URL = getCdnUrl("/amenities");
 
 const amenities = [
   {
     altText: "Outdoor porch on sunny day",
-    desktopImgSrc: `${CDN_URL}/amenities/amenities-container__porch--desktop.jpg`,
-    mobileImgSrc: `${CDN_URL}/amenities/amenities-container__porch--mobile.png`,
+    desktopImgSrc: `${CDN_URL}/amenities-container__porch--desktop.jpg`,
+    mobileImgSrc: `${CDN_URL}/amenities-container__porch--mobile.png`,
     amenityGroupContent: [
       {
         title: "Outdoor porches",
@@ -20,8 +22,8 @@ const amenities = [
   },
   {
     altText: "Library with two sitting chairs",
-    desktopImgSrc: `${CDN_URL}/amenities/amenities-container__library--desktop.jpg`,
-    mobileImgSrc: `${CDN_URL}/amenities/amenities-container__library--mobile.png`,
+    desktopImgSrc: `${CDN_URL}/amenities-container__library--desktop.jpg`,
+    mobileImgSrc: `${CDN_URL}/amenities-container__library--mobile.png`,
     amenityGroupContent: [
       {
         title: "Library",
@@ -37,8 +39,8 @@ const amenities = [
   },
   {
     altText: "Small concierge bus",
-    desktopImgSrc: `${CDN_URL}/amenities/amenities-container__bus--desktop.jpg`,
-    mobileImgSrc: `${CDN_URL}/amenities/amenities-container__bus--mobile.png`,
+    desktopImgSrc: `${CDN_URL}/amenities-container__bus--desktop.jpg`,
+    mobileImgSrc: `${CDN_URL}/amenities-container__bus--mobile.png`,
     amenityGroupContent: [
       {
         title: "Transportation",
@@ -54,8 +56,8 @@ const amenities = [
   },
   {
     altText: "Convenience store with items",
-    desktopImgSrc: `${CDN_URL}/amenities/amenities-container__store--desktop.jpg`,
-    mobileImgSrc: `${CDN_URL}/amenities/amenities-container__store--mobile.png`,
+    desktopImgSrc: `${CDN_URL}/amenities-container__store--desktop.jpg`,
+    mobileImgSrc: `${CDN_URL}/amenities-container__store--mobile.png`,
     amenityGroupContent: [
       {
         title: "Convenience Store",
