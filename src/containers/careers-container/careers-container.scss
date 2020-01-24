@@ -56,6 +56,11 @@
 @media only screen and (min-width: $largeScreen) {
   .careers-container {
     padding: $MEDIUM 30% $XLARGE;
+    &__header {
+      &-image {
+        max-width: 450px;
+      }
+    }
   }
 }
 

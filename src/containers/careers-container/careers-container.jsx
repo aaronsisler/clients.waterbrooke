@@ -10,7 +10,6 @@ const CDN_URL = getCdnUrl("/careers");
 
 const headerImage = {
   altText: "Staff member smiling with phone",
-  className: "careers-container__header-image",
   desktopImgSrc: `${CDN_URL}/careers-container__header--desktop.jpg`,
   mobileImgSrc: `${CDN_URL}/careers-container__header--desktop.jpg`
 };
@@ -18,7 +17,7 @@ const headerImage = {
 const CareersContainer = () => (
   <div className="careers-container">
     <div className="careers-container__header">
-      <Image {...headerImage} />
+      <Image className="careers-container__header-image" {...headerImage} />
       <div className="careers-container__header-content">
         <h1>Join our team</h1>
         <p>

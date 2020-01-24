@@ -22,8 +22,8 @@ const AmenitiesContainer = () => (
         ) => (
           <section className="amenities-container__section" key={groupIndex}>
             <Image
-              className="amenities-container__section-image"
               altText={altText}
+              className="amenities-container__section-image"
               desktopImgSrc={desktopImgSrc}
               mobileImgSrc={mobileImgSrc}
             />

@@ -4,9 +4,13 @@
 //Small screens - MOBILE
 @media only screen {
   .image {
+    display: block;
     object-fit: scale-down;
     &--mobile {
       width: 100%;
+    }
+    &--desktop {
+      margin: 0 auto;
     }
   }
 }
