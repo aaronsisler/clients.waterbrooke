@@ -44,6 +44,12 @@
 //Medium screens - TABLET
 @media only screen and (min-width: $mediumScreen) {
   .assisted-living-container {
+    &__splash {
+      &-image {
+        display: grid;
+        height: 35vh;
+      }
+    }
     &__content {
       padding: 0 15% $XLARGE;
     }

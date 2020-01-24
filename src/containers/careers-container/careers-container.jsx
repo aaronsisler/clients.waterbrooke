@@ -1,10 +1,12 @@
 import React from "react";
 import Image from "../../atoms/image";
-import { CDN_URL } from "../../config";
+import { getCdnUrl } from "../../config";
 import ApplicationDownload from "../../components/application-download";
 import ApplicationSubmissionForm from "../../components/application-submission-form";
 
 import "./careers-container.scss";
+
+const CDN_URL = getCdnUrl("/careers");
 
 const headerImage = {
   altText: "Staff member smiling with phone",

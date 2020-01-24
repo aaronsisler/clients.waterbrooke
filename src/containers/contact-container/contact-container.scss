@@ -8,9 +8,10 @@
     flex: 1 1 auto;
     flex-direction: column;
     padding: $LARGE $SMALL;
-    background-image: url($IMAGES_CDN+"/contact_container--mobile.jpg");
-    background-position: center;
-    background-size: cover;
+    background-color: #d9e4f5;
+    background-image: linear-gradient(315deg, #d9e4f5 0%, #f5e3e6 74%);
+    // background-color: #9fa4c4;
+    // background-image: linear-gradient(315deg, #9fa4c4 0%, #9e768f 74%);
     &__form {
       display: grid;
       width: fit-content;
@@ -38,7 +39,6 @@
 @media only screen and (min-width: $largeScreen) {
   .contact-container {
     height: calc(100vh - #{$navMenuHeight});
-    background-image: url($IMAGES_CDN+"/contact_container--desktop.jpg");
   }
 }
 
