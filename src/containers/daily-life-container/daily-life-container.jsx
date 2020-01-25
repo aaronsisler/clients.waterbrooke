@@ -15,9 +15,7 @@ const splashImage = {
 
 const DailyLifeContainer = () => (
   <div className="daily-life-container">
-    <div className="daily-life-container__splash">
-      <Image className="daily-life-container__splash-image" {...splashImage} />
-    </div>
+    <Image className="daily-life-container__splash-image" {...splashImage} />
     <div className="daily-life-container__content">
       <h1 className="daily-life-container__title">A day in the life</h1>
       <p>

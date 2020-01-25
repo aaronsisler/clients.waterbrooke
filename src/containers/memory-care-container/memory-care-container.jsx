@@ -14,9 +14,7 @@ const splashImage = {
 
 const MemoryCareContainer = () => (
   <div className="memory-care-container">
-    <div className="memory-care-container__splash">
-      <Image className="memory-care-container__splash-image" {...splashImage} />
-    </div>
+    <Image className="memory-care-container__splash-image" {...splashImage} />
     <div className="memory-care-container__content">
       <h1 className="memory-care-container__title">What is memory care?</h1>
       <p>

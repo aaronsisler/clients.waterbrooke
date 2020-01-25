@@ -16,16 +16,14 @@ const headerImage = {
 
 const CareersContainer = () => (
   <div className="careers-container">
+    <Image className="careers-container__splash-image" {...headerImage} />
     <div className="careers-container__header">
-      <Image className="careers-container__header-image" {...headerImage} />
-      <div className="careers-container__header-content">
-        <h1>Join our team</h1>
-        <p>
-          Download an application below and fill it out. To submit, please
-          either bring it by the facility or scan and upload below.
-        </p>
-        <hr />
-      </div>
+      <h1>Join our team</h1>
+      <p>
+        Download an application below and fill it out. To submit, please either
+        bring it by the facility or scan and upload below.
+      </p>
+      <hr />
     </div>
     <div className="careers-container__content">
       <ApplicationDownload />

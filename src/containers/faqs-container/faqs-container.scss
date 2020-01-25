@@ -26,6 +26,11 @@
 //Medium screens - TABLET
 @media only screen and (min-width: $mediumScreen) {
   .faqs-container {
+    &__splash {
+      &-image {
+        @include headerImage();
+      }
+    }
     &__content {
       padding: 0 15% $XLARGE;
     }
@@ -35,11 +40,6 @@
 //Large screens - DESKTOP
 @media only screen and (min-width: $largeScreen) {
   .faqs-container {
-    &__splash {
-      &-image {
-        height: 45vh;
-      }
-    }
     &__content {
       padding: 0 25% $XLARGE;
     }

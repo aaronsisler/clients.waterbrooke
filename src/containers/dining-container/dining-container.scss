@@ -33,8 +33,7 @@
   .dining-container {
     &__splash {
       &-image {
-        display: grid;
-        height: 35vh;
+        @include headerImage();
       }
     }
     &__content {
@@ -46,11 +45,6 @@
 //Large screens - DESKTOP
 @media only screen and (min-width: $largeScreen) {
   .dining-container {
-    &__splash {
-      &-image {
-        height: 45vh;
-      }
-    }
     &__content {
       padding: 0 25% $XLARGE;
     }

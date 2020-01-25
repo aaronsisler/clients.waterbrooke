@@ -14,9 +14,7 @@ const splashImage = {
 
 const DiningContainer = () => (
   <div className="dining-container">
-    <div className="dining-container__splash">
-      <Image className="dining-container__splash-image" {...splashImage} />
-    </div>
+    <Image className="dining-container__splash-image" {...splashImage} />
     <div className="dining-container__content">
       <h1 className="dining-container__title">Home cooked meals every day</h1>
       <p>
