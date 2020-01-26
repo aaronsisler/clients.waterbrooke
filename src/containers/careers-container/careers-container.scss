@@ -11,7 +11,7 @@
       h1 {
         @include font-type($MAIN_FONT, $LARGE, bold);
 
-        margin-bottom: $SMALL;
+        margin: $SMALL 0;
       }
       p {
         margin-bottom: $SMALL;
