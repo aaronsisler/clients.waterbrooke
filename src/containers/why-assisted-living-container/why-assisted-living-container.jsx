@@ -10,48 +10,48 @@ const CDN_URL = getCdnUrl("/why-assisted-living");
 const splashImage = {
   altText: "Man holding hands together in thought",
   desktopImgSrc: `${CDN_URL}/why-assisted-living-container--desktop.jpg`,
-  mobileImgSrc: `${CDN_URL}/why-assisted-living-container--mobile.png`
+  mobileImgSrc: `${CDN_URL}/why-assisted-living-container--mobile.jpg`
 };
 
 const WhyAssistedLivingContainer = () => (
   <div className="why-assisted-living-container">
-    <div className="why-assisted-living-container__splash">
-      <Image
-        className="why-assisted-living-container__splash-image"
-        {...splashImage}
-      />
-    </div>
+    <Image
+      className="why-assisted-living-container__splash-image"
+      {...splashImage}
+    />
     <div className="why-assisted-living-container__content">
       <h1 className="why-assisted-living-container__title">
-        Where do I start?
+        What is assisted living?
       </h1>
       <p>
-        Many adult children experience a moment when they realize for the first
-        time that their parent seems to be getting old. This realization can
-        open the door to a plethora of emotions including fear, sadness,
-        nostalgia, concern, anxiety and even anger. The good news is that
-        families enter this journey together
-      </p>
-      <p>
-        Making the decision to move to a senior living community is a big one
-        and we’re here to help. Our team understands the unique needs of each
-        person and the desire to remain as safely independent as possible.
+        Simply put, assisted living communities give older adults personalized
+        care in a residential setting. They’re for seniors whose health or
+        well-being requires a higher level of support, which is determined
+        through a health assessment by the community according to state
+        regulations. Assisted living also provides a healthy lifestyle and
+        social engagement.
       </p>
       <h2 className="why-assisted-living-container__sec-title">
-        Taking the first steps
+        What can assisted living provide?
       </h2>
       <p>
-        Perhaps you aren’t even ready to start the journey right now. That’s
-        okay. The more you gather information and learn about the opportunities
-        available to you and your loved one, the better decision you’ll be able
-        to make in the future.
+        The most common assisted living services offered include medication
+        management and assistance with using the bathroom, dressing, and
+        grooming. Housekeeping, meals, laundry and transportation services are
+        typically included. Staff is available 24/7 to help with safety, care
+        and support. Residents are encouraged to bring furniture and personal
+        items to make their new home feel, well, like home.
       </p>
       <p>
-        We understand that this decision is important, and it’s not always easy
-        to make the choice. The journey towards senior living doesn’t happen
-        overnight. It’s a process that we will gladly go through with you,
-        answering any questions that you may have.&nbsp;
-        <Hyperlink href="/faqs" title="Learn More" />
+        Residents are assessed when they move in, so they can get an
+        individualized service plan to meet specific needs and make their care
+        truly personal. Some assisted living communities, such as Waterbrooke,
+        are also licensed to provide memory care. These will often have separate
+        dining rooms and menus based on residents’ nutritional needs. &nbsp;
+        <Hyperlink
+          href="/assisted-living"
+          title="Learn more about what we offer."
+        />
       </p>
     </div>
   </div>

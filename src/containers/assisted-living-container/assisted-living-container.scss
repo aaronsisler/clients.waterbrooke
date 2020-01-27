@@ -23,7 +23,7 @@
       margin-top: $MEDIUM;
     }
     p {
-      margin: $SMALL 0 $LARGE 0;
+      margin: $SMALL 0 $MEDIUM 0;
     }
     &__list-title {
       @include font-type($MAIN_FONT, $MIDLARGE, bold);
@@ -33,7 +33,7 @@
     &__list {
       margin-left: $MEDIUM;
       &-item {
-        @include font-type($MAIN_FONT, $MEDIUM, bold);
+        @include font-type($MAIN_FONT, $MEDIUM);
 
         margin-bottom: $SMALL;
       }
@@ -46,8 +46,7 @@
   .assisted-living-container {
     &__splash {
       &-image {
-        display: grid;
-        height: 35vh;
+        @include headerImage();
       }
     }
     &__content {
@@ -59,11 +58,6 @@
 //Large screens - DESKTOP
 @media only screen and (min-width: $largeScreen) {
   .assisted-living-container {
-    &__splash {
-      &-image {
-        height: 45vh;
-      }
-    }
     &__content {
       padding: 0 25% $XLARGE;
     }

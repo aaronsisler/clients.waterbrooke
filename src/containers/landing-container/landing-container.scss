@@ -5,9 +5,8 @@
 @media only screen {
   .landing-container {
     &__splash {
-      height: 50vh;
       &-image {
-        height: 100%;
+        height: 50vh;
         object-fit: cover;
       }
     }
@@ -32,9 +31,8 @@
 @media only screen and (min-width: $mediumScreen) {
   .landing-container {
     &__splash {
-      height: 45vh;
       &-image {
-        height: 100%;
+        height: 45vh;
       }
     }
     &__content {

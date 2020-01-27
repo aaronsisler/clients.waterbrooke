@@ -15,12 +15,10 @@ const splashImage = {
 
 const AssistedLivingContainer = () => (
   <div className="assisted-living-container">
-    <div className="assisted-living-container__splash">
-      <Image
-        className="assisted-living-container__splash-image"
-        {...splashImage}
-      />
-    </div>
+    <Image
+      className="assisted-living-container__splash-image"
+      {...splashImage}
+    />
     <div className="assisted-living-container__content">
       <h1 className="assisted-living-container__title">
         Our services make the difference

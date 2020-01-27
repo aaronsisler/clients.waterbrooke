@@ -23,7 +23,7 @@
       margin-top: $MEDIUM;
     }
     p {
-      margin: $SMALL 0 $LARGE 0;
+      margin: $SMALL 0 $MEDIUM 0;
     }
   }
 }
@@ -31,6 +31,11 @@
 //Medium screens - TABLET
 @media only screen and (min-width: $mediumScreen) {
   .memory-care-container {
+    &__splash {
+      &-image {
+        @include headerImage();
+      }
+    }
     &__content {
       padding: 0 15% $XLARGE;
     }
@@ -40,11 +45,6 @@
 //Large screens - DESKTOP
 @media only screen and (min-width: $largeScreen) {
   .memory-care-container {
-    &__splash {
-      &-image {
-        height: 45vh;
-      }
-    }
     &__content {
       padding: 0 25% $XLARGE;
     }

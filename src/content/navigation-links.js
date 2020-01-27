@@ -3,7 +3,9 @@ const navigationLinks = [
     key: "begin",
     title: "Where to begin",
     links: [
+      { title: "First Step", href: "/first-step" },
       { title: "Why Assisted Living", href: "/why-assisted-living" },
+      { title: "Our Mission", href: "/our-mission" },
       { title: "FAQs", href: "/faqs" }
     ]
   },
@@ -30,7 +32,6 @@ const navigationLinks = [
     title: "About Us",
     links: [
       { title: "Contact Us", href: "/contact" },
-      { title: "Our Mission", href: "/our-mission" },
       { title: "Leadership", href: "/leadership" },
       { title: "Careers", href: "/careers" }
     ]
