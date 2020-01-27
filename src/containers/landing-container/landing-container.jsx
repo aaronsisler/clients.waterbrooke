@@ -15,9 +15,7 @@ const splashImage = {
 
 const LandingContainer = () => (
   <div className="landing-container">
-    <div className="landing-container__splash">
-      <Image className="landing-container__splash-image" {...splashImage} />
-    </div>
+    <Image className="landing-container__splash-image" {...splashImage} />
     <div className="landing-container__content">
       <h1 className="landing-container__content-title">
         Life is better at Waterbrooke
