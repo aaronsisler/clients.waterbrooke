@@ -35,7 +35,6 @@
         @include font-type($MAIN_FONT, $MEDIUM, lighter);
 
         padding: $SMALL;
-        border-bottom: solid 1px $GRAY_400;
         &:hover {
           background-color: $GRAY_100;
         }
