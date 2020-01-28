@@ -9,8 +9,7 @@ const CDN_URL = getCdnUrl("/first-step");
 
 const splashImage = {
   altText: "Man holding hands together in thought",
-  desktopImgSrc: `${CDN_URL}/first-step-container--desktop.jpg`,
-  mobileImgSrc: `${CDN_URL}/first-step-container--mobile.png`
+  src: `${CDN_URL}/first-step-container--desktop.jpg`
 };
 
 const FirstStepContainer = () => (

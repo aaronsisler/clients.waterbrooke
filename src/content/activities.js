@@ -5,18 +5,15 @@ const CDN_URL = getCdnUrl("/activities");
 const eventImages = [
   {
     altText: "Disco party for residents",
-    desktopImgSrc: `${CDN_URL}/activities-container__disco--desktop.jpg`,
-    mobileImgSrc: `${CDN_URL}/activities-container__disco--desktop.jpg`
+    src: `${CDN_URL}/activities-container__disco.jpg`
   },
   {
     altText: "Tea party for residents on Mother's Day",
-    desktopImgSrc: `${CDN_URL}/activities-container__tea--desktop.jpg`,
-    mobileImgSrc: `${CDN_URL}/activities-container__tea--desktop.jpg`
+    src: `${CDN_URL}/activities-container__tea.jpg`
   },
   {
     altText: "Santa visiting the residents during Christmas party",
-    desktopImgSrc: `${CDN_URL}/activities-container__santa--desktop.jpg`,
-    mobileImgSrc: `${CDN_URL}/activities-container__santa--desktop.jpg`
+    src: `${CDN_URL}/activities-container__santa.jpg`
   }
 ];
 

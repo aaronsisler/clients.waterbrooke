@@ -43,10 +43,10 @@
   border-radius: 5px;
 }
 
-@mixin headerImage($MAX_WIDTH: 1000px, $HEIGHT: 45vh) {
-  max-width: $MAX_WIDTH;
-  max-height: $HEIGHT;
-  margin: 0 auto;
+@mixin headerImage($MAX_HEIGHT: 45vh) {
+  // max-width: $MAX_WIDTH;
+  max-height: $MAX_HEIGHT;
+  // margin: 0 auto;
 }
 
 @mixin imageMaxWidth($MAX_WIDTH: 1000px) {

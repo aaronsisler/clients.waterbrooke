@@ -5,10 +5,8 @@
 @media only screen {
   .image {
     display: block;
+    width: 100%;
     object-fit: scale-down;
-    &--mobile {
-      width: 100%;
-    }
   }
 }
 

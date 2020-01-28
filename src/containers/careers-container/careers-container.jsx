@@ -10,8 +10,7 @@ const CDN_URL = getCdnUrl("/careers");
 
 const headerImage = {
   altText: "Staff member smiling with phone",
-  desktopImgSrc: `${CDN_URL}/careers-container__header--desktop.jpg`,
-  mobileImgSrc: `${CDN_URL}/careers-container__header--desktop.jpg`
+  src: `${CDN_URL}/careers-container__header--desktop.jpg`
 };
 
 const CareersContainer = () => (
