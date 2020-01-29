@@ -1,5 +1,8 @@
 import React from "react";
-import assistedLivingServices from "../../content/assisted-living-services";
+import {
+  coveredServices,
+  notCoveredServices
+} from "../../content/assisted-living-services";
 import Image from "../../atoms/image";
 import { getCdnUrl } from "../../utils";
 
@@ -42,11 +45,20 @@ const AssistedLivingContainer = () => (
         the life you lead.
       </p>
       <hr />
+      <h2 className="assisted-living-container__list-title">What we provide</h2>
+      <ul className="assisted-living-container__list">
+        {coveredServices.map((service, index) => (
+          <li key={index} className="assisted-living-container__list-item">
+            {service}
+          </li>
+        ))}
+      </ul>
+      <hr />
       <h2 className="assisted-living-container__list-title">
-        Assisted Living services
+        What we don't cover
       </h2>
       <ul className="assisted-living-container__list">
-        {assistedLivingServices.map((service, index) => (
+        {notCoveredServices.map((service, index) => (
           <li key={index} className="assisted-living-container__list-item">
             {service}
           </li>

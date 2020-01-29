@@ -37,7 +37,7 @@
   .daily-life-container {
     &__splash {
       &-image {
-        @include headerImage();
+        @include headerImage(0 15%);
       }
     }
     &__content {

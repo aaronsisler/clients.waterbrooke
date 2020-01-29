@@ -46,7 +46,7 @@ const WhyAssistedLivingContainer = () => (
         individualized service plan to meet specific needs and make their care
         truly personal. Some assisted living communities, such as Waterbrooke,
         are also licensed to provide memory care. These will often have separate
-        dining rooms and menus based on residents’ nutritional needs. &nbsp;
+        dining rooms and menus based on residents’ nutritional needs.&nbsp;
         <Hyperlink
           href="/assisted-living"
           title="Learn more about what we offer."
