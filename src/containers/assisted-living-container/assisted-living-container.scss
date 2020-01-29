@@ -11,6 +11,12 @@
     }
     &__content {
       padding: 0 $MEDIUM $LARGE;
+      p {
+        margin: $SMALL 0 0;
+      }
+      hr {
+        margin: $MEDIUM 0 $SMALL 0;
+      }
     }
     &__title {
       @include font-type($MAIN_FONT, $LARGE, bold);
@@ -22,13 +28,10 @@
 
       margin-top: $MEDIUM;
     }
-    p {
-      margin: $SMALL 0 $MEDIUM 0;
-    }
     &__list-title {
       @include font-type($MAIN_FONT, $MIDLARGE, bold);
 
-      margin: $SMALL 0;
+      margin-bottom: $SMALL;
     }
     &__list {
       margin-left: $MEDIUM;

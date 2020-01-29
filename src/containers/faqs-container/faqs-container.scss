@@ -28,7 +28,7 @@
       dt {
         @include font-type($MAIN_FONT, $MEDIUM, bold);
 
-        margin: $XSMALL 0;
+        margin: $SMALL 0 $XSMALL;
       }
     }
   }
