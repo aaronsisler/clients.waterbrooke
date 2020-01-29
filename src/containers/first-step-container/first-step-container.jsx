@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "../../atoms/image";
 import Hyperlink from "../../atoms/hyperlink";
-import { getCdnUrl } from "../../config";
+import { getCdnUrl } from "../../utils";
 
 import "./first-step-container.scss";
 
@@ -9,8 +9,7 @@ const CDN_URL = getCdnUrl("/first-step");
 
 const splashImage = {
   altText: "Man holding hands together in thought",
-  desktopImgSrc: `${CDN_URL}/first-step-container--desktop.jpg`,
-  mobileImgSrc: `${CDN_URL}/first-step-container--mobile.png`
+  src: `${CDN_URL}/first-step-container.jpg`
 };
 
 const FirstStepContainer = () => (

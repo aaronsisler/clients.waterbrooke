@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "../../atoms/image";
-import { getCdnUrl } from "../../config";
+import { getCdnUrl } from "../../utils";
 
 import "./memory-care-container.scss";
 
@@ -8,8 +8,7 @@ const CDN_URL = getCdnUrl("/memory-care");
 
 const splashImage = {
   altText: "Hand holding projector slide containing an older couple",
-  desktopImgSrc: `${CDN_URL}/memory-care-container--desktop.jpg`,
-  mobileImgSrc: `${CDN_URL}/memory-care-container--mobile.png`
+  src: `${CDN_URL}/memory-care-container.jpg`
 };
 
 const MemoryCareContainer = () => (

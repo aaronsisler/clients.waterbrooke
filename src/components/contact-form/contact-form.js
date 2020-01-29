@@ -1,5 +1,5 @@
 import React from "react";
-import { isEmailValid, sendEmail } from "../../utils/email";
+import { isEmailValid, sendEmail } from "../../utils";
 import FormError from "../../atoms/form-error";
 import Input from "../../atoms/input";
 

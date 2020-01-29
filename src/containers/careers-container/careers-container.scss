@@ -48,7 +48,9 @@
   .careers-container {
     &__splash {
       &-image {
-        @include headerImage(450px);
+        @include headerImage();
+
+        padding: 0 20%;
       }
     }
     &__header,
@@ -62,6 +64,11 @@
 //Large screens - DESKTOP
 @media only screen and (min-width: $largeScreen) {
   .careers-container {
+    &__splash {
+      &-image {
+        padding: 0;
+      }
+    }
     &__header,
     &__content {
       padding-right: 30%;

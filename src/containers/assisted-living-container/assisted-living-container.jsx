@@ -1,7 +1,7 @@
 import React from "react";
 import assistedLivingServices from "../../content/assisted-living-services";
 import Image from "../../atoms/image";
-import { getCdnUrl } from "../../config";
+import { getCdnUrl } from "../../utils";
 
 import "./assisted-living-container.scss";
 
@@ -9,8 +9,7 @@ const CDN_URL = getCdnUrl("/assisted-living");
 
 const splashImage = {
   altText: "Nurse holding an senior lady's hand",
-  desktopImgSrc: `${CDN_URL}/assisted-living-container--desktop.jpg`,
-  mobileImgSrc: `${CDN_URL}/assisted-living-container--mobile.png`
+  src: `${CDN_URL}/assisted-living-container.jpg`
 };
 
 const AssistedLivingContainer = () => (

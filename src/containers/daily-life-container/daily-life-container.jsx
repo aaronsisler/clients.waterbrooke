@@ -1,7 +1,7 @@
 import React from "react";
 import Hyperlink from "../../atoms/hyperlink";
 import Image from "../../atoms/image";
-import { getCdnUrl } from "../../config";
+import { getCdnUrl } from "../../utils";
 
 import "./daily-life-container.scss";
 
@@ -9,8 +9,7 @@ const CDN_URL = getCdnUrl("/daily-life");
 
 const splashImage = {
   altText: "Two smiling senior ladies giving each other a high five",
-  desktopImgSrc: `${CDN_URL}/daily-life-container--desktop.jpg`,
-  mobileImgSrc: `${CDN_URL}/daily-life-container--mobile.png`
+  src: `${CDN_URL}/daily-life-container.jpg`
 };
 
 const DailyLifeContainer = () => (

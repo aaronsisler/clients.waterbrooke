@@ -1,7 +1,7 @@
 import React from "react";
 import Hyperlink from "../../atoms/hyperlink";
 import Image from "../../atoms/image";
-import { getCdnUrl } from "../../config";
+import { getCdnUrl } from "../../utils";
 
 import "./our-mission-container.scss";
 
@@ -9,8 +9,7 @@ const CDN_URL = getCdnUrl("/our-mission");
 
 const headerImage = {
   altText: "Staff member hugging a resident",
-  desktopImgSrc: `${CDN_URL}/our-mission-container--desktop.jpg`,
-  mobileImgSrc: `${CDN_URL}/our-mission-container--desktop.jpg`
+  src: `${CDN_URL}/our-mission-container.jpg`
 };
 
 const OurMissionContainer = () => (

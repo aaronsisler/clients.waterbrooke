@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "../../atoms/image";
-import { getCdnUrl } from "../../config";
+import { getCdnUrl } from "../../utils";
 
 import "./dining-container.scss";
 
@@ -8,8 +8,7 @@ const CDN_URL = getCdnUrl("/dining");
 
 const splashImage = {
   altText: "Dining hall with tables and chairs",
-  desktopImgSrc: `${CDN_URL}/dining-container--desktop.jpg`,
-  mobileImgSrc: `${CDN_URL}/dining-container--mobile.png`
+  src: `${CDN_URL}/dining-container.jpg`
 };
 
 const DiningContainer = () => (
