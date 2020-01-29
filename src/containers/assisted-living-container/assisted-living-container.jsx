@@ -9,7 +9,7 @@ const CDN_URL = getCdnUrl("/assisted-living");
 
 const splashImage = {
   altText: "Nurse holding an senior lady's hand",
-  src: `${CDN_URL}/assisted-living-container--desktop.jpg`
+  src: `${CDN_URL}/assisted-living-container.jpg`
 };
 
 const AssistedLivingContainer = () => (

@@ -9,7 +9,7 @@ const CDN_URL = getCdnUrl("/why-assisted-living");
 
 const splashImage = {
   altText: "Man holding hands together in thought",
-  src: `${CDN_URL}/why-assisted-living-container--desktop.jpg`
+  src: `${CDN_URL}/why-assisted-living-container.jpg`
 };
 
 const WhyAssistedLivingContainer = () => (

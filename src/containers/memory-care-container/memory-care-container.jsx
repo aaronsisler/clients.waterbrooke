@@ -8,7 +8,7 @@ const CDN_URL = getCdnUrl("/memory-care");
 
 const splashImage = {
   altText: "Hand holding projector slide containing an older couple",
-  src: `${CDN_URL}/memory-care-container--desktop.jpg`
+  src: `${CDN_URL}/memory-care-container.jpg`
 };
 
 const MemoryCareContainer = () => (

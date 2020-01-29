@@ -5,7 +5,7 @@ const CDN_URL = getCdnUrl("/amenities");
 const amenities = [
   {
     altText: "Outdoor porch on sunny day",
-    src: `${CDN_URL}/amenities-container__porch--desktop.jpg`,
+    src: `${CDN_URL}/amenities-container__porch.jpg`,
     amenityGroupContent: [
       {
         title: "Outdoor porches",
@@ -21,7 +21,7 @@ const amenities = [
   },
   {
     altText: "Library with two sitting chairs",
-    src: `${CDN_URL}/amenities-container__library--desktop.jpg`,
+    src: `${CDN_URL}/amenities-container__library.jpg`,
     amenityGroupContent: [
       {
         title: "Library",
@@ -37,7 +37,7 @@ const amenities = [
   },
   {
     altText: "Small concierge bus",
-    src: `${CDN_URL}/amenities-container__bus--desktop.jpg`,
+    src: `${CDN_URL}/amenities-container__bus.jpg`,
     amenityGroupContent: [
       {
         title: "Transportation",
@@ -53,7 +53,7 @@ const amenities = [
   },
   {
     altText: "Convenience store with items",
-    src: `${CDN_URL}/amenities-container__store--desktop.jpg`,
+    src: `${CDN_URL}/amenities-container__store.jpg`,
     amenityGroupContent: [
       {
         title: "Convenience Store",

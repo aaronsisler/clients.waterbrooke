@@ -9,7 +9,7 @@ const CDN_URL = getCdnUrl("/daily-life");
 
 const splashImage = {
   altText: "Two smiling senior ladies giving each other a high five",
-  src: `${CDN_URL}/daily-life-container--desktop.jpg`
+  src: `${CDN_URL}/daily-life-container.jpg`
 };
 
 const DailyLifeContainer = () => (

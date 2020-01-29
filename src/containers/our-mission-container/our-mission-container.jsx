@@ -9,7 +9,7 @@ const CDN_URL = getCdnUrl("/our-mission");
 
 const headerImage = {
   altText: "Staff member hugging a resident",
-  src: `${CDN_URL}/our-mission-container--desktop.jpg`
+  src: `${CDN_URL}/our-mission-container.jpg`
 };
 
 const OurMissionContainer = () => (

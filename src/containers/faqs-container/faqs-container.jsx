@@ -8,7 +8,7 @@ const CDN_URL = getCdnUrl("/faqs");
 
 const splashImage = {
   altText: "Sunset behind field with directional sign",
-  src: `${CDN_URL}/faqs-container--desktop.jpg`
+  src: `${CDN_URL}/faqs-container.jpg`
 };
 
 const FaqsContainer = () => (

@@ -8,7 +8,7 @@ const CDN_URL = getCdnUrl("/dining");
 
 const splashImage = {
   altText: "Dining hall with tables and chairs",
-  src: `${CDN_URL}/dining-container--desktop.jpg`
+  src: `${CDN_URL}/dining-container.jpg`
 };
 
 const DiningContainer = () => (
