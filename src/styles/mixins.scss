@@ -43,7 +43,11 @@
   border-radius: 5px;
 }
 
-@mixin headerImage($MAX_HEIGHT: 45vh) {
+@mixin headerImage($PADDING: 0, $MAX_HEIGHT: 45vh) {
+  @if $PADDING != 0 {
+    padding: $PADDING;
+  }
+
   max-height: $MAX_HEIGHT;
 }
 
