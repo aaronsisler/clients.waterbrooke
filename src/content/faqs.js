@@ -6,8 +6,7 @@ const faqs = [
       "Assisted living offers a wide range of services and levels of care. It is best to discuss assisted living with your physician to be certain if assisted living is right for you or your loved one."
   },
   {
-    question:
-      "How are assisted living rates paid? How do I get information on state assistance?",
+    question: "How are assisted living rates paid?",
     answer:
       "Assisted living is paid for either privately by the individual or family or by state/federal assistance. You may contact the local Department of Social Services to get more information on how to qualify for state/federal assistance."
   },
