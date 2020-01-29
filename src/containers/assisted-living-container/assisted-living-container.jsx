@@ -1,7 +1,7 @@
 import React from "react";
 import assistedLivingServices from "../../content/assisted-living-services";
 import Image from "../../atoms/image";
-import { getCdnUrl } from "../../config";
+import { getCdnUrl } from "../../utils";
 
 import "./assisted-living-container.scss";
 

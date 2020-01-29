@@ -1,4 +1,4 @@
-import { getCdnUrl } from "../config";
+import { getCdnUrl } from "../utils";
 
 const CDN_URL = getCdnUrl("/amenities");
 

@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "../../atoms/image";
-import { getCdnUrl } from "../../config";
+import { getCdnUrl } from "../../utils";
 import ApplicationDownload from "../../components/application-download";
 import ApplicationSubmissionForm from "../../components/application-submission-form";
 

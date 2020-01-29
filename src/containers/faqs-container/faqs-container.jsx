@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "../../atoms/image";
-import { getCdnUrl } from "../../config";
+import { getCdnUrl } from "../../utils";
 
 import "./faqs-container.scss";
 

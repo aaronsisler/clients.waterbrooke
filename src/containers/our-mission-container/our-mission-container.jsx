@@ -1,7 +1,7 @@
 import React from "react";
 import Hyperlink from "../../atoms/hyperlink";
 import Image from "../../atoms/image";
-import { getCdnUrl } from "../../config";
+import { getCdnUrl } from "../../utils";
 
 import "./our-mission-container.scss";
 
