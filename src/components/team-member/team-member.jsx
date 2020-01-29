@@ -1,11 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
+import Image from "../../atoms/image";
 
 import "./team-member.scss";
 
 const TeamMember = ({ imgSrc, name, title }) => (
   <div className="team-member">
-    <img className="team-member__image" src={imgSrc} alt={name} />
+    <Image className="team-member__image" altText={name} src={imgSrc} />
     <div className="team-member__content">
       <h3 className="team-member__content-name">{name}</h3>
       <h4 className="team-member__content-title">{title}</h4>

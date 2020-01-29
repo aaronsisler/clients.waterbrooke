@@ -15,33 +15,27 @@ const AmenitiesContainer = () => (
     </div>
     <h2 className="amenities-container__sec-title">What we provide</h2>
     <div className="amenities-container__sections">
-      {amenities.map(
-        (
-          { amenityGroupContent, altText, desktopImgSrc, mobileImgSrc },
-          groupIndex
-        ) => (
-          <section className="amenities-container__section" key={groupIndex}>
-            <Image
-              altText={altText}
-              className="amenities-container__section-image"
-              desktopImgSrc={desktopImgSrc}
-              mobileImgSrc={mobileImgSrc}
-            />
-            <dl className="amenities-container__section-list">
-              {amenityGroupContent.map(({ content, title }, index) => (
-                <React.Fragment key={index}>
-                  <dt className="amenities-container__section-list-item-title">
-                    {title}
-                  </dt>
-                  <dd className="amenities-container__section-list-item-content">
-                    {content}
-                  </dd>
-                </React.Fragment>
-              ))}
-            </dl>
-          </section>
-        )
-      )}
+      {amenities.map(({ amenityGroupContent, altText, src }, groupIndex) => (
+        <section className="amenities-container__section" key={groupIndex}>
+          <Image
+            altText={altText}
+            className="amenities-container__section-image"
+            src={src}
+          />
+          <dl className="amenities-container__section-list">
+            {amenityGroupContent.map(({ content, title }, index) => (
+              <React.Fragment key={index}>
+                <dt className="amenities-container__section-list-item-title">
+                  {title}
+                </dt>
+                <dd className="amenities-container__section-list-item-content">
+                  {content}
+                </dd>
+              </React.Fragment>
+            ))}
+          </dl>
+        </section>
+      ))}
     </div>
   </div>
 );
