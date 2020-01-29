@@ -44,9 +44,7 @@
 }
 
 @mixin headerImage($MAX_HEIGHT: 45vh) {
-  // max-width: $MAX_WIDTH;
   max-height: $MAX_HEIGHT;
-  // margin: 0 auto;
 }
 
 @mixin imageMaxWidth($MAX_WIDTH: 1000px) {

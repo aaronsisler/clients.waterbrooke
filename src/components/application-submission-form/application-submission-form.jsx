@@ -4,7 +4,7 @@ import FileUpload from "../file-upload";
 import FormError from "../../atoms/form-error";
 import Input from "../../atoms/input";
 import { sendEmailWithAttachment } from "../../utils/email";
-import encodeBase64 from "../../utils/encodeBase64";
+import encodeBase64 from "../../utils/encode-base-64";
 
 import "./application-submission-form.scss";
 
