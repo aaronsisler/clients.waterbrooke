@@ -3,19 +3,9 @@
 
 //Small screens - MOBILE
 @media only screen {
-  .contact-container {
-    display: grid;
-    grid-gap: $MEDIUM;
-    padding: $MEDIUM $SMALL;
-    background-color: #bbf0f3;
-    background-image: linear-gradient(315deg, #bbf0f3 0%, #f6d285 74%);
-    &__visit {
-      display: grid;
-      grid-gap: $MEDIUM;
-      padding: $MEDIUM;
-      background: white;
-      box-shadow: $BOX_SHADOW;
-      opacity: 0.95;
+  .contact-phone {
+    h2 {
+      @include font-type($MAIN_FONT, $MEDIUM, bold);
     }
   }
 }
@@ -26,9 +16,6 @@
 
 //Large screens - DESKTOP
 @media only screen and (min-width: $largeScreen) {
-  .contact-container {
-    height: calc(100vh - #{$navMenuHeight});
-  }
 }
 
 //XLarge screens

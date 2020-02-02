@@ -3,18 +3,18 @@ import { useForm } from "react-hook-form";
 import * as yup from "yup";
 // import { isEmailValid, sendEmail } from "../../utils";
 import FormError from "../../atoms/form-error";
-// import Input from "../../atoms/input";
+import Input from "../../atoms/input";
 
 import "./contact-form.scss";
 
 const errorMessages = {
-  email: "Please enter a valid email address",
+  emailAddress: "Please enter a valid email address",
   name: "Please enter your name",
   phoneNumber: "Phone number must be 10 digits"
 };
 
 const ContactSchema = yup.object().shape({
-  email: yup
+  emailAddress: yup
     .string()
     .email()
     .required(),
@@ -41,12 +41,28 @@ const ContactForm = () => {
 
   return (
     <form className="contact-form" onSubmit={handleSubmit(onSubmit)}>
+      <h1 className="contact-form__title">Have some questions?</h1>
       {errors.name && <FormError error={errorMessages.name} />}
-      <input name="name" ref={register} />
-      {errors.email && <FormError error={errorMessages.email} />}
-      <input name="email" ref={register} />
+      <Input
+        hasError={Boolean(errors.name)}
+        label="Name"
+        name="name"
+        refProp={register}
+      />
+      {errors.emailAddress && <FormError error={errorMessages.emailAddress} />}
+      <Input
+        hasError={Boolean(errors.emailAddress)}
+        label="Email"
+        name="emailAddress"
+        refProp={register}
+      />
       {errors.phoneNumber && <FormError error={errorMessages.phoneNumber} />}
-      <input name="phoneNumber" ref={register} />
+      <Input
+        hasError={Boolean(errors.phoneNumber)}
+        label="Phone (Digits only, no dashes, etc.)"
+        name="phoneNumber"
+        refProp={register}
+      />
       <textarea
         className="contact-form__message"
         name="message"
