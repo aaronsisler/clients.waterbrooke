@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
-// import { isEmailValid, sendEmail } from "../../utils";
+import { sendEmail } from "../../utils";
 import FormError from "../../atoms/form-error";
 import Input from "../../atoms/input";
 
@@ -30,39 +30,72 @@ const ContactSchema = yup.object().shape({
 });
 
 const ContactForm = () => {
+  const [isSendButtonDisabled, setIsSendButtonDisabled] = useState(false);
+  const [emailSent, setEmailSent] = useState(false);
+  const [sendButtonText, setSendButtonText] = useState("Send It");
   const { register, handleSubmit, watch, errors } = useForm({
     mode: "onBlur",
     validationSchema: ContactSchema
   });
-  const onSubmit = data => {
-    console.log(data);
-    console.log(errors);
+
+  if (emailSent) {
+    return (
+      <div className="contact-form">
+        <h1 className="contact-form__email-sent">
+          Thank you for reaching out!
+          <br />
+          We are excited to get back in touch with you.
+        </h1>
+      </div>
+    );
+  }
+
+  const onSubmit = ({ emailAddress, message, name, phoneNumber }) => {
+    setIsSendButtonDisabled(true);
+    setSendButtonText("Sending");
+
+    const formData = {
+      emailAddress,
+      message,
+      name,
+      phoneNumber
+    };
+
+    const done = () => {
+      setEmailSent(true);
+    };
+    const fail = () => {
+      setSendButtonText("Please try again");
+      setIsSendButtonDisabled(false);
+    };
+
+    sendEmail(formData, done, fail);
   };
 
   return (
     <form className="contact-form" onSubmit={handleSubmit(onSubmit)}>
       <h1 className="contact-form__title">Have some questions?</h1>
-      {errors.name && <FormError error={errorMessages.name} />}
       <Input
         hasError={Boolean(errors.name)}
         label="Name"
         name="name"
         refProp={register}
       />
-      {errors.emailAddress && <FormError error={errorMessages.emailAddress} />}
+      {errors.name && <FormError error={errorMessages.name} />}
       <Input
         hasError={Boolean(errors.emailAddress)}
         label="Email"
         name="emailAddress"
         refProp={register}
       />
-      {errors.phoneNumber && <FormError error={errorMessages.phoneNumber} />}
+      {errors.emailAddress && <FormError error={errorMessages.emailAddress} />}
       <Input
         hasError={Boolean(errors.phoneNumber)}
         label="Phone (Digits only, no dashes, etc.)"
         name="phoneNumber"
         refProp={register}
       />
+      {errors.phoneNumber && <FormError error={errorMessages.phoneNumber} />}
       <textarea
         className="contact-form__message"
         name="message"
@@ -73,9 +106,13 @@ const ContactForm = () => {
       <input
         className="contact-form__button"
         disabled={
-          !watch("name") || !watch("email") || Object.keys(errors).length
+          isSendButtonDisabled ||
+          (!watch("name") ||
+            !watch("emailAddress") ||
+            Object.keys(errors).length)
         }
         type="submit"
+        value={sendButtonText}
       />
     </form>
   );

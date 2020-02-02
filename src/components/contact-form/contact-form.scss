@@ -16,7 +16,7 @@
     box-shadow: $BOX_SHADOW;
     opacity: 0.95;
     &__title {
-      @include font-type($MAIN_FONT, $LARGE);
+      @include font-type($MAIN_FONT, $MIDLARGE);
 
       margin-bottom: $SMALL;
       text-align: center;
@@ -24,24 +24,31 @@
     &__button {
       @include button();
     }
-    input {
-      display: grid;
-      width: 100%;
+    &__email-sent {
+      @include font-type($MAIN_FONT, $MIDLARGE);
+
+      max-width: 30vw;
       margin: 0 auto;
-      font-size: $MEDIUM;
+      text-align: center;
     }
   }
 }
 
 //Medium screens - TABLET
 @media only screen and (min-width: $mediumScreen) {
+  .contact-form {
+    padding: $MEDIUM $MIDLARGE;
+    textarea {
+      margin-top: $SMALL;
+    }
+  }
 }
 
 //Large screens - DESKTOP
 @media only screen and (min-width: $largeScreen) {
   .contact-form {
-    display: grid;
-    max-width: 30vw;
+    min-width: 40vw;
+    max-width: 50vw;
   }
 }
 

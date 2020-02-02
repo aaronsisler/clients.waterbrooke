@@ -50,7 +50,3 @@
 
   max-height: $MAX_HEIGHT;
 }
-
-@mixin imageMaxWidth($MAX_WIDTH: 1000px) {
-  max-width: $MAX_WIDTH;
-}
