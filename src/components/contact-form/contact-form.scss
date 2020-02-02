@@ -37,6 +37,7 @@
 //Medium screens - TABLET
 @media only screen and (min-width: $mediumScreen) {
   .contact-form {
+    min-width: 350px;
     padding: $MEDIUM $MIDLARGE;
     textarea {
       margin-top: $SMALL;
@@ -47,8 +48,8 @@
 //Large screens - DESKTOP
 @media only screen and (min-width: $largeScreen) {
   .contact-form {
-    min-width: 40vw;
-    max-width: 50vw;
+    min-width: 500px;
+    max-width: 750px;
   }
 }
 
