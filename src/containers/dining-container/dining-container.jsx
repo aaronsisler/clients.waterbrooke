@@ -15,7 +15,7 @@ const DiningContainer = () => (
   <div className="dining-container">
     <Image className="dining-container__splash-image" {...splashImage} />
     <div className="dining-container__content">
-      <h1 className="dining-container__title">Home cooked meals every day</h1>
+      <h1 className="dining-container__title">Home-cooked meals every day</h1>
       <p>
         We recognize that diet is one of the most important aspects of a
         senior's life. We focus on from-scratch cooking using fine ingredients
