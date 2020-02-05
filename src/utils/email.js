@@ -1,7 +1,8 @@
 import axios from "axios";
 import { validate } from "email-validator";
 import {
-  CONTACT_EMAIL,
+  HR_CONTACT_EMAIL,
+  MARKETING_CONTACT_EMAIL,
   SERVICES_API_KEY,
   SERVICES_GATEWAY_URL
 } from "../config";
@@ -16,7 +17,7 @@ const emailOptions = { headers };
 export const isEmailValid = emailAddress => validate(emailAddress);
 
 export const sendEmail = async (data, done, fail) => {
-  const emailData = { pointOfContactEmail: CONTACT_EMAIL, ...data };
+  const emailData = { pointOfContactEmail: MARKETING_CONTACT_EMAIL, ...data };
 
   try {
     await axios.post(`${SERVICES_GATEWAY_URL}/email`, emailData, emailOptions);
@@ -27,7 +28,7 @@ export const sendEmail = async (data, done, fail) => {
 };
 
 export const sendEmailWithAttachment = async (data, done, fail) => {
-  const emailData = { pointOfContactEmail: CONTACT_EMAIL, ...data };
+  const emailData = { pointOfContactEmail: HR_CONTACT_EMAIL, ...data };
 
   try {
     await axios.post(

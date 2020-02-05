@@ -1,7 +1,7 @@
 import React from "react";
 import cn from "classnames";
 import PropTypes from "prop-types";
-import Hyperlink from "../../atoms/hyperlink";
+import Hyperlink from "../hyperlink";
 
 import "./accordion-desktop.scss";
 
