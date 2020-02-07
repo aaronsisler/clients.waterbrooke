@@ -39,7 +39,7 @@ const faqs = [
   {
     question: "Does Waterbrooke offer any in-house medical services?",
     answer:
-      "Yes, we have an in-house physician and psychiatrist. We contract with Albemarle Hospital for labs and blood work to be drawn in house. Also, we utilize services of Albemarle Home Care & Hospice and Community Home Care & Hospice for therapy, wound care, and hospice care in-house."
+      "Yes, we have an in-house physician and psychiatrist. We contract with Caring Hands for labs and blood work to be drawn in house. Also, we utilize services of Albemarle Home Care & Hospice and Community Home Care & Hospice for therapy, wound care, and hospice care in-house."
   }
 ];
 

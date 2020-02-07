@@ -69,7 +69,11 @@ const amenities = [
   {
     content:
       "Our beauty/barber shop is open weekly for haircuts, styling, manicures, and pedicures.",
-    title: "Beauty/Barber Shop"
+    title: "Beauty/Barber Shop",
+    image: {
+      altText: "Stylist at her station",
+      src: `${CDN_URL}/amenities-container__salon.jpg`
+    }
   },
   {
     content:

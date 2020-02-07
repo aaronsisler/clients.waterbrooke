@@ -24,6 +24,11 @@ const teamMembers = [
     title: "Special Care Unit Director"
   },
   {
+    imgSrc: `${CDN_URL}/glen_needham.jpeg`,
+    name: "Glen Needhame",
+    title: "Clinical Supervising RN"
+  },
+  {
     imgSrc: `${CDN_URL}/marie_bell.jpeg`,
     name: "Marie Bell",
     title: "Transportation Director"

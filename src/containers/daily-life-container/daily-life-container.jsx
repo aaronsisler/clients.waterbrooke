@@ -8,7 +8,7 @@ import "./daily-life-container.scss";
 const CDN_URL = getCdnUrl("/daily-life");
 
 const splashImage = {
-  altText: "Two smiling senior ladies giving each other a high five",
+  altText: "Two gentlemen sitting in the library",
   src: `${CDN_URL}/daily-life-container.jpg`
 };
 

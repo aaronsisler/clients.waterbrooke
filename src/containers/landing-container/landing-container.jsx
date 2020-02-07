@@ -9,7 +9,11 @@ const CDN_URL = getCdnUrl("/landing");
 
 const splashImage = {
   altText: "Flowers on the front outdoor porch",
-  src: `${CDN_URL}/landing-container.jpg`
+  src: `${CDN_URL}/landing-container__splash.jpg`
+};
+const outdoorImage = {
+  altText: "Picture of the front of facility",
+  src: `${CDN_URL}/landing-container__second.jpg`
 };
 
 const LandingContainer = () => (
@@ -31,6 +35,9 @@ const LandingContainer = () => (
         friends by&nbsp;
         <Hyperlink href="/daily-life" title="learning more here." />
       </p>
+    </div>
+    <Image className="landing-container__second-image" {...outdoorImage} />
+    <div className="landing-container__content">
       <h2 className="landing-container__content-sec-title">
         Not sure where to begin?
       </h2>
