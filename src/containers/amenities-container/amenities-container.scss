@@ -5,29 +5,30 @@
 @media only screen {
   .amenities-container {
     padding: $MEDIUM;
-    &__title {
-      @include font-type($MAIN_FONT, $LARGE, bold);
+    &__header {
+      h1 {
+        @include font-type($MAIN_FONT, $LARGE, bold);
+      }
+      p {
+        margin: $SMALL 0;
+      }
     }
     &__sec-title {
       @include font-type($MAIN_FONT, $MIDLARGE, bold);
 
       margin: $SMALL 0;
     }
-    p {
-      margin: $SMALL 0;
-    }
-    &__section {
-      &-image {
-        margin: 0 0 $XSMALL;
-      }
-      &-list {
-        &-item {
-          &-title {
-            @include font-type($MAIN_FONT, $MEDIUM, bold);
-          }
-          &-content {
-            margin-bottom: $SMALL;
-          }
+    &__list {
+      &-item {
+        margin-bottom: $MIDLARGE;
+        &-image {
+          margin-bottom: $SMALL;
+        }
+        &-title {
+          @include font-type($MAIN_FONT, $MEDIUM, bold);
+        }
+        &-content {
+          margin-top: $XSMALL;
         }
       }
     }
@@ -38,12 +39,12 @@
 @media only screen and (min-width: $mediumScreen) {
   .amenities-container {
     padding: $MEDIUM 15% $XLARGE;
-    &__section {
-      &-list {
-        max-width: 700px;
-      }
-      &-image {
-        max-width: 350px;
+    &__list {
+      max-width: 700px;
+      &-item {
+        &-image {
+          max-width: 350px;
+        }
       }
     }
   }

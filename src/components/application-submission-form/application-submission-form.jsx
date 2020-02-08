@@ -1,5 +1,6 @@
-import React from "react";
-import cn from "classnames";
+import React, { useState } from "react";
+import { useForm } from "react-hook-form";
+import * as yup from "yup";
 import FileUpload from "../file-upload";
 import FormError from "../../atoms/form-error";
 import Input from "../../atoms/input";
@@ -7,158 +8,99 @@ import { encodeBase64, sendEmailWithAttachment } from "../../utils";
 
 import "./application-submission-form.scss";
 
-class ApplicationSubmissionForm extends React.Component {
-  constructor(props) {
-    super(props);
+const errorMessages = {
+  name: "Please enter your name"
+};
 
-    this.state = {
-      buttonText: "Send It",
-      emailError: false,
-      emailSent: false,
-      error: {},
-      isSendButtonDisabled: true,
-      message: "",
-      name: "",
-      rawFile: undefined
-    };
+const ApplicationSchema = yup.object().shape({
+  name: yup.string().required()
+});
+
+const ApplicationSubmissionForm = () => {
+  const [rawFile, setRawFile] = useState(undefined);
+  const [isSendButtonDisabled, setIsSendButtonDisabled] = useState(false);
+  const [sendButtonText, setSendButtonText] = useState("Send It");
+  const [emailSent, setEmailSent] = useState(false);
+  const { register, handleSubmit, watch, errors } = useForm({
+    mode: "onBlur",
+    validationSchema: ApplicationSchema
+  });
+
+  if (emailSent) {
+    return (
+      <div className="application-submission-form">
+        <h1 className="application-submission-form__email-sent">
+          Thank you for reaching out!
+          <br />
+          We are excited to get back in touch with you.
+        </h1>
+      </div>
+    );
   }
 
-  handleFileUpload = event => {
+  const handleFileUpload = event => {
     const [rawFile] = event.target.files;
 
-    return this.setState({ rawFile });
+    return setRawFile(rawFile);
   };
 
-  handleInput = e => {
-    const { name: inputName, value: inputValue } = e.target;
-
-    return this.setState(prevState => ({
-      ...prevState,
-      [inputName]: inputValue
-    }));
-  };
-
-  handleNameValidation = () => {
-    if (!this.state.name) {
-      return this.setState(
-        prevState => ({
-          ...prevState,
-          error: { ...prevState.error, name: "Please enter your name" }
-        }),
-        this.validateRequiredFields()
-      );
-    }
-
-    return this.setState(
-      prevState => ({
-        ...prevState,
-        error: { ...prevState.error, name: undefined }
-      }),
-      this.validateRequiredFields()
-    );
-  };
-
-  handleSubmitApplicationForm = async () => {
-    this.setState({ buttonText: "Sending", isSendButtonDisabled: true });
-
-    const { name, message, rawFile } = this.state;
+  const onSubmit = async ({ message, name }) => {
+    setIsSendButtonDisabled(true);
+    setSendButtonText("Sending");
 
     const encodedFile = await encodeBase64(rawFile);
 
-    const data = {
+    const formData = {
       encodedFile,
       message,
       name
     };
 
-    const done = () => this.setState({ emailError: false, emailSent: true });
-    const fail = () =>
-      this.setState({
-        emailError: true,
-        isSendButtonDisabled: false,
-        buttonText: "Send It"
-      });
+    const done = () => {
+      setEmailSent(true);
+    };
+    const fail = () => {
+      setSendButtonText("Please try again");
+      setIsSendButtonDisabled(false);
+    };
 
-    sendEmailWithAttachment(data, done, fail);
+    sendEmailWithAttachment(formData, done, fail);
   };
 
-  validateRequiredFields = () => {
-    const { error, name, rawFile } = this.state;
-    const { name: nameError } = error;
-
-    if (name && rawFile && !nameError) {
-      return this.setState({ isSendButtonDisabled: false });
-    }
-
-    return this.setState({ isSendButtonDisabled: true });
-  };
-
-  render() {
-    const {
-      buttonText,
-      emailSent,
-      emailError,
-      error,
-      isSendButtonDisabled,
-      message,
-      name,
-      rawFile
-    } = this.state;
-
-    return (
-      <div className="application-submission-form">
-        {emailSent && (
-          <div className="application-submission-form__email">
-            Thank you for reaching out! We are excited to get back in touch with
-            you.
-          </div>
-        )}
-        {emailError && (
-          <div
-            className={cn(
-              "application-submission-form__email",
-              "application-submission-form__email--error"
-            )}
-          >
-            Something went wrong unfortunately. Please try sending again.
-          </div>
-        )}
-        {!emailSent && (
-          <React.Fragment>
-            <div className="application-submission-form__input">
-              {error.name && <FormError error={error.name} />}
-              <Input
-                label="Name"
-                name="name"
-                onBlur={this.handleNameValidation}
-                onChange={this.handleInput}
-                value={name}
-              />
-            </div>
-            <div className="application-submission-form__file-upload">
-              {rawFile && <span>File Uploaded Successfully!</span>}
-              <FileUpload onFileUpload={this.handleFileUpload} />
-            </div>
-            <textarea
-              className="application-submission-form__message"
-              name="message"
-              onChange={this.handleInput}
-              placeholder="Is there anything extra you'd like to tell us?"
-              rows="4"
-              value={message}
-            />
-            <button
-              className="application-submission-form__button"
-              disabled={isSendButtonDisabled}
-              onClick={this.handleSubmitApplicationForm}
-            >
-              {buttonText}
-            </button>
-          </React.Fragment>
-        )}
+  return (
+    <form
+      className="application-submission-form"
+      onSubmit={handleSubmit(onSubmit)}
+    >
+      <Input
+        hasError={Boolean(errors.name)}
+        label="Name"
+        name="name"
+        refProp={register}
+      />
+      {errors.name && <FormError error={errorMessages.name} />}
+      <div className="application-submission-form__file-upload">
+        {rawFile && <span>File Uploaded Successfully!</span>}
+        <FileUpload onFileUpload={handleFileUpload} />
       </div>
-    );
-  }
-}
+      <textarea
+        className="application-submission-form__message"
+        name="message"
+        placeholder="Is there anything extra you'd like to tell us?"
+        ref={register}
+        rows="4"
+      />
+      <input
+        className="application-submission-form__button"
+        disabled={
+          isSendButtonDisabled ||
+          (!watch("name") || !rawFile || Object.keys(errors).length)
+        }
+        type="submit"
+        value={sendButtonText}
+      />
+    </form>
+  );
+};
 
 export default ApplicationSubmissionForm;

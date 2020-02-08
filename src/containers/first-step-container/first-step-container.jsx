@@ -25,7 +25,7 @@ const FirstStepContainer = () => (
         families enter this journey together.
       </p>
       <p>
-        Making the decision to move to a senior living community is a big one
+        Making the decision to move to a senior living community is a big one,
         and we’re here to help. Our team understands the unique needs of each
         person and the desire to remain as safely independent as possible.&nbsp;
         <Hyperlink
