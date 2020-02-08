@@ -25,14 +25,12 @@
     &__button {
       @include button();
     }
-    &__email {
+    &__email-sent {
       @include font-type($MAIN_FONT, $MIDLARGE);
 
-      padding: $SMALL 0 $MEDIUM;
+      max-width: 30vw;
+      margin: 0 auto;
       text-align: center;
-      &--error {
-        border-bottom: 1px solid $BORDER_GRAY;
-      }
     }
   }
 }
