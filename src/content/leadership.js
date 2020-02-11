@@ -25,7 +25,7 @@ const teamMembers = [
   },
   {
     imgSrc: `${CDN_URL}/glen_needham.jpeg`,
-    name: "Glen Needhame",
+    name: "Glen Needham",
     title: "Clinical Supervising RN"
   },
   {
