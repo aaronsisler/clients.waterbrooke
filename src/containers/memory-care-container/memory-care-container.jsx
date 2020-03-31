@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "../../atoms/image";
 import { getCdnUrl } from "../../utils";
+import { modelRoomImages } from "../../content/shared";
 
 import "./memory-care-container.scss";
 
@@ -41,6 +42,16 @@ const MemoryCareContainer = () => (
         of interesting residents and fun-filled activities that help them
         continue to live with purpose and meaning.
       </p>
+      <h2 className="memory-care-container__images-title">Our rooms</h2>
+      <div className="memory-care-container__model-images">
+        {modelRoomImages.map((image, index) => (
+          <Image
+            key={index}
+            className="memory-care-container__model-image"
+            {...image}
+          />
+        ))}
+      </div>
     </div>
   </div>
 );

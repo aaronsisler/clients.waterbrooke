@@ -25,6 +25,20 @@
     p {
       margin: $SMALL 0 $MEDIUM 0;
     }
+    &__images-title {
+      @include font-type($MAIN_FONT, $MIDLARGE, bold);
+
+      margin: $MEDIUM 0;
+    }
+    &__model-images {
+      display: flex;
+      flex-flow: column;
+    }
+    &__model-image {
+      width: 100%;
+      margin-bottom: $SMALL;
+      object-fit: scale-down;
+    }
   }
 }
 
@@ -38,6 +52,9 @@
     }
     &__content {
       padding: 0 15% $XLARGE;
+    }
+    &__model-image {
+      max-height: 350px;
     }
   }
 }
