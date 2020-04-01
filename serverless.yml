@@ -2,7 +2,7 @@ service: waterbrooke
 
 provider:
   name: aws
-  runtime: nodejs10.x
+  runtime: nodejs12.x
   stage: prod
   region: us-east-1
   environment:
@@ -25,7 +25,7 @@ custom:
     types:
       - "*/*"
   customDomain:
-    domainName: ${self:custom.secrets.beta.DOMAIN}
+    domainName: ${self:custom.secrets.prod.DOMAIN}
     basePath: ""
     stage: prod
     createRoute53Record: true

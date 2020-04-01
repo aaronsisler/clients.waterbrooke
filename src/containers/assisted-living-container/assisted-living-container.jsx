@@ -3,6 +3,7 @@ import {
   coveredServices,
   notCoveredServices
 } from "../../content/assisted-living-services";
+import { modelRoomImages } from "../../content/shared";
 import Image from "../../atoms/image";
 import { getCdnUrl } from "../../utils";
 
@@ -44,6 +45,16 @@ const AssistedLivingContainer = () => (
         maintenance calls or repairs. Simply enjoy the most remarkable parts of
         the life you lead.
       </p>
+      <h2 className="assisted-living-container__images-title">Our rooms</h2>
+      <div className="assisted-living-container__model-images">
+        {modelRoomImages.map((image, index) => (
+          <Image
+            key={index}
+            className="assisted-living-container__model-image"
+            {...image}
+          />
+        ))}
+      </div>
       <hr />
       <h2 className="assisted-living-container__list-title">What we provide</h2>
       <ul className="assisted-living-container__list">

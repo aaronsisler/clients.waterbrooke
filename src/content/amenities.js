@@ -78,7 +78,11 @@ const amenities = [
   {
     content:
       "Waterbrooke has a dedicated hospice room to allow for a peaceful transition.",
-    title: "Hospice Room"
+    title: "Hospice Room",
+    image: {
+      altText: "Hospice room with bed and comfy recliner chair.",
+      src: `${CDN_URL}/amenities-container__hospice.jpg`
+    }
   },
   {
     content:
