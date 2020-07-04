@@ -39,14 +39,19 @@ const teamMembers = [
     title: "Admission/Marketing Director"
   },
   {
+    imgSrc: `${CDN_URL}/wes_newby.jpg`,
+    name: "Wes Newby",
+    title: "Dietary & Environmental Service Director"
+  },
+  {
     imgSrc: `${CDN_URL}/suzie_nixon.jpg`,
     name: "Suzie Nixon",
     title: "Human Resource Director"
   },
   {
-    imgSrc: `${CDN_URL}/wes_newby.jpg`,
-    name: "Wes Newby",
-    title: "Dietary & Environmental Service Director"
+    imgSrc: `${CDN_URL}/adela_pena.jpg`,
+    name: "Adela Pena",
+    title: "Quality Assurance Director"
   },
   {
     imgSrc: `${CDN_URL}/jennifer_white.jpg`,

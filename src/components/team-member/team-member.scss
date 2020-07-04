@@ -11,7 +11,7 @@
       margin-bottom: $SMALL;
     }
     &__content {
-      margin-bottom: $SMALL;
+      margin-bottom: $MEDIUM;
       text-align: center;
       &-name {
         @include font-type($MAIN_FONT, $MIDLARGE, bold);
