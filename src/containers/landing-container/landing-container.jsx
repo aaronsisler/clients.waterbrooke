@@ -12,8 +12,8 @@ const splashImage = {
   src: `${CDN_URL}/landing-container__splash.jpg`
 };
 const outdoorImage = {
-  altText: "Picture of the front of facility",
-  src: `${CDN_URL}/landing-container__second.jpg`
+  altText: "Picture of the back of facility",
+  src: `${CDN_URL}/landing-container__second-image.jpg`
 };
 
 const LandingContainer = () => (
