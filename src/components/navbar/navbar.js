@@ -1,9 +1,9 @@
 import React from "react";
 import cn from "classnames";
+import Logo from "../../components/logo";
 import AccordionDesktop from "../../atoms/accordion-desktop";
 import AccordionMobile from "../../atoms/accordion-mobile";
 import Hamburger from "../../atoms/hamburger";
-import Logo from "../../components/logo";
 import navigationLinks from "../../content/navigation-links";
 
 import "./navbar.scss";
