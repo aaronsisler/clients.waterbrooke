@@ -13,7 +13,7 @@ const splashImage = {
 };
 const outdoorImage = {
   altText: "Picture of the back of facility",
-  src: `${CDN_URL}/landing-container__second-image.jpg`
+  src: `${CDN_URL}/landing-container__splash.jpg`
 };
 
 const LandingContainer = () => (
