@@ -14,8 +14,12 @@ export const MARKETING_CONTACT_EMAIL = "waterbrooke.marketing@gmail.com";
 // export const HR_CONTACT_EMAIL = "aaron.sisler@eandbsolutions.com";
 // export const MARKETING_CONTACT_EMAIL = "aaron.sisler@eandbsolutions.com";
 
+// Client Name
+export const CLIENT_NAME = "Waterbrooke";
+
 // Phone number
 export const CONTACT_PHONE_NUMBER = "(252) 331-2149";
 
 // Services Gateway
+// export const SERVICES_GATEWAY_URL = "https://services.eandbsolutions.com/beta";
 export const SERVICES_GATEWAY_URL = "https://services.eandbsolutions.com/prod";
