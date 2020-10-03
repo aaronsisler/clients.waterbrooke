@@ -94,7 +94,9 @@ const ApplicationSubmissionForm = () => {
         className="application-submission-form__button"
         disabled={
           isSendButtonDisabled ||
-          (!watch("name") || !rawFile || Object.keys(errors).length)
+          !watch("name") ||
+          !rawFile ||
+          Object.keys(errors).length
         }
         type="submit"
         value={sendButtonText}
