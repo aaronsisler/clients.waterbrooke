@@ -6,7 +6,6 @@
 .serverless/
 
 # secrets
-secrets.json
 
 # local error files
 npm-debug.log*

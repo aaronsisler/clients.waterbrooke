@@ -20,12 +20,11 @@ plugins:
   - serverless-domain-manager
 
 custom:
-  secrets: ${file(secrets.json)}
   apigwBinary:
     types:
       - "*/*"
   customDomain:
-    domainName: ${self:custom.secrets.beta.DOMAIN}
+    domainName: waterbrooke.eandbsolutions.com
     basePath: ""
     stage: beta
     createRoute53Record: true
