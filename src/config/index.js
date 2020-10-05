@@ -9,8 +9,6 @@ import {
   SERVICES_GATEWAY_URL
 } from "./config";
 
-import { SERVICES_API_KEY } from "./secrets";
-
 export {
   CDN_URL,
   CLIENT_NAME,
@@ -19,6 +17,5 @@ export {
   GOOGLE_MAPS_LOCATION,
   HR_CONTACT_EMAIL,
   MARKETING_CONTACT_EMAIL,
-  SERVICES_GATEWAY_URL,
-  SERVICES_API_KEY
+  SERVICES_GATEWAY_URL
 };
