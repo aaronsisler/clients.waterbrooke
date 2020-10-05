@@ -4,13 +4,11 @@ import {
   CLIENT_NAME,
   HR_CONTACT_EMAIL,
   MARKETING_CONTACT_EMAIL,
-  SERVICES_API_KEY,
   SERVICES_GATEWAY_URL
 } from "../config";
 
 const headers = {
-  "Content-Type": "application/json",
-  "X-Api-Key": SERVICES_API_KEY
+  "Content-Type": "application/json"
 };
 
 const emailOptions = { headers };
