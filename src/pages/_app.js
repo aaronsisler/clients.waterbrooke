@@ -13,6 +13,10 @@ class MyApp extends App {
       <>
         <Head>
           <title>Waterbrooke Assisted Living</title>
+          <meta
+            name="viewport"
+            content="initial-scale=1.0, width=device-width"
+          />
         </Head>
         <Navbar />
         <Component {...pageProps} />
