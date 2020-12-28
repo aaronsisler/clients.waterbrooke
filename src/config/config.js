@@ -17,6 +17,11 @@ export const MARKETING_CONTACT_EMAIL = "waterbrooke.marketing@gmail.com";
 // Client Name
 export const CLIENT_NAME = "Waterbrooke";
 
+// Application
+export const APPLICATON_PDF_FILENAME = "waterbrooke-employment-application.pdf";
+export const APPLICATION_ONLINE_URL =
+  "https://docs.google.com/forms/d/e/1FAIpQLScjs0OeyK0KbG0SrLndfq7XePDYCnvACWW4V0D6Y-Z8nxZLlw/viewform";
+
 // Phone number
 export const CONTACT_PHONE_NUMBER = "(252) 331-2149";
 
