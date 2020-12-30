@@ -1,9 +1,8 @@
 import React from "react";
 import Image from "../../atoms/image";
 import { getCdnUrl } from "../../utils";
-import ApplicationDownload from "../../components/application-download";
+import Hyperlink from "../../atoms/hyperlink";
 import ApplicationOnline from "../../components/application-online";
-import ApplicationSubmissionForm from "../../components/application-submission-form";
 
 import "./careers-container.scss";
 
@@ -29,12 +28,11 @@ const CareersContainer = () => (
     <div className="careers-container__content">
       <ApplicationOnline />
       <hr />
-      <ApplicationDownload />
-      <div className="careers-container__form">
-        <hr />
-        <h2 className="careers-container__form-title">Submit Application</h2>
-        <ApplicationSubmissionForm />
-      </div>
+      <Hyperlink
+        href="/apply"
+        title="Upload Paper Application"
+        className="careers-container__content-link"
+      />
     </div>
   </div>
 );

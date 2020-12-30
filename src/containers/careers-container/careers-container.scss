@@ -21,6 +21,9 @@
       display: grid;
       grid-gap: $MEDIUM;
       padding: $MEDIUM $MEDIUM $XLARGE;
+      &-link {
+        @include button();
+      }
     }
     &__form {
       &-title {
@@ -28,16 +31,6 @@
 
         margin: $SMALL 0;
         text-align: center;
-      }
-    }
-    &__email {
-      @include font-type($MAIN_FONT, $MIDLARGE);
-
-      padding: $SMALL 0 $MEDIUM;
-      text-align: center;
-      &--error {
-        margin-bottom: $SMALL;
-        border-bottom: 1px solid $BORDER_GRAY;
       }
     }
   }
