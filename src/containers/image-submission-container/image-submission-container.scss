@@ -3,6 +3,14 @@
 
 //Small screens - MOBILE
 @media only screen {
+  .image-submission-container {
+    display: grid;
+    padding: $MEDIUM $MEDIUM $XLARGE;
+    p {
+      margin-bottom: $SMALL;
+      text-align: center;
+    }
+  }
 }
 
 //Medium screens - TABLET
