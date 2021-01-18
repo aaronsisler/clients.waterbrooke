@@ -8,7 +8,8 @@ import {
 } from "../config";
 
 const headers = {
-  "Content-Type": "application/json"
+  "Content-Type": "application/json",
+  "api-version": 2.0
 };
 
 const emailOptions = { headers };
@@ -32,7 +33,6 @@ export const sendEmail = async (data, done, fail) => {
 
 export const sendEmailWithAttachment = async (data, done, fail) => {
   const emailData = {
-    clientName: CLIENT_NAME,
     pointOfContactEmail: HR_CONTACT_EMAIL,
     ...data
   };
