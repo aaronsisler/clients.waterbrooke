@@ -84,7 +84,10 @@ const ApplicationSubmissionForm = () => {
       {errors.name && <FormError error={errorMessages.name} />}
       <div className="application-submission-form__file-upload">
         {rawFile && <span>File Uploaded Successfully!</span>}
-        <FileUpload onFileUpload={handleFileUpload} />
+        <FileUpload
+          buttonText="Upload Application"
+          onFileUpload={handleFileUpload}
+        />
       </div>
       <textarea
         className="application-submission-form__message"
