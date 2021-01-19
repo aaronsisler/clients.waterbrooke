@@ -14,7 +14,8 @@ import {
 import "./image-submission-form.scss";
 
 const errorMessages = {
-  name: "Please enter your name"
+  name: "Please enter your name",
+  fileType: "Valid image types: jpeg, jpg, png"
 };
 
 const ImageUploadSchema = yup.object().shape({
@@ -24,7 +25,7 @@ const ImageUploadSchema = yup.object().shape({
 const ImageSubmissionForm = () => {
   const [rawFile, setRawFile] = useState(undefined);
   const [fileType, setFileType] = useState(undefined);
-  const [isValidFileType, setIsValidFileType] = useState(undefined);
+  const [isValidFileType, setIsValidFileType] = useState(true);
   const [isSendButtonDisabled, setIsSendButtonDisabled] = useState(false);
   const [sendButtonText, setSendButtonText] = useState("Send It");
   const [emailSent, setEmailSent] = useState(false);
@@ -36,24 +37,33 @@ const ImageSubmissionForm = () => {
   if (emailSent) {
     return (
       <div className="image-submission-form">
-        <h1 className="image-submission-form__email-sent">
-          Thank you for reaching out!
+        <p className="image-submission-form__email-sent">
+          Thank you!
           <br />
           We are excited to get back in touch with you.
-        </h1>
+        </p>
       </div>
     );
   }
 
   const handleFileUpload = event => {
     const [rawFile] = event.target.files;
+    if (!rawFile) {
+      setRawFile(undefined);
+      setIsValidFileType(false);
+
+      return;
+    }
     const fileType = rawFile.type.split("/")[1];
     const isValid = isValidImageType(fileType);
+
     setFileType(fileType);
     setIsValidFileType(isValid);
+    setRawFile(rawFile);
 
-    return setRawFile(rawFile);
+    return;
   };
+
   const onSubmit = async ({ message, name }) => {
     setIsSendButtonDisabled(true);
     setSendButtonText("Sending");
@@ -88,9 +98,12 @@ const ImageSubmissionForm = () => {
       />
       {errors.name && <FormError error={errorMessages.name} />}
       <div className="image-submission-form__file-upload">
-        {rawFile && <span>Image Uploaded Successfully!</span>}
         <FileUpload buttonText="Upload Image" onFileUpload={handleFileUpload} />
+        {rawFile && isValidFileType && (
+          <span>Image Uploaded Successfully!</span>
+        )}
       </div>
+      {!isValidFileType && <FormError error={errorMessages.fileType} />}
       <textarea
         className="image-submission-form__message"
         name="message"
