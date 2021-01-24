@@ -25,9 +25,6 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Install app dependencies
-        run: npm install -g serverless
-
       - name: Deploy
         run: sls deploy --config=./deployment/serverless.beta.yml
         env:
