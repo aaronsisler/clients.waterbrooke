@@ -1,0 +1,43 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+//Small screens - MOBILE
+@media only screen {
+  .apply-container {
+    display: grid;
+    grid-gap: $MEDIUM;
+    padding: $MEDIUM $MEDIUM $XLARGE;
+    &__form {
+      &-title {
+        @include font-type($MAIN_FONT, $MIDLARGE, bold);
+
+        margin: $SMALL 0;
+        text-align: center;
+      }
+    }
+  }
+}
+
+//Medium screens - TABLET
+@media only screen and (min-width: $MEDIUM_SCREEN) {
+  .apply-container {
+    padding-right: 20%;
+    padding-left: 20%;
+  }
+}
+
+//Large screens - DESKTOP
+@media only screen and (min-width: $LARGE_SCREEN) {
+  .apply-container {
+    padding-right: 30%;
+    padding-left: 30%;
+  }
+}
+
+//XLarge screens
+@media only screen and (min-width: $XLARGE_SCREEN) {
+}
+
+//XXLarge screens
+@media only screen and (min-width: $XXLARGE_SCREEN) {
+}
