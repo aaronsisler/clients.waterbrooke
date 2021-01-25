@@ -25,6 +25,9 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Run ls
+        run: ls
+
       - name: Deploy
         uses: serverless/github-action@master
         with:
