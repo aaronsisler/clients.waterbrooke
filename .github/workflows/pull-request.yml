@@ -25,13 +25,13 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Run ls
-        run: ls
+      - name: Setup serverless
+        run: mv ./deployment/serverless.beta.yml serverless.yml
 
       - name: Deploy
         uses: serverless/github-action@master
         with:
-          args: deploy --stage beta
+          args: deploy
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
