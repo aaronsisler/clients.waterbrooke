@@ -28,6 +28,9 @@ jobs:
       - name: Run ls
         run: ls
 
+      - name: Run ls deploy
+        run: ls ./deployment
+
       - name: Deploy
         uses: serverless/github-action@master
         with:
