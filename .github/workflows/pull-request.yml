@@ -28,13 +28,10 @@ jobs:
       - name: Run ls
         run: ls
 
-      - name: Check sls version
-        run: serverless --version
-
       - name: Deploy
         uses: serverless/github-action@master
         with:
-          args: deploy
+          args: --config=./deployment/serverless.beta.yml deploy
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
