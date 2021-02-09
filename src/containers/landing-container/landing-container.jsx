@@ -19,6 +19,10 @@ const outdoorImage = {
 const LandingContainer = () => (
   <div className="landing-container">
     <Image className="landing-container__splash-image" {...splashImage} />
+    <div className="landing-container__banner">
+      <p>Voted Best Senior Care Facility</p>
+      <p>Albemarle Readers' Choice Winner 2020</p>
+    </div>
     <div className="landing-container__content">
       <h1 className="landing-container__content-title">
         Life is better at Waterbrooke
