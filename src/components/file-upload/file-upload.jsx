@@ -18,6 +18,7 @@ const FileUpload = ({ buttonText, onFileUpload }) => (
 );
 
 FileUpload.propTypes = {
+  buttonText: PropTypes.string.isRequired,
   onFileUpload: PropTypes.func.isRequired
 };
 
