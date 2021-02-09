@@ -21,7 +21,7 @@ const LandingContainer = () => (
     <Image className="landing-container__splash-image" {...splashImage} />
     <div className="landing-container__banner">
       <p>Voted Best Senior Care Facility</p>
-      <p>Albemarle Readers' Choice Winner 2020</p>
+      <p>The Daily Advance Readers' Choice Winner 2020</p>
     </div>
     <div className="landing-container__content">
       <h1 className="landing-container__content-title">
