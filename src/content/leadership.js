@@ -13,16 +13,11 @@ const teamMembers = [
     name: "Rhonda Boyd Todd",
     title: "Administrator"
   },
-  {
-    imgSrc: `${CDN_URL}/morticia_butcher.jpg`,
-    name: "Morticia Butcher",
-    title: "Resident Care Director"
-  },
-  {
-    imgSrc: `${CDN_URL}/yolanda_thatch.jpg`,
-    name: "Yolanda Thatch",
-    title: "Special Care Unit Director"
-  },
+  // {
+  //   // imgSrc: `${CDN_URL}/nicki_cowell.jpg`,
+  //   name: "Nicki Cowell",
+  //   title: "Resident Care Director"
+  // },
   {
     imgSrc: `${CDN_URL}/glen_needham.jpg`,
     name: "Glen Needham",
@@ -37,11 +32,6 @@ const teamMembers = [
     imgSrc: `${CDN_URL}/audrey_clark.jpg`,
     name: "Audrey Clark",
     title: "Admission/Marketing Director"
-  },
-  {
-    imgSrc: `${CDN_URL}/wes_newby.jpg`,
-    name: "Wes Newby",
-    title: "Dietary & Environmental Service Director"
   },
   {
     imgSrc: `${CDN_URL}/suzie_nixon.jpg`,
