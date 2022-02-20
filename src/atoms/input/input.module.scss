@@ -1,5 +1,5 @@
-@import "../../styles/variables.scss";
-@import "../../styles/mixins.scss";
+@import "../../styles/variables";
+@import "../../styles/mixins";
 
 //Small screens - MOBILE
 @media only screen {
@@ -33,11 +33,11 @@
         transition: transform 0.3s ease;
         content: "";
       }
-      &--error {
-        color: lighten(darkred, 15);
-        border-bottom: 3px solid lighten(darkred, 15);
+      &Error {
+        color: $ERROR_RED;
+        border-bottom: 3px solid $ERROR_RED;
         &::after {
-          border-bottom: 3px solid lighten(darkred, 15);
+          border-bottom: 3px solid $ERROR_RED;
           content: "";
         }
       }
@@ -55,8 +55,8 @@
 
         color: $MAIN_COLOR;
         transform: translateY(-200%);
-        &--error {
-          color: lighten(darkred, 15);
+        &Error {
+          color: $ERROR_RED;
         }
       }
       &:focus + .input__label::after,

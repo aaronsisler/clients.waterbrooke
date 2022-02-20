@@ -1,12 +1,17 @@
 # dependencies
 /node_modules
 
+# secrets
+.env
+
 # build/production folders
 .next/
-.serverless/
+build/
+**/build/
+dist/
+**/dist/
 
-# secrets
-
-# local error files
+# local files
 npm-debug.log*
 sh.exe.stackdump
+**/.DS_Store

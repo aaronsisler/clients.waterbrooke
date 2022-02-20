@@ -1,9 +1,9 @@
-@import "../../styles/variables.scss";
-@import "../../styles/mixins.scss";
+@import "../../styles/variables";
+@import "../../styles/mixins";
 
 //Small screens - MOBILE
 @media only screen {
-  .external-link {
+  .externalLink {
     @include font-type($MAIN_FONT, $MEDIUM);
 
     color: $MAIN_COLOR;

@@ -1,5 +1,5 @@
-@import "../../styles/variables.scss";
-@import "../../styles/mixins.scss";
+@import "../../styles/variables";
+@import "../../styles/mixins";
 
 //Small screens - MOBILE
 @media only screen {
@@ -11,7 +11,7 @@
 
 //Large screens - DESKTOP
 @media only screen and (min-width: $LARGE_SCREEN) {
-  .accordion-desktop {
+  .accordionDesktop {
     position: relative;
     display: inline-block;
     margin-right: $MEDIUM;
@@ -22,7 +22,7 @@
       color: $MAIN_COLOR;
       border-bottom: none;
       cursor: pointer;
-      &.accordion-desktop--toggled {
+      &.accordionDesktopToggled {
         background-color: $GRAY_200;
       }
     }
@@ -31,7 +31,7 @@
       max-height: 0;
       overflow: hidden;
       background-color: white;
-      &-link {
+      &Link {
         @include font-type($MAIN_FONT, $MEDIUM, lighter);
 
         padding: $SMALL;
@@ -39,7 +39,7 @@
           background-color: $GRAY_100;
         }
       }
-      &.accordion-desktop--toggled {
+      &.accordionDesktopToggled {
         position: absolute;
         top: 50px;
         left: 0;

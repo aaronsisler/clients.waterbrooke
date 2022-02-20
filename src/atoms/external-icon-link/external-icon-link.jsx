@@ -2,9 +2,9 @@ import React from "react";
 import cn from "classnames";
 import PropTypes from "prop-types";
 
-import styles from "./external-link.module.scss";
+import styles from "./external-icon-link.module.scss";
 
-const ExternalLink = ({ className, href, onClick, title }) => (
+const ExternalIconLink = ({ children, className, href, onClick }) => (
   <a
     className={cn(styles.externalLink, className)}
     onClick={onClick}
@@ -12,15 +12,15 @@ const ExternalLink = ({ className, href, onClick, title }) => (
     target="_blank"
     rel="noopener noreferrer"
   >
-    {title}
+    {children}
   </a>
 );
 
-ExternalLink.propTypes = {
+ExternalIconLink.propTypes = {
+  children: PropTypes.object,
   className: PropTypes.string,
   href: PropTypes.string.isRequired,
   onClick: PropTypes.func,
-  title: PropTypes.string.isRequired
 };
 
-export default ExternalLink;
+export default ExternalIconLink;

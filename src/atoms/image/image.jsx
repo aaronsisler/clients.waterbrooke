@@ -1,17 +1,39 @@
 import React from "react";
+import NextImage from "next/image";
 import cn from "classnames";
 import PropTypes from "prop-types";
 
-import "./image.scss";
+import styles from "./image.module.scss";
 
-const Image = ({ altText, className, src }) => (
-  <img className={cn("image", className)} src={src} alt={altText} />
+const ImageAtom = ({
+  alt,
+  className,
+  height,
+  layout,
+  priority = false,
+  src,
+  width,
+}) => (
+  <NextImage
+    className={cn(className, styles.image)}
+    src={src}
+    alt={alt}
+    layout={layout}
+    priority={priority}
+    unoptimized={true}
+    height={height}
+    width={width}
+  />
 );
 
-Image.propTypes = {
-  altText: PropTypes.string.isRequired,
+ImageAtom.propTypes = {
+  src: PropTypes.string.isRequired,
+  alt: PropTypes.string.isRequired,
   className: PropTypes.string,
-  src: PropTypes.string.isRequired
+  height: PropTypes.any,
+  layout: PropTypes.string,
+  priority: PropTypes.bool,
+  width: PropTypes.any,
 };
 
-export default Image;
+export default ImageAtom;

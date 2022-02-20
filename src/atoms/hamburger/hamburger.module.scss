@@ -1,4 +1,4 @@
-@import "../../styles/variables.scss";
+@import "../../styles/variables";
 
 //Small screens - MOBILE
 @media only screen {
@@ -10,7 +10,7 @@
       background-color: $MAIN_COLOR;
       transition: all 0.3s ease;
     }
-    &.hamburger--toggled {
+    &.hamburgerToggled {
       .hamburger__line:nth-child(1) {
         transform: rotate(-45deg) translate(-5px, 6px);
       }

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup/dist/yup.umd";
 import * as yup from "yup";
 
 import { CLIENT_NAME } from "../../config";
@@ -7,43 +8,47 @@ import { sendEmail } from "../../utils";
 import FormError from "../../atoms/form-error";
 import Input from "../../atoms/input";
 
-import "./contact-form.scss";
+import styles from "./contact-form.module.scss";
 
 const errorMessages = {
   emailAddress: "Please enter a valid email address",
   name: "Please enter your name",
-  phoneNumber: "Phone number must be 10 digits"
+  phoneNumber: "Phone number must be 10 digits",
 };
 
-const ContactSchema = yup.object().shape({
-  emailAddress: yup
-    .string()
-    .email()
-    .required(),
+const contactSchema = yup.object().shape({
+  emailAddress: yup.string().email().required(),
   name: yup.string().required(),
   phoneNumber: yup
     .string()
     .test(
       "is-phone-number",
       errorMessages.phoneNumber,
-      value =>
+      (value) =>
         value.trim() === "" || (value.match(/^[0-9]*$/) && value.length === 10)
-    )
+    ),
 });
+
+const useFormOptions = {
+  mode: "onBlur",
+  resolver: yupResolver(contactSchema),
+};
 
 const ContactForm = () => {
   const [isSendButtonDisabled, setIsSendButtonDisabled] = useState(false);
   const [emailSent, setEmailSent] = useState(false);
   const [sendButtonText, setSendButtonText] = useState("Send It");
-  const { register, handleSubmit, watch, errors } = useForm({
-    mode: "onBlur",
-    validationSchema: ContactSchema
-  });
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm(useFormOptions);
 
   if (emailSent) {
     return (
-      <div className="contact-form">
-        <h1 className="contact-form__email-sent">
+      <div className={styles.contactForm}>
+        <h1 className={styles.contactForm__emailSent}>
           Thank you for reaching out!
           <br />
           We are excited to get back in touch with you.
@@ -61,7 +66,7 @@ const ContactForm = () => {
       message,
       name,
       phoneNumber,
-      subject: `${CLIENT_NAME}: Contact Submission`
+      subject: `${CLIENT_NAME}: Contact Submission`,
     };
 
     const done = () => {
@@ -76,38 +81,38 @@ const ContactForm = () => {
   };
 
   return (
-    <form className="contact-form" onSubmit={handleSubmit(onSubmit)}>
-      <h1 className="contact-form__title">Have some questions?</h1>
+    <form className={styles.contactForm} onSubmit={handleSubmit(onSubmit)}>
+      <h1 className={styles.contactForm__title}>Send a message</h1>
       <Input
-        hasError={Boolean(errors.name)}
+        hasError={Boolean(errors?.name)}
         label="Name"
         name="name"
-        refProp={register}
+        registerProp={register}
       />
-      {errors.name && <FormError error={errorMessages.name} />}
+      {errors?.name && <FormError error={errorMessages.name} />}
       <Input
-        hasError={Boolean(errors.emailAddress)}
+        hasError={Boolean(errors?.emailAddress)}
         label="Email"
         name="emailAddress"
-        refProp={register}
+        registerProp={register}
       />
-      {errors.emailAddress && <FormError error={errorMessages.emailAddress} />}
+      {errors?.emailAddress && <FormError error={errorMessages.emailAddress} />}
       <Input
-        hasError={Boolean(errors.phoneNumber)}
+        hasError={Boolean(errors?.phoneNumber)}
         label="Phone (Digits only, no dashes, etc.)"
         name="phoneNumber"
-        refProp={register}
+        registerProp={register}
       />
-      {errors.phoneNumber && <FormError error={errorMessages.phoneNumber} />}
+      {errors?.phoneNumber && <FormError error={errorMessages.phoneNumber} />}
       <textarea
-        className="contact-form__message"
+        className={styles.contactForm__message}
         name="message"
         placeholder="What's on your mind?"
-        ref={register}
+        {...register("message")}
         rows="4"
       />
       <input
-        className="contact-form__button"
+        className={styles.contactForm__button}
         disabled={
           isSendButtonDisabled ||
           !watch("name") ||
