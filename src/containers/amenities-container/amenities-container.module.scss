@@ -13,7 +13,7 @@
         margin: $SMALL 0;
       }
     }
-    &__sec-title {
+    &__secTitle {
       @include font-type($MAIN_FONT, $MIDLARGE, bold);
 
       margin: $SMALL 0;
@@ -21,7 +21,7 @@
     &__list {
       &-item {
         margin-bottom: $MIDLARGE;
-        &-image {
+        &Image {
           margin-bottom: $SMALL;
         }
         &-title {
@@ -42,7 +42,7 @@
     &__list {
       max-width: 700px;
       &-item {
-        &-image {
+        &Image {
           max-width: 350px;
         }
       }
@@ -55,7 +55,7 @@
   .amenities-container {
     padding: $MEDIUM 25% $XLARGE;
     &__section {
-      &-image {
+      &Image {
         max-width: 450px;
       }
     }

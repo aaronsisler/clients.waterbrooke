@@ -5,7 +5,7 @@
 @media only screen {
   .daily-life-container {
     &__splash {
-      &-image {
+      &Image {
         height: 100%;
       }
     }
@@ -36,7 +36,7 @@
 @media only screen and (min-width: $MEDIUM_SCREEN) {
   .daily-life-container {
     &__splash {
-      &-image {
+      &Image {
         @include headerImage(0 15%);
       }
     }

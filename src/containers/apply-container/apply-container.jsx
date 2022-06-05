@@ -5,11 +5,11 @@ import ApplicationSubmissionForm from "../../components/application-submission-f
 import styles from "./apply-container.module.scss";
 
 const ApplyContainer = () => (
-  <div className={styles.apply-container">
+  <div className={styles.applyContainer}>
     <ApplicationDownload />
-    <div className={styles.apply-container__form">
+    <div className={styles.applyContainer__form}>
       <hr />
-      <h2 className={styles.apply-container__form-title">Submit Application</h2>
+      <h2 className={styles.applyContainer__formTitle}>Submit Application</h2>
       <ApplicationSubmissionForm />
     </div>
   </div>

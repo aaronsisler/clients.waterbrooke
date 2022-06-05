@@ -14,7 +14,7 @@ const headerImage = {
 
 const OurMissionContainer = () => (
   <div className={styles.our-mission-container">
-    <Image className={styles.our-mission-container__header-image" {...headerImage} />
+    <Image className={styles.our-mission-container__headerImage} {...headerImage} />
     <div className={styles.our-mission-container__content">
       <h1 className={styles.our-mission-container__title">
         Our mission is caring for you.
@@ -32,7 +32,7 @@ const OurMissionContainer = () => (
         independence possible.&nbsp;
         <Hyperlink href="/leadership" title="Meet our team" />
       </p>
-      <h2 className={styles.our-mission-container__sec-title">Leading by example</h2>
+      <h2 className={styles.our-mission-container__secTitle}>Leading by example</h2>
       <p>
         We take pride in the fact that our staff within memory care do not just
         simply meet state minimum requirements for training. It is Waterbrooke’s

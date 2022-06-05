@@ -5,27 +5,29 @@ import amenities from "../../content/amenities";
 import styles from "./amenities-container.module.scss";
 
 const AmenitiesContainer = () => (
-  <div className={styles.amenities-container">
-    <div className={styles.amenities-container__header">
-      <h1 className={styles.amenities-container__header-title">Amenities</h1>
+  <div className={styles.amenitiesContainer}>
+    <div className={styles.amenitiesContainer__header}>
+      <h1 className={styles.amenitiesContainer__headerTitle}>Amenities</h1>
       <p>
         Living at Waterbrooke gives you perks you would never have living at
         home.
       </p>
     </div>
-    <h2 className={styles.amenities-container__sec-title">What we provide</h2>
-    <div className={styles.amenities-container__list">
+    <h2 className={styles.amenitiesContainer__secTitle}>What we provide</h2>
+    <div className={styles.amenitiesContainer__list}>
       {amenities.map(({ content, image, title }, index) => (
-        <section className={styles.amenities-container__list-item" key={index}>
+        <section className={styles.amenitiesContainer__listItem} key={index}>
           {image && (
             <Image
               alt={image.alt}
-              className={styles.amenities-container__list-item-image"
+              className={styles.amenitiesContainer__listItemImage}
               src={image.src}
             />
           )}
-          <h3 className={styles.amenities-container__list-item-title">{title}</h3>
-          <p className={styles.amenities-container__list-item-content">{content}</p>
+          <h3 className={styles.amenitiesContainer__listItemTitle}>{title}</h3>
+          <p className={styles.amenitiesContainer__listItemContent}>
+            {content}
+          </p>
         </section>
       ))}
     </div>

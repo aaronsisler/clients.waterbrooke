@@ -37,8 +37,8 @@ const ImageSubmissionForm = () => {
 
   if (emailSent) {
     return (
-      <div className={styles.image-submission-form">
-        <p className={styles.image-submission-form__email-sent">
+      <div className={styles.imageSubmissionForm}>
+        <p className={styles.imageSubmissionForm__emailSent}>
           Thank you!
           <br />
           We are excited to get back in touch with you.
@@ -90,7 +90,10 @@ const ImageSubmissionForm = () => {
     sendEmailWithAttachment(formData, done, fail);
   };
   return (
-    <form className={styles.image-submission-form" onSubmit={handleSubmit(onSubmit)}>
+    <form
+      className={styles.imageSubmissionForm}
+      onSubmit={handleSubmit(onSubmit)}
+    >
       <Input
         hasError={Boolean(errors.name)}
         label="Name"
@@ -98,7 +101,7 @@ const ImageSubmissionForm = () => {
         refProp={register}
       />
       {errors.name && <FormError error={errorMessages.name} />}
-      <div className={styles.image-submission-form__file-upload">
+      <div className={styles.imageSubmissionForm__fileUpload}>
         <FileUpload buttonText="Upload Image" onFileUpload={handleFileUpload} />
         {rawFile && isValidFileType && (
           <span>Image Uploaded Successfully!</span>
@@ -106,14 +109,14 @@ const ImageSubmissionForm = () => {
       </div>
       {!isValidFileType && <FormError error={errorMessages.fileType} />}
       <textarea
-        className={styles.image-submission-form__message"
+        className={styles.imageSubmissionForm__message}
         name="message"
         placeholder="Is there anything extra you'd like to tell us?"
         ref={register}
         rows="4"
       />
       <input
-        className={styles.image-submission-form__button"
+        className={styles.imageSubmissionForm__button}
         disabled={
           isSendButtonDisabled ||
           !watch("name") ||

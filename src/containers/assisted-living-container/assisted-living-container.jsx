@@ -17,13 +17,13 @@ const splashImage = {
 };
 
 const AssistedLivingContainer = () => (
-  <div className={styles.assisted-living-container">
+  <div className={styles.assistedLivingContainer}>
     <Image
-      className={styles.assisted-living-container__splash-image"
+      className={styles.assistedLivingContainer__splashImage}
       {...splashImage}
     />
-    <div className={styles.assisted-living-container__content">
-      <h1 className={styles.assisted-living-container__title">
+    <div className={styles.assistedLivingContainer__content}>
+      <h1 className={styles.assistedLivingContainer__title}>
         Our services make the difference
       </h1>
       <p>
@@ -33,7 +33,7 @@ const AssistedLivingContainer = () => (
         maintain connections with people and interests that are meaningful to
         them.
       </p>
-      <h2 className={styles.assisted-living-container__sec-title">Live freely</h2>
+      <h2 className={styles.assistedLivingContainer__secTitle}>Live freely</h2>
       <p>
         Our Assisted Living program is designed to provide the perfect balance
         of support and independence. Whether you’re a social butterfly or prefer
@@ -45,32 +45,32 @@ const AssistedLivingContainer = () => (
         maintenance calls or repairs. Simply enjoy the most remarkable parts of
         the life you lead.
       </p>
-      <h2 className={styles.assisted-living-container__images-title">Our rooms</h2>
-      <div className={styles.assisted-living-container__model-images">
+      <h2 className={styles.assistedLivingContainer__imagesTitle}>Our rooms</h2>
+      <div className={styles.assistedLivingContainer__modelImages}>
         {modelRoomImages.map((image, index) => (
           <Image
             key={index}
-            className={styles.assisted-living-container__model-image"
+            className={styles.assistedLivingContainer__modelImage}
             {...image}
           />
         ))}
       </div>
       <hr />
-      <h2 className={styles.assisted-living-container__list-title">What we provide</h2>
-      <ul className={styles.assisted-living-container__list">
+      <h2 className={styles.assistedLivingContainer__list-title">What we provide</h2>
+      <ul className={styles.assistedLivingContainer__list">
         {coveredServices.map((service, index) => (
-          <li key={index} className={styles.assisted-living-container__list-item">
+          <li key={index} className={styles.assistedLivingContainer__list-item">
             {service}
           </li>
         ))}
       </ul>
       <hr />
-      <h2 className={styles.assisted-living-container__list-title">
+      <h2 className={styles.assistedLivingContainer__list-title">
         What we don't cover
       </h2>
-      <ul className={styles.assisted-living-container__list">
+      <ul className={styles.assistedLivingContainer__list">
         {notCoveredServices.map((service, index) => (
-          <li key={index} className={styles.assisted-living-container__list-item">
+          <li key={index} className={styles.assistedLivingContainer__list-item">
             {service}
           </li>
         ))}

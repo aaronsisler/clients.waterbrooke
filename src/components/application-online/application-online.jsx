@@ -5,10 +5,10 @@ import ExternalLink from "../../atoms/external-link";
 import styles from "./application-online.module.scss";
 
 const ApplicationOnline = () => (
-  <div className={styles.application-online">
+  <div className={styles.applicationOnline}>
     <ExternalLink
       href={APPLICATION_ONLINE_URL}
-      className={styles.application-online__nav-link"
+      className={styles.applicationOnline__navLink}
       title="Apply Online"
     />
   </div>

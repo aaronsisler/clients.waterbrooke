@@ -3,10 +3,10 @@
 
 //Small screens - MOBILE
 @media only screen {
-  .activities-container {
+  .activitiesContainer {
     padding: $MEDIUM $MEDIUM $LARGE;
     &__header {
-      &-title {
+      &Title {
         @include font-type($MAIN_FONT, $LARGE, bold);
       }
     }
@@ -19,14 +19,14 @@
     hr {
       margin: $SMALL 0;
     }
-    &__sec-title {
+    &__secTitle {
       @include font-type($MAIN_FONT, $MIDLARGE, bold);
 
       margin: $SMALL 0;
     }
     &__list {
       margin-left: $MEDIUM;
-      &-item {
+      &Item {
         @include font-type($MAIN_FONT, $MEDIUM);
 
         margin-bottom: $SMALL;
@@ -37,7 +37,7 @@
 
 //Medium screens - TABLET
 @media only screen and (min-width: $MEDIUM_SCREEN) {
-  .activities-container {
+  .activitiesContainer {
     &__header,
     &__activities {
       padding: 0 15%;

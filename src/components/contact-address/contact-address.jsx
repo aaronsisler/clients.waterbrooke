@@ -6,13 +6,13 @@ import styles from "./contact-address.module.scss";
 const [streetAddress, cityStateZip] = CONTACT_ADDRESS;
 
 const ContactAddress = () => (
-  <div className={styles.contact-address">
+  <div className={styles.contactAddress}>
     <h2>Stop by to see us</h2>
     <p>{streetAddress}</p>
     <p>{cityStateZip}</p>
     <a
       href={GOOGLE_MAPS_LOCATION}
-      className={styles.hyperlink"
+      className={styles.hyperlink}
       target="_blank"
       rel="noopener noreferrer"
     >

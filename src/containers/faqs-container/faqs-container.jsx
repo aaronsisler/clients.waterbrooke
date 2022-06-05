@@ -14,7 +14,7 @@ const splashImage = {
 
 const FaqsContainer = () => (
   <div className={styles.faqs-container">
-    <Image className={styles.faqs-container__splash-image" {...splashImage} />
+    <Image className={styles.faqs-container__splashImage} {...splashImage} />
     <div className={styles.faqs-container__content">
       <h1 className={styles.faqs-container__title">What should I know?</h1>
       <p>

@@ -30,8 +30,8 @@ const ApplicationSubmissionForm = () => {
 
   if (emailSent) {
     return (
-      <div className={styles.application-submission-form">
-        <h1 className={styles.application-submission-form__email-sent">
+      <div className={styles.applicationSubmissionForm}>
+        <h1 className={styles.applicationSubmissionForm__emailSent}>
           Thank you for reaching out!
           <br />
           We are excited to get back in touch with you.
@@ -72,7 +72,7 @@ const ApplicationSubmissionForm = () => {
 
   return (
     <form
-      className={styles.application-submission-form"
+      className={styles.applicationSubmissionForm}
       onSubmit={handleSubmit(onSubmit)}
     >
       <Input
@@ -82,7 +82,7 @@ const ApplicationSubmissionForm = () => {
         refProp={register}
       />
       {errors.name && <FormError error={errorMessages.name} />}
-      <div className={styles.application-submission-form__file-upload">
+      <div className={styles.applicationSubmissionForm__fileUpload}>
         {rawFile && <span>File Uploaded Successfully!</span>}
         <FileUpload
           buttonText="Upload Application"
@@ -90,14 +90,14 @@ const ApplicationSubmissionForm = () => {
         />
       </div>
       <textarea
-        className={styles.application-submission-form__message"
+        className={styles.applicationSubmissionForm__message}
         name="message"
         placeholder="Is there anything extra you'd like to tell us?"
         ref={register}
         rows="4"
       />
       <input
-        className={styles.application-submission-form__button"
+        className={styles.applicationSubmissionForm__button}
         disabled={
           isSendButtonDisabled ||
           !watch("name") ||

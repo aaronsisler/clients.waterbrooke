@@ -13,7 +13,7 @@ const splashImage = {
 
 const DiningContainer = () => (
   <div className={styles.dining-container">
-    <Image className={styles.dining-container__splash-image" {...splashImage} />
+    <Image className={styles.dining-container__splashImage} {...splashImage} />
     <div className={styles.dining-container__content">
       <h1 className={styles.dining-container__title">Home-cooked meals every day</h1>
       <p>

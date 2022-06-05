@@ -15,7 +15,7 @@ const splashImage = {
 const WhyAssistedLivingContainer = () => (
   <div className={styles.why-assisted-living-container">
     <Image
-      className={styles.why-assisted-living-container__splash-image"
+      className={styles.why-assisted-living-container__splashImage}
       {...splashImage}
     />
     <div className={styles.why-assisted-living-container__content">
@@ -30,7 +30,7 @@ const WhyAssistedLivingContainer = () => (
         regulations. Assisted living also provides a healthy lifestyle and
         social engagement.
       </p>
-      <h2 className={styles.why-assisted-living-container__sec-title">
+      <h2 className={styles.why-assisted-living-container__secTitle}>
         What can assisted living provide?
       </h2>
       <p>

@@ -4,7 +4,7 @@ import { APPLICATON_PDF_FILENAME, CDN_URL } from "../../config";
 import styles from "./application-download.module.scss";
 
 const ApplicationDownload = () => (
-  <div className={styles.application-download">
+  <div className={styles.applicationDownload}>
     <a
       href={`${CDN_URL}/documents/${APPLICATON_PDF_FILENAME}`}
       download

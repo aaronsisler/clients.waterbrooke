@@ -14,7 +14,7 @@ const splashImage = {
 
 const FirstStepContainer = () => (
   <div className={styles.first-step-container">
-    <Image className={styles.first-step-container__splash-image" {...splashImage} />
+    <Image className={styles.first-step-container__splashImage} {...splashImage} />
     <div className={styles.first-step-container__content">
       <h1 className={styles.first-step-container__title">Where do I start?</h1>
       <p>
@@ -33,7 +33,7 @@ const FirstStepContainer = () => (
           title="Learn more about assisted living."
         />
       </p>
-      <h2 className={styles.first-step-container__sec-title">
+      <h2 className={styles.first-step-container__secTitle}>
         Taking the first steps
       </h2>
       <p>

@@ -15,7 +15,7 @@ const headerImage = {
 
 const CareersContainer = () => (
   <div className={styles.careers-container">
-    <Image className={styles.careers-container__splash-image" {...headerImage} />
+    <Image className={styles.careers-container__splashImage} {...headerImage} />
     <div className={styles.careers-container__header">
       <h1>Join our team</h1>
       <p>

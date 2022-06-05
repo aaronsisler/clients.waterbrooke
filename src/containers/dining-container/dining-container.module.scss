@@ -5,7 +5,7 @@
 @media only screen {
   .dining-container {
     &__splash {
-      &-image {
+      &Image {
         height: 100%;
       }
     }
@@ -17,7 +17,7 @@
 
       margin-top: $MEDIUM;
     }
-    &__sec-title {
+    &__secTitle {
       @include font-type($MAIN_FONT, $MIDLARGE, bold);
 
       margin-top: $MEDIUM;
@@ -32,7 +32,7 @@
 @media only screen and (min-width: $MEDIUM_SCREEN) {
   .dining-container {
     &__splash {
-      &-image {
+      &Image {
         @include headerImage(0 15%);
       }
     }
