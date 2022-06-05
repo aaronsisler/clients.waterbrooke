@@ -1,11 +1,14 @@
-@import "../../styles/variables.scss";
-@import "../../styles/mixins.scss";
+@import "../../styles/variables";
 
 //Small screens - MOBILE
 @media only screen {
-  .contact-phone {
-    h2 {
-      @include font-type($MAIN_FONT, $MEDIUM, bold);
+  .logo {
+    height: $NAV_MENU_HEIGHT;
+    cursor: pointer;
+    &__image {
+      max-height: 100%;
+      padding: $XSMALL;
+      object-fit: scale-down;
     }
   }
 }

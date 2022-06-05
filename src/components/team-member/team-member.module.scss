@@ -1,9 +1,9 @@
-@import "../../styles/variables.scss";
-@import "../../styles/mixins.scss";
+@import "../../styles/variables";
+@import "../../styles/mixins";
 
 //Small screens - MOBILE
 @media only screen {
-  .team-member {
+  .teamMember {
     display: flex;
     flex-flow: column;
     &__image {
@@ -13,10 +13,10 @@
     &__content {
       margin-bottom: $MEDIUM;
       text-align: center;
-      &-name {
+      &Name {
         @include font-type($MAIN_FONT, $MIDLARGE, bold);
       }
-      &-title {
+      &Title {
         @include font-type($MAIN_FONT, $MEDIUM, 200);
       }
     }
@@ -25,7 +25,7 @@
 
 //Medium screens - TABLET
 @media only screen and (min-width: $MEDIUM_SCREEN) {
-  .team-member {
+  .teamMember {
     flex-flow: row;
     margin-bottom: $MIDLARGE;
     &__image {
@@ -39,12 +39,12 @@
       flex-flow: column;
       justify-content: center;
       text-align: left;
-      &-name {
+      &Name {
         @include font-type($MAIN_FONT, $MIDLARGE, bold);
 
         margin-right: $SMALL;
       }
-      &-title {
+      &Title {
         @include font-type($MAIN_FONT, $MEDIUM);
       }
     }

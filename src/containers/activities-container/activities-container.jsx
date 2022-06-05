@@ -1,13 +1,13 @@
 import React from "react";
-import Image from "../../atoms/image";
+import { Image } from "../../atoms/image";
 import { activities, eventImages } from "../../content/activities";
 
-import "./activities-container.scss";
+import styles from "./activities-container.module.scss";
 
 const ActivitiesContainer = () => (
-  <div className="activities-container">
-    <div className="activities-container__header">
-      <h1 className="activities-container__header-title">
+  <div className={styles.activities-container">
+    <div className={styles.activities-container__header">
+      <h1 className={styles.activities-container__header-title">
         Making new memories
       </h1>
       <p>
@@ -17,21 +17,21 @@ const ActivitiesContainer = () => (
         fitness classes, art activities, or our popular cooking classes.
       </p>
     </div>
-    <div className="activities-container__images">
+    <div className={styles.activities-container__images">
       {eventImages.map((eventImage, index) => (
         <Image
-          className="activities-container__image"
+          className={styles.activities-container__image"
           key={index}
           {...eventImage}
         />
       ))}
     </div>
     <hr />
-    <div className="activities-container__activities">
-      <h2 className="activities-container__sec-title">Activities</h2>
-      <ul className="activities-container__list">
+    <div className={styles.activities-container__activities">
+      <h2 className={styles.activities-container__sec-title">Activities</h2>
+      <ul className={styles.activities-container__list">
         {activities.map((activity, index) => (
-          <li key={index} className="activities-container__list-item">
+          <li key={index} className={styles.activities-container__list-item">
             {activity}
           </li>
         ))}

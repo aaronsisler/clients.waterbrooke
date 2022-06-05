@@ -1,18 +1,16 @@
-@import "../../styles/variables.scss";
-@import "../../styles/mixins.scss";
+@import "../../styles/variables";
+@import "../../styles/mixins";
 
 //Small screens - MOBILE
 @media only screen {
-  .our-mission-container {
-    padding: 0 $MEDIUM;
-    &__header-image {
-      width: 100%;
-      min-height: 45vh;
-      max-height: 350px;
-      margin-top: $SMALL;
+  .why-assisted-living-container {
+    &__splash {
+      &-image {
+        height: 100%;
+      }
     }
     &__content {
-      padding: 0 $SMALL $LARGE;
+      padding: 0 $MEDIUM $LARGE;
     }
     &__title {
       @include font-type($MAIN_FONT, $LARGE, bold);
@@ -32,34 +30,23 @@
 
 //Medium screens - TABLET
 @media only screen and (min-width: $MEDIUM_SCREEN) {
-  .our-mission-container {
-    &__header-image {
-      margin-top: $LARGE;
+  .why-assisted-living-container {
+    &__splash {
+      &-image {
+        @include headerImage(0 15%);
+      }
     }
     &__content {
-      padding: 0 $XLARGE;
+      padding: 0 15% $XLARGE;
     }
   }
 }
 
 //Large screens - DESKTOP
 @media only screen and (min-width: $LARGE_SCREEN) {
-  .our-mission-container {
-    display: flex;
-    justify-content: center;
-    padding: $XLARGE $XLARGE $XLARGE;
-    &__header-image {
-      max-width: 300px;
-      max-height: 450px;
-      margin-top: 0;
-    }
+  .why-assisted-living-container {
     &__content {
-      max-width: 800px;
-      margin-left: $XLARGE;
-      padding: 0;
-    }
-    &__title {
-      margin-top: 0;
+      padding: 0 25% $XLARGE;
     }
   }
 }

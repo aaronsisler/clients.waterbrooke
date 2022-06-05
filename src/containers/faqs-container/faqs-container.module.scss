@@ -1,9 +1,14 @@
-@import "../../styles/variables.scss";
-@import "../../styles/mixins.scss";
+@import "../../styles/variables";
+@import "../../styles/mixins";
 
 //Small screens - MOBILE
 @media only screen {
-  .leadership-container {
+  .faqs-container {
+    &__splash {
+      &-image {
+        height: 100%;
+      }
+    }
     &__content {
       padding: 0 $MEDIUM $LARGE;
     }
@@ -13,11 +18,17 @@
       margin-top: $MEDIUM;
     }
     p {
-      margin: $LARGE 0 $XLARGE 0;
+      margin: $SMALL 0 $MEDIUM 0;
     }
-    &__team-members {
-      hr {
-        margin-bottom: $MEDIUM;
+    hr {
+      margin-bottom: $SMALL;
+    }
+    &__questions-list {
+      padding-right: $XSMALL;
+      dt {
+        @include font-type($MAIN_FONT, $MEDIUM, bold);
+
+        margin: $SMALL 0 $XSMALL;
       }
     }
   }
@@ -25,21 +36,21 @@
 
 //Medium screens - TABLET
 @media only screen and (min-width: $MEDIUM_SCREEN) {
-  .leadership-container {
+  .faqs-container {
+    &__splash {
+      &-image {
+        @include headerImage(0 15%);
+      }
+    }
     &__content {
       padding: 0 15% $XLARGE;
-    }
-    &__team-members {
-      hr {
-        display: none;
-      }
     }
   }
 }
 
 //Large screens - DESKTOP
 @media only screen and (min-width: $LARGE_SCREEN) {
-  .leadership-container {
+  .faqs-container {
     &__content {
       padding: 0 25% $XLARGE;
     }

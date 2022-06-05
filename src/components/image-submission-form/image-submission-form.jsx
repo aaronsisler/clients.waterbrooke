@@ -9,17 +9,18 @@ import Input from "../../atoms/input";
 import {
   encodeBase64,
   isValidImageType,
-  sendEmailWithAttachment
+  sendEmailWithAttachment,
 } from "../../utils";
-import "./image-submission-form.scss";
+
+import styles from "./image-submission-form.module.scss";
 
 const errorMessages = {
   name: "Please enter your name",
-  fileType: "Valid image types: jpeg, jpg, png"
+  fileType: "Valid image types: jpeg, jpg, png",
 };
 
 const ImageUploadSchema = yup.object().shape({
-  name: yup.string().required()
+  name: yup.string().required(),
 });
 
 const ImageSubmissionForm = () => {
@@ -31,13 +32,13 @@ const ImageSubmissionForm = () => {
   const [emailSent, setEmailSent] = useState(false);
   const { register, handleSubmit, watch, errors } = useForm({
     mode: "onBlur",
-    validationSchema: ImageUploadSchema
+    validationSchema: ImageUploadSchema,
   });
 
   if (emailSent) {
     return (
-      <div className="image-submission-form">
-        <p className="image-submission-form__email-sent">
+      <div className={styles.image-submission-form">
+        <p className={styles.image-submission-form__email-sent">
           Thank you!
           <br />
           We are excited to get back in touch with you.
@@ -46,7 +47,7 @@ const ImageSubmissionForm = () => {
     );
   }
 
-  const handleFileUpload = event => {
+  const handleFileUpload = (event) => {
     const [rawFile] = event.target.files;
     if (!rawFile) {
       setRawFile(undefined);
@@ -75,7 +76,7 @@ const ImageSubmissionForm = () => {
       filename: `Image Verification: ${name}.${fileType}`,
       message,
       name,
-      subject: `${CLIENT_NAME}: Image Verification from ${name}`
+      subject: `${CLIENT_NAME}: Image Verification from ${name}`,
     };
 
     const done = () => {
@@ -89,7 +90,7 @@ const ImageSubmissionForm = () => {
     sendEmailWithAttachment(formData, done, fail);
   };
   return (
-    <form className="image-submission-form" onSubmit={handleSubmit(onSubmit)}>
+    <form className={styles.image-submission-form" onSubmit={handleSubmit(onSubmit)}>
       <Input
         hasError={Boolean(errors.name)}
         label="Name"
@@ -97,7 +98,7 @@ const ImageSubmissionForm = () => {
         refProp={register}
       />
       {errors.name && <FormError error={errorMessages.name} />}
-      <div className="image-submission-form__file-upload">
+      <div className={styles.image-submission-form__file-upload">
         <FileUpload buttonText="Upload Image" onFileUpload={handleFileUpload} />
         {rawFile && isValidFileType && (
           <span>Image Uploaded Successfully!</span>
@@ -105,14 +106,14 @@ const ImageSubmissionForm = () => {
       </div>
       {!isValidFileType && <FormError error={errorMessages.fileType} />}
       <textarea
-        className="image-submission-form__message"
+        className={styles.image-submission-form__message"
         name="message"
         placeholder="Is there anything extra you'd like to tell us?"
         ref={register}
         rows="4"
       />
       <input
-        className="image-submission-form__button"
+        className={styles.image-submission-form__button"
         disabled={
           isSendButtonDisabled ||
           !watch("name") ||

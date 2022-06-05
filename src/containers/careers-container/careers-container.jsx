@@ -1,22 +1,22 @@
 import React from "react";
-import Image from "../../atoms/image";
+import { Image } from "../../atoms/image";
 import { getCdnUrl } from "../../utils";
 import Hyperlink from "../../atoms/hyperlink";
 import ApplicationOnline from "../../components/application-online";
 
-import "./careers-container.scss";
+import styles from "./careers-container.module.scss";
 
 const CDN_URL = getCdnUrl("/careers");
 
 const headerImage = {
-  altText: "Staff member smiling with phone",
-  src: `${CDN_URL}/careers-container.jpg`
+  alt: "Staff member smiling with phone",
+  src: `${CDN_URL}/careers-container.jpg`,
 };
 
 const CareersContainer = () => (
-  <div className="careers-container">
-    <Image className="careers-container__splash-image" {...headerImage} />
-    <div className="careers-container__header">
+  <div className={styles.careers-container">
+    <Image className={styles.careers-container__splash-image" {...headerImage} />
+    <div className={styles.careers-container__header">
       <h1>Join our team</h1>
       <p>
         Submit your application by applying online or you may download an
@@ -25,13 +25,13 @@ const CareersContainer = () => (
       </p>
       <hr />
     </div>
-    <div className="careers-container__content">
+    <div className={styles.careers-container__content">
       <ApplicationOnline />
       <hr />
       <Hyperlink
         href="/apply"
         title="Upload Paper Application"
-        className="careers-container__content-link"
+        className={styles.careers-container__content-link"
       />
     </div>
   </div>

@@ -1,16 +1,18 @@
-@import "../../styles/variables.scss";
-@import "../../styles/mixins.scss";
+@import "../../styles/variables";
+@import "../../styles/mixins";
 
 //Small screens - MOBILE
 @media only screen {
-  .first-step-container {
-    &__splash {
-      &-image {
-        height: 100%;
-      }
+  .our-mission-container {
+    padding: 0 $MEDIUM;
+    &__header-image {
+      width: 100%;
+      min-height: 45vh;
+      max-height: 350px;
+      margin-top: $SMALL;
     }
     &__content {
-      padding: 0 $MEDIUM $LARGE;
+      padding: 0 $SMALL $LARGE;
     }
     &__title {
       @include font-type($MAIN_FONT, $LARGE, bold);
@@ -30,23 +32,34 @@
 
 //Medium screens - TABLET
 @media only screen and (min-width: $MEDIUM_SCREEN) {
-  .first-step-container {
-    &__splash {
-      &-image {
-        @include headerImage(0 15%);
-      }
+  .our-mission-container {
+    &__header-image {
+      margin-top: $LARGE;
     }
     &__content {
-      padding: 0 15% $XLARGE;
+      padding: 0 $XLARGE;
     }
   }
 }
 
 //Large screens - DESKTOP
 @media only screen and (min-width: $LARGE_SCREEN) {
-  .first-step-container {
+  .our-mission-container {
+    display: flex;
+    justify-content: center;
+    padding: $XLARGE $XLARGE $XLARGE;
+    &__header-image {
+      max-width: 300px;
+      max-height: 450px;
+      margin-top: 0;
+    }
     &__content {
-      padding: 0 25% $XLARGE;
+      max-width: 800px;
+      margin-left: $XLARGE;
+      padding: 0;
+    }
+    &__title {
+      margin-top: 0;
     }
   }
 }

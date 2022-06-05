@@ -1,11 +1,11 @@
-@import "../../styles/variables.scss";
-@import "../../styles/mixins.scss";
+@import "../../styles/variables";
+@import "../../styles/mixins";
 
 //Small screens - MOBILE
 @media only screen {
-  .contact-address {
-    h2 {
-      @include font-type($MAIN_FONT, $MEDIUM, bold);
+  .application-download {
+    a {
+      @include button();
     }
   }
 }

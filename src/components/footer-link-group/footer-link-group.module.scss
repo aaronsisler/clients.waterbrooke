@@ -1,17 +1,26 @@
-@import "../../styles/variables.scss";
-@import "../../styles/mixins.scss";
+@import "../../styles/variables";
+@import "../../styles/mixins";
 
 //Small screens - MOBILE
 @media only screen {
-  .application-download {
-    a {
-      @include button();
+  .footerLinkGroup {
+    &__title {
+      @include font-type($MAIN_FONT, $MIDLARGE, bold);
+
+      color: $MAIN_COLOR;
+    }
+    &__links {
+      display: flex;
+      flex-flow: column;
     }
   }
 }
 
 //Medium screens - TABLET
 @media only screen and (min-width: $MEDIUM_SCREEN) {
+  .footerLinkGroup {
+    margin-right: $SMALL;
+  }
 }
 
 //Large screens - DESKTOP

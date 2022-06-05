@@ -1,9 +1,9 @@
-@import "../../styles/variables.scss";
-@import "../../styles/mixins.scss";
+@import "../../styles/variables";
+@import "../../styles/mixins";
 
 //Small screens - MOBILE
 @media only screen {
-  .dining-container {
+  .first-step-container {
     &__splash {
       &-image {
         height: 100%;
@@ -30,7 +30,7 @@
 
 //Medium screens - TABLET
 @media only screen and (min-width: $MEDIUM_SCREEN) {
-  .dining-container {
+  .first-step-container {
     &__splash {
       &-image {
         @include headerImage(0 15%);
@@ -44,7 +44,7 @@
 
 //Large screens - DESKTOP
 @media only screen and (min-width: $LARGE_SCREEN) {
-  .dining-container {
+  .first-step-container {
     &__content {
       padding: 0 25% $XLARGE;
     }

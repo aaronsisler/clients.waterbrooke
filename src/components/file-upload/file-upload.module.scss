@@ -1,9 +1,9 @@
-@import "../../styles/variables.scss";
-@import "../../styles/mixins.scss";
+@import "../../styles/variables";
+@import "../../styles/mixins";
 
 //Small screens - MOBILE
 @media only screen {
-  .file-upload {
+  .fileUpload {
     &__input {
       position: absolute !important;
       width: 1px;

@@ -1,22 +1,22 @@
 import React from "react";
-import Image from "../../atoms/image";
+import { Image } from "../../atoms/image";
 import Hyperlink from "../../atoms/hyperlink";
 import { getCdnUrl } from "../../utils";
 
-import "./daily-life-container.scss";
+import styles from "./daily-life-container.module.scss";
 
 const CDN_URL = getCdnUrl("/daily-life");
 
 const splashImage = {
-  altText: "Two smiling senior ladies giving each other a high five",
-  src: `${CDN_URL}/daily-life-container.jpg`
+  alt: "Two smiling senior ladies giving each other a high five",
+  src: `${CDN_URL}/daily-life-container.jpg`,
 };
 
 const DailyLifeContainer = () => (
-  <div className="daily-life-container">
-    <Image className="daily-life-container__splash-image" {...splashImage} />
-    <div className="daily-life-container__content">
-      <h1 className="daily-life-container__title">A day in the life</h1>
+  <div className={styles.daily-life-container">
+    <Image className={styles.daily-life-container__splash-image" {...splashImage} />
+    <div className={styles.daily-life-container__content">
+      <h1 className={styles.daily-life-container__title">A day in the life</h1>
       <p>
         One of the most common questions seniors have about senior living is,
         “What am I going to do all day?” Seniors fear they’ll be bored or lonely
@@ -35,11 +35,11 @@ const DailyLifeContainer = () => (
         the life you lead.
       </p>
       <hr />
-      <div className="daily-life-container__topic">
-        <h2 className="daily-life-container__topic-title">
+      <div className={styles.daily-life-container__topic">
+        <h2 className={styles.daily-life-container__topic-title">
           Engaging Activities
         </h2>
-        <p className="daily-life-container__topic-content">
+        <p className={styles.daily-life-container__topic-content">
           Our community offers residents a personalized monthly calendar of
           events. The available activities are selected based on the interests
           of each senior. They are designed to be enriching and fun for the
@@ -49,9 +49,9 @@ const DailyLifeContainer = () => (
         </p>
       </div>
       <hr />
-      <div className="daily-life-container__topic">
-        <h2 className="daily-life-container__topic-title">Dining Experience</h2>
-        <p className="daily-life-container__topic-content">
+      <div className={styles.daily-life-container__topic">
+        <h2 className={styles.daily-life-container__topic-title">Dining Experience</h2>
+        <p className={styles.daily-life-container__topic-content">
           A great meal is one of life’s simple pleasures. At Waterbrooke, we
           believe dining well is part of living well. Your loved one will enjoy
           restaurant-style dining with chef-prepared meals. Each day features a
@@ -61,9 +61,9 @@ const DailyLifeContainer = () => (
         </p>
       </div>
       <hr />
-      <div className="daily-life-container__topic">
-        <h2 className="daily-life-container__topic-title">Amenities</h2>
-        <p className="daily-life-container__topic-content">
+      <div className={styles.daily-life-container__topic">
+        <h2 className={styles.daily-life-container__topic-title">Amenities</h2>
+        <p className={styles.daily-life-container__topic-content">
           We strive to bring your loved one's interests to life through programs
           and outings that reflect their talents and personalities, while also
           offering new experiences that will challenge them and keep them

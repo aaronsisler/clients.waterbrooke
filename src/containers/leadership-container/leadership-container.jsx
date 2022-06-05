@@ -2,17 +2,17 @@ import React from "react";
 import TeamMember from "../../components/team-member";
 import leadership from "../../content/leadership";
 
-import "./leadership-container.scss";
+import styles from "./leadership-container.module.scss";
 
 const LeadershipContainer = () => (
-  <div className="leadership-container">
-    <div className="leadership-container__content">
-      <h1 className="leadership-container__title">Getting to know your team</h1>
+  <div className={styles.leadership-container">
+    <div className={styles.leadership-container__content">
+      <h1 className={styles.leadership-container__title">Getting to know your team</h1>
       <p>
         Your family member seeing a familiar face each day is one of the joys of
         living at Waterbrooke.
       </p>
-      <div className="leadership-container__team-members">
+      <div className={styles.leadership-container__team-members">
         {leadership.map((teamMember, index) => (
           <React.Fragment key={index}>
             <TeamMember key={index} {...teamMember} />

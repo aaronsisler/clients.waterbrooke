@@ -8,14 +8,14 @@ import FormError from "../../atoms/form-error";
 import Input from "../../atoms/input";
 import { encodeBase64, sendEmailWithAttachment } from "../../utils";
 
-import "./application-submission-form.scss";
+import styles from "./application-submission-form.module.scss";
 
 const errorMessages = {
-  name: "Please enter your name"
+  name: "Please enter your name",
 };
 
 const ApplicationSchema = yup.object().shape({
-  name: yup.string().required()
+  name: yup.string().required(),
 });
 
 const ApplicationSubmissionForm = () => {
@@ -25,13 +25,13 @@ const ApplicationSubmissionForm = () => {
   const [emailSent, setEmailSent] = useState(false);
   const { register, handleSubmit, watch, errors } = useForm({
     mode: "onBlur",
-    validationSchema: ApplicationSchema
+    validationSchema: ApplicationSchema,
   });
 
   if (emailSent) {
     return (
-      <div className="application-submission-form">
-        <h1 className="application-submission-form__email-sent">
+      <div className={styles.application-submission-form">
+        <h1 className={styles.application-submission-form__email-sent">
           Thank you for reaching out!
           <br />
           We are excited to get back in touch with you.
@@ -40,7 +40,7 @@ const ApplicationSubmissionForm = () => {
     );
   }
 
-  const handleFileUpload = event => {
+  const handleFileUpload = (event) => {
     const [rawFile] = event.target.files;
 
     return setRawFile(rawFile);
@@ -56,7 +56,7 @@ const ApplicationSubmissionForm = () => {
       encodedFile,
       filename: `Application: ${name}.pdf`,
       message,
-      subject: `${CLIENT_NAME} Application from ${name}`
+      subject: `${CLIENT_NAME} Application from ${name}`,
     };
 
     const done = () => {
@@ -72,7 +72,7 @@ const ApplicationSubmissionForm = () => {
 
   return (
     <form
-      className="application-submission-form"
+      className={styles.application-submission-form"
       onSubmit={handleSubmit(onSubmit)}
     >
       <Input
@@ -82,7 +82,7 @@ const ApplicationSubmissionForm = () => {
         refProp={register}
       />
       {errors.name && <FormError error={errorMessages.name} />}
-      <div className="application-submission-form__file-upload">
+      <div className={styles.application-submission-form__file-upload">
         {rawFile && <span>File Uploaded Successfully!</span>}
         <FileUpload
           buttonText="Upload Application"
@@ -90,14 +90,14 @@ const ApplicationSubmissionForm = () => {
         />
       </div>
       <textarea
-        className="application-submission-form__message"
+        className={styles.application-submission-form__message"
         name="message"
         placeholder="Is there anything extra you'd like to tell us?"
         ref={register}
         rows="4"
       />
       <input
-        className="application-submission-form__button"
+        className={styles.application-submission-form__button"
         disabled={
           isSendButtonDisabled ||
           !watch("name") ||

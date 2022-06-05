@@ -1,22 +1,22 @@
 import React from "react";
-import Image from "../../atoms/image";
+import { Image } from "../../atoms/image";
 import { getCdnUrl } from "../../utils";
 import { modelRoomImages } from "../../content/shared";
 
-import "./memory-care-container.scss";
+import styles from "./memory-care-container.module.scss";
 
 const CDN_URL = getCdnUrl("/memory-care");
 
 const splashImage = {
-  altText: "Hand holding projector slide containing an older couple",
-  src: `${CDN_URL}/memory-care-container.jpg`
+  alt: "Hand holding projector slide containing an older couple",
+  src: `${CDN_URL}/memory-care-container.jpg`,
 };
 
 const MemoryCareContainer = () => (
-  <div className="memory-care-container">
-    <Image className="memory-care-container__splash-image" {...splashImage} />
-    <div className="memory-care-container__content">
-      <h1 className="memory-care-container__title">What is memory care?</h1>
+  <div className={styles.memory-care-container">
+    <Image className={styles.memory-care-container__splash-image" {...splashImage} />
+    <div className={styles.memory-care-container__content">
+      <h1 className={styles.memory-care-container__title">What is memory care?</h1>
       <p>
         Our memory care program features a person-centered approach that’s
         designed to help your loved one feel a sense of belonging and purpose,
@@ -27,7 +27,7 @@ const MemoryCareContainer = () => (
         in our daily path of engagement, which encourages their current skills
         through research-based activities.
       </p>
-      <h2 className="memory-care-container__sec-title">
+      <h2 className={styles.memory-care-container__sec-title">
         Life in a memory care community
       </h2>
       <p>
@@ -42,12 +42,12 @@ const MemoryCareContainer = () => (
         of interesting residents and fun-filled activities that help them
         continue to live with purpose and meaning.
       </p>
-      <h2 className="memory-care-container__images-title">Our rooms</h2>
-      <div className="memory-care-container__model-images">
+      <h2 className={styles.memory-care-container__images-title">Our rooms</h2>
+      <div className={styles.memory-care-container__model-images">
         {modelRoomImages.map((image, index) => (
           <Image
             key={index}
-            className="memory-care-container__model-image"
+            className={styles.memory-care-container__model-image"
             {...image}
           />
         ))}

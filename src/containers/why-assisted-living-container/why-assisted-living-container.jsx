@@ -1,25 +1,25 @@
 import React from "react";
-import Image from "../../atoms/image";
+import { Image } from "../../atoms/image";
 import Hyperlink from "../../atoms/hyperlink";
 import { getCdnUrl } from "../../utils";
 
-import "./why-assisted-living-container.scss";
+import styles from "./why-assisted-living-container.module.scss";
 
 const CDN_URL = getCdnUrl("/why-assisted-living");
 
 const splashImage = {
-  altText: "Man holding hands together in thought",
-  src: `${CDN_URL}/why-assisted-living-container.jpg`
+  alt: "Man holding hands together in thought",
+  src: `${CDN_URL}/why-assisted-living-container.jpg`,
 };
 
 const WhyAssistedLivingContainer = () => (
-  <div className="why-assisted-living-container">
+  <div className={styles.why-assisted-living-container">
     <Image
-      className="why-assisted-living-container__splash-image"
+      className={styles.why-assisted-living-container__splash-image"
       {...splashImage}
     />
-    <div className="why-assisted-living-container__content">
-      <h1 className="why-assisted-living-container__title">
+    <div className={styles.why-assisted-living-container__content">
+      <h1 className={styles.why-assisted-living-container__title">
         What is assisted living?
       </h1>
       <p>
@@ -30,7 +30,7 @@ const WhyAssistedLivingContainer = () => (
         regulations. Assisted living also provides a healthy lifestyle and
         social engagement.
       </p>
-      <h2 className="why-assisted-living-container__sec-title">
+      <h2 className={styles.why-assisted-living-container__sec-title">
         What can assisted living provide?
       </h2>
       <p>

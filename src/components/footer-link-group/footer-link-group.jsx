@@ -2,12 +2,12 @@ import React from "react";
 import PropTypes from "prop-types";
 import Hyperlink from "../../atoms/hyperlink";
 
-import "./footer-link-group.scss";
+import styles from "./footer-link-group.module.scss";
 
 const FooterLinkGroup = ({ links, title }) => (
-  <div className="footer-link-group">
-    <h3 className="footer-link-group__title">{title}</h3>
-    <div className="footer-link-group__links">
+  <div className={styles.footerLinkGroup}>
+    <h3 className={styles.footerLinkGroup__title}>{title}</h3>
+    <div className={styles.footerLinkGroup__links}>
       {links.map((link, index) => (
         <Hyperlink key={index} {...link} />
       ))}
@@ -17,7 +17,7 @@ const FooterLinkGroup = ({ links, title }) => (
 
 FooterLinkGroup.propTypes = {
   links: PropTypes.array.isRequired,
-  title: PropTypes.string.isRequired
+  title: PropTypes.string.isRequired,
 };
 
 export default FooterLinkGroup;

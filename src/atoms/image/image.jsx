@@ -1,39 +1,18 @@
 import React from "react";
-import NextImage from "next/image";
 import cn from "classnames";
 import PropTypes from "prop-types";
 
 import styles from "./image.module.scss";
 
-const ImageAtom = ({
-  alt,
-  className,
-  height,
-  layout,
-  priority = false,
-  src,
-  width,
-}) => (
-  <NextImage
-    className={cn(className, styles.image)}
-    src={src}
-    alt={alt}
-    layout={layout}
-    priority={priority}
-    unoptimized={true}
-    height={height}
-    width={width}
-  />
+const Image = ({ alt, className, src }) => (
+  // eslint-disable-next-line @next/next/no-img-element
+  <img className={cn(styles.image, className)} src={src} alt={alt} />
 );
 
-ImageAtom.propTypes = {
-  src: PropTypes.string.isRequired,
+Image.propTypes = {
   alt: PropTypes.string.isRequired,
   className: PropTypes.string,
-  height: PropTypes.any,
-  layout: PropTypes.string,
-  priority: PropTypes.bool,
-  width: PropTypes.any,
+  src: PropTypes.string.isRequired,
 };
 
-export default ImageAtom;
+export { Image };

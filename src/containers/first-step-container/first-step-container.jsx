@@ -1,22 +1,22 @@
 import React from "react";
-import Image from "../../atoms/image";
+import { Image } from "../../atoms/image";
 import Hyperlink from "../../atoms/hyperlink";
 import { getCdnUrl } from "../../utils";
 
-import "./first-step-container.scss";
+import styles from "./first-step-container.module.scss";
 
 const CDN_URL = getCdnUrl("/first-step");
 
 const splashImage = {
-  altText: "Man holding hands together in thought",
-  src: `${CDN_URL}/first-step-container.jpg`
+  alt: "Man holding hands together in thought",
+  src: `${CDN_URL}/first-step-container.jpg`,
 };
 
 const FirstStepContainer = () => (
-  <div className="first-step-container">
-    <Image className="first-step-container__splash-image" {...splashImage} />
-    <div className="first-step-container__content">
-      <h1 className="first-step-container__title">Where do I start?</h1>
+  <div className={styles.first-step-container">
+    <Image className={styles.first-step-container__splash-image" {...splashImage} />
+    <div className={styles.first-step-container__content">
+      <h1 className={styles.first-step-container__title">Where do I start?</h1>
       <p>
         Many adult children experience a moment when they realize for the first
         time that their parent seems to be getting old. This realization can
@@ -33,7 +33,7 @@ const FirstStepContainer = () => (
           title="Learn more about assisted living."
         />
       </p>
-      <h2 className="first-step-container__sec-title">
+      <h2 className={styles.first-step-container__sec-title">
         Taking the first steps
       </h2>
       <p>

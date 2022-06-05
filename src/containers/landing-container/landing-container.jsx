@@ -1,31 +1,31 @@
 import React from "react";
-import Image from "../../atoms/image";
+import { Image } from "../../atoms/image";
 import Hyperlink from "../../atoms/hyperlink";
 import { getCdnUrl } from "../../utils";
 
-import "./landing-container.scss";
+import styles from "./landing-container.module.scss";
 
 const CDN_URL = getCdnUrl("/landing");
 
 const splashImage = {
-  altText: "Flowers on the front outdoor porch",
-  src: `${CDN_URL}/landing-container__front-porch.jpg`
+  alt: "Flowers on the front outdoor porch",
+  src: `${CDN_URL}/landing-container__front-porch.jpg`,
 };
 const outdoorImage = {
-  altText: "Picture of the back of facility",
-  src: `${CDN_URL}/landing-container__splash.jpg`
+  alt: "Picture of the back of facility",
+  src: `${CDN_URL}/landing-container__splash.jpg`,
 };
 
 const LandingContainer = () => (
-  <div className="landing-container">
-    <Image className="landing-container__splash-image" {...splashImage} />
-    <div className="landing-container__banner">
+  <div className={styles.landingContainer}>
+    <Image className={styles.landingContainer__splashImage} {...splashImage} />
+    <div className={styles.landingContainer__banner}>
       <p>Voted Best Senior Care Facility</p>
       <p>2021 Winner: Best of the Albemarle Award</p>
       <p>2020 Winner: The Daily Advance Readers' Choice</p>
     </div>
-    <div className="landing-container__content">
-      <h1 className="landing-container__content-title">
+    <div className={styles.landingContainer__content}>
+      <h1 className={styles.landingContainer__contentTitle}>
         Life is better at Waterbrooke
       </h1>
       <p>
@@ -41,9 +41,9 @@ const LandingContainer = () => (
         <Hyperlink href="/daily-life" title="learning more here." />
       </p>
     </div>
-    <Image className="landing-container__second-image" {...outdoorImage} />
-    <div className="landing-container__content">
-      <h2 className="landing-container__content-sec-title">
+    <Image className={styles.landingContainer__secondImage} {...outdoorImage} />
+    <div className={styles.landingContainer__content}>
+      <h2 className={styles.landingContainer__contentSecTitle}>
         Not sure where to begin?
       </h2>
       <p>
