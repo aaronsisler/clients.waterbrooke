@@ -76,12 +76,12 @@ const ApplicationSubmissionForm = () => {
       onSubmit={handleSubmit(onSubmit)}
     >
       <Input
-        hasError={Boolean(errors.name)}
+        hasError={Boolean(errors?.name)}
         label="Name"
         name="name"
         registerProp={register}
       />
-      {errors.name && <FormError error={errorMessages.name} />}
+      {errors?.name && <FormError error={errorMessages.name} />}
       <div className={styles.applicationSubmissionForm__fileUpload}>
         {rawFile && <span>File Uploaded Successfully!</span>}
         <FileUpload

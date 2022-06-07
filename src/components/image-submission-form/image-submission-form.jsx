@@ -79,47 +79,46 @@ const ImageSubmissionForm = () => {
     };
     sendEmailWithAttachment(formData, done, fail);
   };
-  // return (
-  //   <form
-  //     className={styles.imageSubmissionForm}
-  //     onSubmit={handleSubmit(onSubmit)}
-  //   >
-  //     {/* <Input
-  //       hasError={Boolean(errors.name)}
-  //       label="Name"
-  //       name="name"
-  //       registerProp={register}
-  //     /> */}
-  //     {errors.name && <FormError error={errorMessages.name} />}
-  //     <div className={styles.imageSubmissionForm__fileUpload}>
-  //       <FileUpload buttonText="Upload Image" onFileUpload={handleFileUpload} />
-  //       {rawFile && isValidFileType && (
-  //         <span>Image Uploaded Successfully!</span>
-  //       )}
-  //     </div>
-  //     {!isValidFileType && <FormError error={errorMessages.fileType} />}
-  //     {/* <textarea
-  //       className={styles.imageSubmissionForm__message}
-  //       name="message"
-  //       placeholder="Is there anything extra you'd like to tell us?"
-  //       ref={register}
-  //       rows="4"
-  //     /> */}
-  //     {/* <input
-  //       className={styles.imageSubmissionForm__button}
-  //       disabled={
-  //         isSendButtonDisabled ||
-  //         !watch("name") ||
-  //         !rawFile ||
-  //         !isValidFileType ||
-  //         Object.keys(errors).length
-  //       }
-  //       type="submit"
-  //       value={sendButtonText}
-  //     /> */}
-  //   </form>
-  // );
-  return <></>;
+  return (
+    <form
+      className={styles.imageSubmissionForm}
+      onSubmit={handleSubmit(onSubmit)}
+    >
+      <Input
+        hasError={Boolean(errors?.name)}
+        label="Name"
+        name="name"
+        registerProp={register}
+      />
+      {errors?.name && <FormError error={errorMessages.name} />}
+      <div className={styles.imageSubmissionForm__fileUpload}>
+        <FileUpload buttonText="Upload Image" onFileUpload={handleFileUpload} />
+        {rawFile && isValidFileType && (
+          <span>Image Uploaded Successfully!</span>
+        )}
+      </div>
+      {!isValidFileType && <FormError error={errorMessages.fileType} />}
+      <textarea
+        className={styles.imageSubmissionForm__message}
+        name="message"
+        placeholder="Is there anything extra you'd like to tell us?"
+        ref={register}
+        rows="4"
+      />
+      <input
+        className={styles.imageSubmissionForm__button}
+        disabled={
+          isSendButtonDisabled ||
+          !watch("name") ||
+          !rawFile ||
+          !isValidFileType ||
+          Object.keys(errors).length
+        }
+        type="submit"
+        value={sendButtonText}
+      />
+    </form>
+  );
 };
 
 export default ImageSubmissionForm;
