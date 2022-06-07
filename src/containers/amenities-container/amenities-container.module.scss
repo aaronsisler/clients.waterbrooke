@@ -20,9 +20,9 @@
     }
     &__list {
       &Item {
-        margin-bottom: $MIDLARGE;
+        margin-bottom: $XLARGE;
         &Image {
-          margin-bottom: $SMALL;
+          margin-bottom: $MEDIUM;
         }
         &Title {
           @include font-type($MAIN_FONT, $MEDIUM, bold);

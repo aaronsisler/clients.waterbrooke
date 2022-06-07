@@ -21,14 +21,14 @@
       margin: $SMALL 0 $MEDIUM 0;
     }
     hr {
-      margin-bottom: $SMALL;
+      margin-block: $LARGE;
     }
     &__questionsList {
       padding-right: $XSMALL;
       dt {
         @include font-type($MAIN_FONT, $MEDIUM, bold);
 
-        margin: $SMALL 0 $XSMALL;
+        margin: $LARGE 0 $SMALL;
       }
     }
   }
