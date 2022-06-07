@@ -1,9 +1,6 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import { yupResolver } from "@hookform/resolvers/yup/dist/yup.umd";
 import * as yup from "yup";
-
-import { CLIENT_NAME } from "../../config";
 import { sendEmail } from "../../utils";
 import FormError from "../../atoms/form-error";
 import Input from "../../atoms/input";
@@ -16,7 +13,7 @@ const errorMessages = {
   phoneNumber: "Phone number must be 10 digits",
 };
 
-const contactSchema = yup.object().shape({
+const ContactSchema = yup.object().shape({
   emailAddress: yup.string().email().required(),
   name: yup.string().required(),
   phoneNumber: yup
@@ -29,21 +26,14 @@ const contactSchema = yup.object().shape({
     ),
 });
 
-const useFormOptions = {
-  mode: "onBlur",
-  resolver: yupResolver(contactSchema),
-};
-
 const ContactForm = () => {
   const [isSendButtonDisabled, setIsSendButtonDisabled] = useState(false);
   const [emailSent, setEmailSent] = useState(false);
   const [sendButtonText, setSendButtonText] = useState("Send It");
-  const {
-    register,
-    handleSubmit,
-    watch,
-    formState: { errors },
-  } = useForm(useFormOptions);
+  const { register, handleSubmit, watch, errors } = useForm({
+    mode: "onBlur",
+    validationSchema: ContactSchema,
+  });
 
   if (emailSent) {
     return (
@@ -66,7 +56,6 @@ const ContactForm = () => {
       message,
       name,
       phoneNumber,
-      subject: `${CLIENT_NAME}: Contact Submission`,
     };
 
     const done = () => {
@@ -82,7 +71,7 @@ const ContactForm = () => {
 
   return (
     <form className={styles.contactForm} onSubmit={handleSubmit(onSubmit)}>
-      <h1 className={styles.contactForm__title}>Send a message</h1>
+      <h1 className={styles.contactForm__title}>Have some questions?</h1>
       <Input
         hasError={Boolean(errors?.name)}
         label="Name"
@@ -108,7 +97,7 @@ const ContactForm = () => {
         className={styles.contactForm__message}
         name="message"
         placeholder="What's on your mind?"
-        {...register("message")}
+        {...register}
         rows="4"
       />
       <input

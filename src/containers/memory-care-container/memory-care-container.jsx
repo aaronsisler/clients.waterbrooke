@@ -13,13 +13,13 @@ const splashImage = {
 };
 
 const MemoryCareContainer = () => (
-  <div className={styles.memory - careContainer}>
+  <div className={styles.memoryCareContainer}>
     <Image
-      className={styles.memory - careContainer__splashImage}
+      className={styles.memoryCareContainer__splashImage}
       {...splashImage}
     />
-    <div className={styles.memory - careContainer__content}>
-      <h1 className={styles.memory - careContainer__title}>
+    <div className={styles.memoryCareContainer__content}>
+      <h1 className={styles.memoryCareContainer__title}>
         What is memory care?
       </h1>
       <p>
@@ -32,7 +32,7 @@ const MemoryCareContainer = () => (
         in our daily path of engagement, which encourages their current skills
         through research-based activities.
       </p>
-      <h2 className={styles.memory - careContainer__secTitle}>
+      <h2 className={styles.memoryCareContainer__secTitle}>
         Life in a memory care community
       </h2>
       <p>
@@ -47,12 +47,12 @@ const MemoryCareContainer = () => (
         of interesting residents and fun-filled activities that help them
         continue to live with purpose and meaning.
       </p>
-      <h2 className={styles.memory - careContainer__imagesTitle}>Our rooms</h2>
-      <div className={styles.memory - careContainer__modelImages}>
+      <h2 className={styles.memoryCareContainer__imagesTitle}>Our rooms</h2>
+      <div className={styles.memoryCareContainer__modelImages}>
         {modelRoomImages.map((image, index) => (
           <Image
             key={index}
-            className={styles.memory - careContainer__modelImage}
+            className={styles.memoryCareContainer__modelImage}
             {...image}
           />
         ))}

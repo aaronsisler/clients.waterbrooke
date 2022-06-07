@@ -15,15 +15,15 @@ const splashImage = {
 const FaqsContainer = () => (
   <div className={styles.faqsContainer}>
     <Image className={styles.faqsContainer__splashImage} {...splashImage} />
-    <div className={styles.faqsContainer__content">
-      <h1 className={styles.faqsContainer__title">What should I know?</h1>
+    <div className={styles.faqsContainer__content}>
+      <h1 className={styles.faqsContainer__title}>What should I know?</h1>
       <p>
         Sometimes it is hard to know what questions to even begin asking when it
         comes to the care of your loved ones. We have listed below some
         questions that may come to mind as you research our community.
       </p>
       <hr />
-      <dl className={styles.faqsContainer__questions-list">
+      <dl className={styles.faqsContainer__questionsList}>
         {faqs.map(({ question, answer }, index) => (
           <React.Fragment key={index}>
             <dt>{question}</dt>

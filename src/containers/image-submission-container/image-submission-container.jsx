@@ -1,11 +1,11 @@
 import React from "react";
 
-import { Image }SubmissionForm from "../../components/image-submission-form";
+import ImageSubmissionForm from "../../components/image-submission-form";
 
 import styles from "./image-submission-container.module.scss";
 
 const ImageSubmissionContainer = () => (
-  <div className={styles.image-submissionContainer}>
+  <div className={styles.imageSubmissionContainer}>
     <p>
       To complete the application process, please upload a valid government
       issued form of identification.

@@ -1,5 +1,5 @@
 import React from "react";
-import { Image }SubmissionContainer from "../containers/image-submission-container";
+import ImageSubmissionContainer from "../containers/image-submission-container";
 
 const ImageSubmissionPage = () => (
   <main>

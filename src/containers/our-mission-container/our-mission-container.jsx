@@ -13,13 +13,13 @@ const headerImage = {
 };
 
 const OurMissionContainer = () => (
-  <div className={styles.our - missionContainer}>
+  <div className={styles.ourMissionContainer}>
     <Image
-      className={styles.our - missionContainer__headerImage}
+      className={styles.ourMissionContainer__headerImage}
       {...headerImage}
     />
-    <div className={styles.our - missionContainer__content}>
-      <h1 className={styles.our - missionContainer__title}>
+    <div className={styles.ourMissionContainer__content}>
+      <h1 className={styles.ourMissionContainer__title}>
         Our mission is caring for you.
       </h1>
       <p>
@@ -35,7 +35,7 @@ const OurMissionContainer = () => (
         independence possible.&nbsp;
         <Hyperlink href="/leadership" title="Meet our team" />
       </p>
-      <h2 className={styles.our - missionContainer__secTitle}>
+      <h2 className={styles.ourMissionContainer__secTitle}>
         Leading by example
       </h2>
       <p>

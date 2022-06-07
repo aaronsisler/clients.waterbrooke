@@ -34,7 +34,6 @@ const ImageSubmissionForm = () => {
     mode: "onBlur",
     validationSchema: ImageUploadSchema,
   });
-
   if (emailSent) {
     return (
       <div className={styles.imageSubmissionForm}>
@@ -46,31 +45,24 @@ const ImageSubmissionForm = () => {
       </div>
     );
   }
-
   const handleFileUpload = (event) => {
     const [rawFile] = event.target.files;
     if (!rawFile) {
       setRawFile(undefined);
       setIsValidFileType(false);
-
       return;
     }
     const fileType = rawFile.type.split("/")[1];
     const isValid = isValidImageType(fileType);
-
     setFileType(fileType);
     setIsValidFileType(isValid);
     setRawFile(rawFile);
-
     return;
   };
-
   const onSubmit = async ({ message, name }) => {
     setIsSendButtonDisabled(true);
     setSendButtonText("Sending");
-
     const encodedFile = await encodeBase64(rawFile);
-
     const formData = {
       encodedFile,
       filename: `Image Verification: ${name}.${fileType}`,
@@ -78,7 +70,6 @@ const ImageSubmissionForm = () => {
       name,
       subject: `${CLIENT_NAME}: Image Verification from ${name}`,
     };
-
     const done = () => {
       setEmailSent(true);
     };
@@ -86,49 +77,49 @@ const ImageSubmissionForm = () => {
       setSendButtonText("Please try again");
       setIsSendButtonDisabled(false);
     };
-
     sendEmailWithAttachment(formData, done, fail);
   };
-  return (
-    <form
-      className={styles.imageSubmissionForm}
-      onSubmit={handleSubmit(onSubmit)}
-    >
-      <Input
-        hasError={Boolean(errors.name)}
-        label="Name"
-        name="name"
-        refProp={register}
-      />
-      {errors.name && <FormError error={errorMessages.name} />}
-      <div className={styles.imageSubmissionForm__fileUpload}>
-        <FileUpload buttonText="Upload Image" onFileUpload={handleFileUpload} />
-        {rawFile && isValidFileType && (
-          <span>Image Uploaded Successfully!</span>
-        )}
-      </div>
-      {!isValidFileType && <FormError error={errorMessages.fileType} />}
-      <textarea
-        className={styles.imageSubmissionForm__message}
-        name="message"
-        placeholder="Is there anything extra you'd like to tell us?"
-        ref={register}
-        rows="4"
-      />
-      <input
-        className={styles.imageSubmissionForm__button}
-        disabled={
-          isSendButtonDisabled ||
-          !watch("name") ||
-          !rawFile ||
-          !isValidFileType ||
-          Object.keys(errors).length
-        }
-        type="submit"
-        value={sendButtonText}
-      />
-    </form>
-  );
+  // return (
+  //   <form
+  //     className={styles.imageSubmissionForm}
+  //     onSubmit={handleSubmit(onSubmit)}
+  //   >
+  //     {/* <Input
+  //       hasError={Boolean(errors.name)}
+  //       label="Name"
+  //       name="name"
+  //       registerProp={register}
+  //     /> */}
+  //     {errors.name && <FormError error={errorMessages.name} />}
+  //     <div className={styles.imageSubmissionForm__fileUpload}>
+  //       <FileUpload buttonText="Upload Image" onFileUpload={handleFileUpload} />
+  //       {rawFile && isValidFileType && (
+  //         <span>Image Uploaded Successfully!</span>
+  //       )}
+  //     </div>
+  //     {!isValidFileType && <FormError error={errorMessages.fileType} />}
+  //     {/* <textarea
+  //       className={styles.imageSubmissionForm__message}
+  //       name="message"
+  //       placeholder="Is there anything extra you'd like to tell us?"
+  //       ref={register}
+  //       rows="4"
+  //     /> */}
+  //     {/* <input
+  //       className={styles.imageSubmissionForm__button}
+  //       disabled={
+  //         isSendButtonDisabled ||
+  //         !watch("name") ||
+  //         !rawFile ||
+  //         !isValidFileType ||
+  //         Object.keys(errors).length
+  //       }
+  //       type="submit"
+  //       value={sendButtonText}
+  //     /> */}
+  //   </form>
+  // );
+  return <></>;
 };
 
 export default ImageSubmissionForm;

@@ -79,7 +79,7 @@ const ApplicationSubmissionForm = () => {
         hasError={Boolean(errors.name)}
         label="Name"
         name="name"
-        refProp={register}
+        registerProp={register}
       />
       {errors.name && <FormError error={errorMessages.name} />}
       <div className={styles.applicationSubmissionForm__fileUpload}>

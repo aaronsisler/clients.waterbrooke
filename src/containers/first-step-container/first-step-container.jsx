@@ -13,10 +13,13 @@ const splashImage = {
 };
 
 const FirstStepContainer = () => (
-  <div className={styles.first-stepContainer}>
-    <Image className={styles.first-stepContainer__splashImage} {...splashImage} />
-    <div className={styles.first-stepContainer__content">
-      <h1 className={styles.first-stepContainer__title">Where do I start?</h1>
+  <div className={styles.firstStepContainer}>
+    <Image
+      className={styles.firstStepContainer__splashImage}
+      {...splashImage}
+    />
+    <div className={styles.firstStepContainer__content}>
+      <h1 className={styles.firstStepContainer__title}>Where do I start?</h1>
       <p>
         Many adult children experience a moment when they realize for the first
         time that their parent seems to be getting old. This realization can
@@ -33,7 +36,7 @@ const FirstStepContainer = () => (
           title="Learn more about assisted living."
         />
       </p>
-      <h2 className={styles.first-stepContainer__secTitle}>
+      <h2 className={styles.firstStepContainer__secTitle}>
         Taking the first steps
       </h2>
       <p>
