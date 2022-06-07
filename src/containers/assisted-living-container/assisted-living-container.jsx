@@ -56,21 +56,23 @@ const AssistedLivingContainer = () => (
         ))}
       </div>
       <hr />
-      <h2 className={styles.assistedLivingContainer__list-title">What we provide</h2>
-      <ul className={styles.assistedLivingContainer__list">
+      <h2 className={styles.assistedLivingContainer__listTitle}>
+        What we provide
+      </h2>
+      <ul className={styles.assistedLivingContainer__list}>
         {coveredServices.map((service, index) => (
-          <li key={index} className={styles.assistedLivingContainer__list-item">
+          <li key={index} className={styles.assistedLivingContainer__listItem}>
             {service}
           </li>
         ))}
       </ul>
       <hr />
-      <h2 className={styles.assistedLivingContainer__list-title">
+      <h2 className={styles.assistedLivingContainer__listTitle}>
         What we don't cover
       </h2>
-      <ul className={styles.assistedLivingContainer__list">
+      <ul className={styles.assistedLivingContainer__list}>
         {notCoveredServices.map((service, index) => (
-          <li key={index} className={styles.assistedLivingContainer__list-item">
+          <li key={index} className={styles.assistedLivingContainer__listItem}>
             {service}
           </li>
         ))}

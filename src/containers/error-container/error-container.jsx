@@ -4,8 +4,8 @@ import Hyperlink from "../../atoms/hyperlink";
 import styles from "./error-container.module.scss";
 
 const ErrorContainer = () => (
-  <div className={styles.error - container}>
-    <h2 className={styles.error - container__title}>
+  <div className={styles.errorContainer}>
+    <h2 className={styles.errorContainer__title}>
       Rut roh....something went wrong.
     </h2>
     <p>

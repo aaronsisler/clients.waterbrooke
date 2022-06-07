@@ -3,7 +3,7 @@
 
 //Small screens - MOBILE
 @media only screen {
-  .memory-care-container {
+  .memoryCareContainer {
     &__splash {
       &Image {
         height: 100%;
@@ -25,7 +25,7 @@
     p {
       margin: $SMALL 0 $MEDIUM 0;
     }
-    &__images-title {
+    &__imagesTitle {
       @include font-type($MAIN_FONT, $MIDLARGE, bold);
 
       margin: $MEDIUM 0;
@@ -44,7 +44,7 @@
 
 //Medium screens - TABLET
 @media only screen and (min-width: $MEDIUM_SCREEN) {
-  .memory-care-container {
+  .memoryCareContainer {
     &__splash {
       &Image {
         @include headerImage(0 15%);
@@ -61,7 +61,7 @@
 
 //Large screens - DESKTOP
 @media only screen and (min-width: $LARGE_SCREEN) {
-  .memory-care-container {
+  .memory-careContainer {
     &__content {
       padding: 0 25% $XLARGE;
     }

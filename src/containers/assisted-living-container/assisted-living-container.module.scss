@@ -3,7 +3,7 @@
 
 //Small screens - MOBILE
 @media only screen {
-  .assisted-living-container {
+  .assistedLivingContainer {
     &__splash {
       &Image {
         height: 100%;
@@ -28,7 +28,7 @@
 
       margin-top: $MEDIUM;
     }
-    &__images-title {
+    &__imagesTitle {
       @include font-type($MAIN_FONT, $MIDLARGE, bold);
 
       margin: $MEDIUM 0;
@@ -42,14 +42,14 @@
       margin-bottom: $SMALL;
       object-fit: scale-down;
     }
-    &__list-title {
+    &__listTitle {
       @include font-type($MAIN_FONT, $MIDLARGE, bold);
 
       margin-bottom: $SMALL;
     }
     &__list {
       margin-left: $MEDIUM;
-      &-item {
+      &Item {
         @include font-type($MAIN_FONT, $MEDIUM);
 
         margin-bottom: $SMALL;
@@ -60,7 +60,7 @@
 
 //Medium screens - TABLET
 @media only screen and (min-width: $MEDIUM_SCREEN) {
-  .assisted-living-container {
+  .assistedLivingContainer {
     &__splash {
       &Image {
         @include headerImage(0 15%);
@@ -77,7 +77,7 @@
 
 //Large screens - DESKTOP
 @media only screen and (min-width: $LARGE_SCREEN) {
-  .assisted-living-container {
+  .assisted-livingContainer {
     &__content {
       padding: 0 25% $XLARGE;
     }

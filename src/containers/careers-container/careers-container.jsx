@@ -14,9 +14,9 @@ const headerImage = {
 };
 
 const CareersContainer = () => (
-  <div className={styles.careers-container">
-    <Image className={styles.careers-container__splashImage} {...headerImage} />
-    <div className={styles.careers-container__header">
+  <div className={styles.careersContainer}>
+    <Image className={styles.careersContainer__splashImage} {...headerImage} />
+    <div className={styles.careersContainer__header}>
       <h1>Join our team</h1>
       <p>
         Submit your application by applying online or you may download an
@@ -25,13 +25,13 @@ const CareersContainer = () => (
       </p>
       <hr />
     </div>
-    <div className={styles.careers-container__content">
+    <div className={styles.careersContainer__content}>
       <ApplicationOnline />
       <hr />
       <Hyperlink
         href="/apply"
         title="Upload Paper Application"
-        className={styles.careers-container__content-link"
+        className={styles.careersContainer__contentLink}
       />
     </div>
   </div>

@@ -3,14 +3,14 @@
 
 //Small screens - MOBILE
 @media only screen {
-  .privacy-policy-container {
+  .privacyPolicyContainer {
     padding: $MEDIUM;
     &__title {
       @include font-type($MAIN_FONT, $MIDLARGE, bold);
 
       margin-bottom: $MEDIUM;
     }
-    &__policy-heading {
+    &__policyHeading {
       @include font-type($SEC_FONT, $MEDIUM);
 
       margin: $MEDIUM 0 $XSMALL;

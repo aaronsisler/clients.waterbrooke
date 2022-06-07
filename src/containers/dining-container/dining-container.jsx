@@ -12,10 +12,12 @@ const splashImage = {
 };
 
 const DiningContainer = () => (
-  <div className={styles.dining-container">
-    <Image className={styles.dining-container__splashImage} {...splashImage} />
-    <div className={styles.dining-container__content">
-      <h1 className={styles.dining-container__title">Home-cooked meals every day</h1>
+  <div className={styles.diningContainer}>
+    <Image className={styles.diningContainer__splashImage} {...splashImage} />
+    <div className={styles.diningContainer__content}>
+      <h1 className={styles.diningContainer__title}>
+        Home-cooked meals every day
+      </h1>
       <p>
         We recognize that diet is one of the most important aspects of a
         senior's life. We focus on from-scratch cooking using fine ingredients

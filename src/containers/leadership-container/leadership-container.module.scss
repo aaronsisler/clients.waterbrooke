@@ -3,7 +3,7 @@
 
 //Small screens - MOBILE
 @media only screen {
-  .leadership-container {
+  .leadershipContainer {
     &__content {
       padding: 0 $MEDIUM $LARGE;
     }
@@ -15,7 +15,7 @@
     p {
       margin: $LARGE 0 $XLARGE 0;
     }
-    &__team-members {
+    &__teamMembers {
       hr {
         margin-bottom: $MEDIUM;
       }
@@ -25,11 +25,11 @@
 
 //Medium screens - TABLET
 @media only screen and (min-width: $MEDIUM_SCREEN) {
-  .leadership-container {
+  .leadershipContainer {
     &__content {
       padding: 0 15% $XLARGE;
     }
-    &__team-members {
+    &__teamMembers {
       hr {
         display: none;
       }
@@ -39,7 +39,7 @@
 
 //Large screens - DESKTOP
 @media only screen and (min-width: $LARGE_SCREEN) {
-  .leadership-container {
+  .leadershipContainer {
     &__content {
       padding: 0 25% $XLARGE;
     }

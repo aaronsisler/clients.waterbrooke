@@ -6,9 +6,9 @@ import ContactForm from "../../components/contact-form";
 import styles from "./contact-container.module.scss";
 
 const ContactContainer = () => (
-  <div className={styles.contact-container">
-    <div className={styles.contact-container__content">
-      <div className={styles.contact-container__visit">
+  <div className={styles.contactContainer}>
+    <div className={styles.contactContainer__content}>
+      <div className={styles.contactContainer__visit}>
         <ContactPhone />
         <ContactAddress />
       </div>
