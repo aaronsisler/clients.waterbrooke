@@ -2,11 +2,11 @@ import React from "react";
 import cn from "classnames";
 import PropTypes from "prop-types";
 
-import "./external-link.scss";
+import styles from "./external-link.module.scss";
 
 const ExternalLink = ({ className, href, onClick, title }) => (
   <a
-    className={cn("external-link", className)}
+    className={cn(styles.externalLink, className)}
     onClick={onClick}
     href={href}
     target="_blank"

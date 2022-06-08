@@ -2,16 +2,17 @@ import React from "react";
 import cn from "classnames";
 import PropTypes from "prop-types";
 
-import "./image.scss";
+import styles from "./image.module.scss";
 
-const Image = ({ altText, className, src }) => (
-  <img className={cn("image", className)} src={src} alt={altText} />
+const Image = ({ alt, className, src }) => (
+  // eslint-disable-next-line @next/next/no-img-element
+  <img className={cn(styles.image, className)} src={src} alt={alt} />
 );
 
 Image.propTypes = {
-  altText: PropTypes.string.isRequired,
+  alt: PropTypes.string.isRequired,
   className: PropTypes.string,
-  src: PropTypes.string.isRequired
+  src: PropTypes.string.isRequired,
 };
 
-export default Image;
+export { Image };

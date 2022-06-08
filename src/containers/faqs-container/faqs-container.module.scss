@@ -1,0 +1,66 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+//Small screens - MOBILE
+@media only screen {
+  .faqsContainer {
+    &__splash {
+      &Image {
+        height: 100%;
+      }
+    }
+    &__content {
+      padding: 0 $MEDIUM $LARGE;
+    }
+    &__title {
+      @include font-type($MAIN_FONT, $LARGE, bold);
+
+      margin-top: $MEDIUM;
+    }
+    p {
+      margin: $SMALL 0 $MEDIUM 0;
+    }
+    hr {
+      margin-block: $LARGE;
+    }
+    &__questionsList {
+      padding-right: $XSMALL;
+      dt {
+        @include font-type($MAIN_FONT, $MEDIUM, bold);
+
+        margin: $LARGE 0 $SMALL;
+      }
+    }
+  }
+}
+
+//Medium screens - TABLET
+@media only screen and (min-width: $MEDIUM_SCREEN) {
+  .faqsContainer {
+    &__splash {
+      &Image {
+        @include headerImage(0 15%);
+      }
+    }
+    &__content {
+      padding: 0 15% $XLARGE;
+    }
+  }
+}
+
+//Large screens - DESKTOP
+@media only screen and (min-width: $LARGE_SCREEN) {
+  .faqsContainer {
+    &__content {
+      padding: 0 25% $XLARGE;
+    }
+  }
+}
+
+//XLarge screens
+@media only screen and (min-width: $XLARGE_SCREEN) {
+}
+
+//XXLarge screens
+@media only screen and (min-width: $XXLARGE_SCREEN) {
+}

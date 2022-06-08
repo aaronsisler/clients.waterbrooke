@@ -1,0 +1,64 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+//Small screens - MOBILE
+@media only screen {
+  .landingContainer {
+    &__splashImage {
+      height: 50vh;
+      object-fit: cover;
+    }
+    &__banner {
+      padding: $SMALL;
+      text-align: center;
+      background-color: $MAIN_COLOR;
+      p {
+        @include font-type($MAIN_FONT, $MIDLARGE);
+
+        color: white;
+      }
+    }
+    &__content {
+      padding: $MEDIUM;
+      &Title {
+        @include font-type($MAIN_FONT, $LARGE, bold);
+      }
+      p {
+        margin: $SMALL 0;
+      }
+      &SecTitle {
+        @include font-type($MAIN_FONT, $MIDLARGE, bold);
+
+        margin: $SMALL 0;
+      }
+    }
+  }
+}
+
+//Medium screens - TABLET
+@media only screen and (min-width: $MEDIUM_SCREEN) {
+  .landingContainer {
+    &__splashImage {
+      height: 60vh;
+    }
+    &__secondImage {
+      height: 75vh;
+      object-fit: cover;
+    }
+    &__content {
+      padding: $XLARGE 15%;
+    }
+  }
+}
+
+//Large screens - DESKTOP
+@media only screen and (min-width: $LARGE_SCREEN) {
+}
+
+//XLarge screens
+@media only screen and (min-width: $XLARGE_SCREEN) {
+}
+
+//XXLarge screens
+@media only screen and (min-width: $XXLARGE_SCREEN) {
+}

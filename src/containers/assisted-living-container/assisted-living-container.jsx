@@ -1,29 +1,29 @@
 import React from "react";
 import {
   coveredServices,
-  notCoveredServices
+  notCoveredServices,
 } from "../../content/assisted-living-services";
 import { modelRoomImages } from "../../content/shared";
-import Image from "../../atoms/image";
+import { Image } from "../../atoms/image";
 import { getCdnUrl } from "../../utils";
 
-import "./assisted-living-container.scss";
+import styles from "./assisted-living-container.module.scss";
 
 const CDN_URL = getCdnUrl("/assisted-living");
 
 const splashImage = {
-  altText: "Nurse holding an senior lady's hand",
-  src: `${CDN_URL}/assisted-living-container.jpg`
+  alt: "Nurse holding an senior lady's hand",
+  src: `${CDN_URL}/assisted-living-container.jpg`,
 };
 
 const AssistedLivingContainer = () => (
-  <div className="assisted-living-container">
+  <div className={styles.assistedLivingContainer}>
     <Image
-      className="assisted-living-container__splash-image"
+      className={styles.assistedLivingContainer__splashImage}
       {...splashImage}
     />
-    <div className="assisted-living-container__content">
-      <h1 className="assisted-living-container__title">
+    <div className={styles.assistedLivingContainer__content}>
+      <h1 className={styles.assistedLivingContainer__title}>
         Our services make the difference
       </h1>
       <p>
@@ -33,7 +33,7 @@ const AssistedLivingContainer = () => (
         maintain connections with people and interests that are meaningful to
         them.
       </p>
-      <h2 className="assisted-living-container__sec-title">Live freely</h2>
+      <h2 className={styles.assistedLivingContainer__secTitle}>Live freely</h2>
       <p>
         Our Assisted Living program is designed to provide the perfect balance
         of support and independence. Whether you’re a social butterfly or prefer
@@ -45,32 +45,34 @@ const AssistedLivingContainer = () => (
         maintenance calls or repairs. Simply enjoy the most remarkable parts of
         the life you lead.
       </p>
-      <h2 className="assisted-living-container__images-title">Our rooms</h2>
-      <div className="assisted-living-container__model-images">
+      <h2 className={styles.assistedLivingContainer__imagesTitle}>Our rooms</h2>
+      <div className={styles.assistedLivingContainer__modelImages}>
         {modelRoomImages.map((image, index) => (
           <Image
             key={index}
-            className="assisted-living-container__model-image"
+            className={styles.assistedLivingContainer__modelImage}
             {...image}
           />
         ))}
       </div>
       <hr />
-      <h2 className="assisted-living-container__list-title">What we provide</h2>
-      <ul className="assisted-living-container__list">
+      <h2 className={styles.assistedLivingContainer__listTitle}>
+        What we provide
+      </h2>
+      <ul className={styles.assistedLivingContainer__list}>
         {coveredServices.map((service, index) => (
-          <li key={index} className="assisted-living-container__list-item">
+          <li key={index} className={styles.assistedLivingContainer__listItem}>
             {service}
           </li>
         ))}
       </ul>
       <hr />
-      <h2 className="assisted-living-container__list-title">
+      <h2 className={styles.assistedLivingContainer__listTitle}>
         What we don't cover
       </h2>
-      <ul className="assisted-living-container__list">
+      <ul className={styles.assistedLivingContainer__list}>
         {notCoveredServices.map((service, index) => (
-          <li key={index} className="assisted-living-container__list-item">
+          <li key={index} className={styles.assistedLivingContainer__listItem}>
             {service}
           </li>
         ))}

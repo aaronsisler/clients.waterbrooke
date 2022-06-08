@@ -1,17 +1,14 @@
-# Waterbrooke Assisted Living
+# clients.waterbrooke
 
-Code base for Waterbrooke Assisted Living
+## Local Deployment
 
-## Deving steps:
-
-1.  Install packages using npm
+You will need to run the following commands:
 
 ```bash
-        npm ci
+open -e ~/.aws/credentials
 ```
 
-1.  Start NextJS dev server which runs on http://localhost:3000
-
 ```bash
-       npm run start
+export AWS_ACCESS_KEY_ID=taco
+export AWS_SECRET_ACCESS_KEY=moreTaco
 ```

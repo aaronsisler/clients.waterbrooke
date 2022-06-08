@@ -1,17 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import "./file-upload.scss";
+import styles from "./file-upload.module.scss";
 
 const FileUpload = ({ buttonText, onFileUpload }) => (
-  <div className="file-upload">
+  <div className={styles.fileUpload}>
     <input
-      id="file-upload__input"
+      id="fileUpload__input"
       type="file"
-      className="file-upload__input"
+      className={styles.fileUpload__input}
       onChange={onFileUpload}
     />
-    <label htmlFor="file-upload__input" className="file-upload__label">
+    <label htmlFor="fileUpload__input" className={styles.fileUpload__label}>
       {buttonText}
     </label>
   </div>
@@ -19,7 +19,7 @@ const FileUpload = ({ buttonText, onFileUpload }) => (
 
 FileUpload.propTypes = {
   buttonText: PropTypes.string.isRequired,
-  onFileUpload: PropTypes.func.isRequired
+  onFileUpload: PropTypes.func.isRequired,
 };
 
 export default FileUpload;

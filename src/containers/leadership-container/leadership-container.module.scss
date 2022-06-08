@@ -1,0 +1,55 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+//Small screens - MOBILE
+@media only screen {
+  .leadershipContainer {
+    &__content {
+      padding: 0 $MEDIUM $LARGE;
+    }
+    &__title {
+      @include font-type($MAIN_FONT, $LARGE, bold);
+
+      margin-top: $MEDIUM;
+    }
+    p {
+      margin: $LARGE 0 $XLARGE 0;
+    }
+    &__teamMembers {
+      hr {
+        margin-bottom: $MEDIUM;
+      }
+    }
+  }
+}
+
+//Medium screens - TABLET
+@media only screen and (min-width: $MEDIUM_SCREEN) {
+  .leadershipContainer {
+    &__content {
+      padding: 0 15% $XLARGE;
+    }
+    &__teamMembers {
+      hr {
+        display: none;
+      }
+    }
+  }
+}
+
+//Large screens - DESKTOP
+@media only screen and (min-width: $LARGE_SCREEN) {
+  .leadershipContainer {
+    &__content {
+      padding: 0 25% $XLARGE;
+    }
+  }
+}
+
+//XLarge screens
+@media only screen and (min-width: $XLARGE_SCREEN) {
+}
+
+//XXLarge screens
+@media only screen and (min-width: $XXLARGE_SCREEN) {
+}

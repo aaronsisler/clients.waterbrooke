@@ -1,0 +1,52 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+//Small screens - MOBILE
+@media only screen {
+  .applicationSubmissionForm {
+    display: grid;
+    grid-gap: $MEDIUM;
+    grid-template-columns: 100%;
+    width: 100%;
+    padding: $SMALL;
+    outline: 1px solid $GRAY_300;
+    &__fileUpload {
+      span {
+        display: inline-block;
+        margin-bottom: $SMALL;
+      }
+    }
+    &__input {
+      font-size: $MEDIUM;
+    }
+    &__message {
+      @include textarea();
+    }
+    &__button {
+      @include button();
+    }
+    &__emailSent {
+      @include font-type($MAIN_FONT, $MIDLARGE);
+
+      max-width: 30vw;
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+}
+
+//Medium screens - TABLET
+@media only screen and (min-width: $MEDIUM_SCREEN) {
+}
+
+//Large screens - DESKTOP
+@media only screen and (min-width: $LARGE_SCREEN) {
+}
+
+//XLarge screens
+@media only screen and (min-width: $XLARGE_SCREEN) {
+}
+
+//XXLarge screens
+@media only screen and (min-width: $XXLARGE_SCREEN) {
+}

@@ -1,0 +1,36 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+//Small screens - MOBILE
+@media only screen {
+  .footerLinkGroup {
+    &__title {
+      @include font-type($MAIN_FONT, $MIDLARGE, bold);
+
+      color: $MAIN_COLOR;
+    }
+    &__links {
+      display: flex;
+      flex-flow: column;
+    }
+  }
+}
+
+//Medium screens - TABLET
+@media only screen and (min-width: $MEDIUM_SCREEN) {
+  .footerLinkGroup {
+    margin-right: $SMALL;
+  }
+}
+
+//Large screens - DESKTOP
+@media only screen and (min-width: $LARGE_SCREEN) {
+}
+
+//XLarge screens
+@media only screen and (min-width: $XLARGE_SCREEN) {
+}
+
+//XXLarge screens
+@media only screen and (min-width: $XXLARGE_SCREEN) {
+}

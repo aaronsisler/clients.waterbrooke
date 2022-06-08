@@ -6,46 +6,47 @@ import AccordionMobile from "../../atoms/accordion-mobile";
 import Hamburger from "../../atoms/hamburger";
 import navigationLinks from "../../content/navigation-links";
 
-import "./navbar.scss";
+import styles from "./navbar.module.scss";
 
 class Navbar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isMenuOpen: false
+      isMenuOpen: false,
     };
   }
 
   handleMenuToggle = () =>
-    this.setState(prevState => ({
-      isMenuOpen: !prevState.isMenuOpen
+    this.setState((prevState) => ({
+      isMenuOpen: !prevState.isMenuOpen,
     }));
 
   render() {
     const { isMenuOpen } = this.state;
-    const menuToggledClass = isMenuOpen ? "navbar__links--open" : undefined;
+    const menuToggledClass = isMenuOpen ? styles.navbar__linksOpen : undefined;
 
     return (
-      <nav className="navbar">
-        <div className="navbar__toggle">
+      <nav className={styles.navbar}>
+        <div className={styles.navbar__toggle}>
           <Hamburger isToggled={isMenuOpen} onClick={this.handleMenuToggle} />
         </div>
-        <div className="navbar__logo">
+        <div className={styles.navbar__logo}>
           <Logo />
         </div>
-        <div className={cn("navbar__links--mobile", menuToggledClass)}>
-          <div className={cn("navbar__links-content")}>
-            {navigationLinks.map(navLink => (
+        <div className={cn(styles.navbar__linksMobile, menuToggledClass)}>
+          <div className={cn(styles.navbar__linksContent)}>
+            {navigationLinks.map((navLink, index) => (
               <AccordionMobile
+                key={index}
                 onContentClick={this.handleMenuToggle}
                 {...navLink}
               />
             ))}
           </div>
         </div>
-        <div className={cn("navbar__links--desktop", menuToggledClass)}>
-          {navigationLinks.map(navLink => (
-            <AccordionDesktop {...navLink} />
+        <div className={cn(styles.navbar__linksDesktop, menuToggledClass)}>
+          {navigationLinks.map((navLink, index) => (
+            <AccordionDesktop key={index} {...navLink} />
           ))}
         </div>
       </nav>

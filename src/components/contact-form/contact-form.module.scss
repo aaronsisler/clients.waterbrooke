@@ -1,0 +1,63 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+//Small screens - MOBILE
+@media only screen {
+  .contactForm {
+    @include font-type();
+
+    display: grid;
+    grid-gap: $SMALL;
+    grid-template-columns: 100%;
+    width: 100%;
+    height: 100%;
+    padding: $MEDIUM;
+    background: white;
+    box-shadow: $BOX_SHADOW;
+    opacity: 0.95;
+    &__title {
+      @include font-type($MAIN_FONT, $MIDLARGE);
+
+      margin-bottom: $SMALL;
+      text-align: center;
+    }
+    &__button {
+      @include button();
+    }
+    &__emailSent {
+      @include font-type($MAIN_FONT, $MIDLARGE);
+
+      align-self: center;
+      max-width: 30vw;
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+}
+
+//Medium screens - TABLET
+@media only screen and (min-width: $MEDIUM_SCREEN) {
+  .contactForm {
+    min-width: 350px;
+    padding: $MEDIUM $MIDLARGE;
+    textarea {
+      margin-top: $SMALL;
+    }
+  }
+}
+
+//Large screens - DESKTOP
+@media only screen and (min-width: $LARGE_SCREEN) {
+  .contactForm {
+    min-width: 500px;
+    max-width: 750px;
+  }
+}
+
+//XLarge screens
+@media only screen and (min-width: $XLARGE_SCREEN) {
+}
+
+//XXLarge screens
+@media only screen and (min-width: $XXLARGE_SCREEN) {
+}

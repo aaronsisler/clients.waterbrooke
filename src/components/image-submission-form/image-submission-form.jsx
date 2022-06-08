@@ -9,17 +9,18 @@ import Input from "../../atoms/input";
 import {
   encodeBase64,
   isValidImageType,
-  sendEmailWithAttachment
+  sendEmailWithAttachment,
 } from "../../utils";
-import "./image-submission-form.scss";
+
+import styles from "./image-submission-form.module.scss";
 
 const errorMessages = {
   name: "Please enter your name",
-  fileType: "Valid image types: jpeg, jpg, png"
+  fileType: "Valid image types: jpeg, jpg, png",
 };
 
 const ImageUploadSchema = yup.object().shape({
-  name: yup.string().required()
+  name: yup.string().required(),
 });
 
 const ImageSubmissionForm = () => {
@@ -31,13 +32,12 @@ const ImageSubmissionForm = () => {
   const [emailSent, setEmailSent] = useState(false);
   const { register, handleSubmit, watch, errors } = useForm({
     mode: "onBlur",
-    validationSchema: ImageUploadSchema
+    validationSchema: ImageUploadSchema,
   });
-
   if (emailSent) {
     return (
-      <div className="image-submission-form">
-        <p className="image-submission-form__email-sent">
+      <div className={styles.imageSubmissionForm}>
+        <p className={styles.imageSubmissionForm__emailSent}>
           Thank you!
           <br />
           We are excited to get back in touch with you.
@@ -45,39 +45,31 @@ const ImageSubmissionForm = () => {
       </div>
     );
   }
-
-  const handleFileUpload = event => {
+  const handleFileUpload = (event) => {
     const [rawFile] = event.target.files;
     if (!rawFile) {
       setRawFile(undefined);
       setIsValidFileType(false);
-
       return;
     }
     const fileType = rawFile.type.split("/")[1];
     const isValid = isValidImageType(fileType);
-
     setFileType(fileType);
     setIsValidFileType(isValid);
     setRawFile(rawFile);
-
     return;
   };
-
   const onSubmit = async ({ message, name }) => {
     setIsSendButtonDisabled(true);
     setSendButtonText("Sending");
-
     const encodedFile = await encodeBase64(rawFile);
-
     const formData = {
       encodedFile,
       filename: `Image Verification: ${name}.${fileType}`,
       message,
       name,
-      subject: `${CLIENT_NAME}: Image Verification from ${name}`
+      subject: `${CLIENT_NAME}: Image Verification from ${name}`,
     };
-
     const done = () => {
       setEmailSent(true);
     };
@@ -85,19 +77,21 @@ const ImageSubmissionForm = () => {
       setSendButtonText("Please try again");
       setIsSendButtonDisabled(false);
     };
-
     sendEmailWithAttachment(formData, done, fail);
   };
   return (
-    <form className="image-submission-form" onSubmit={handleSubmit(onSubmit)}>
+    <form
+      className={styles.imageSubmissionForm}
+      onSubmit={handleSubmit(onSubmit)}
+    >
       <Input
-        hasError={Boolean(errors.name)}
+        hasError={Boolean(errors?.name)}
         label="Name"
         name="name"
-        refProp={register}
+        registerProp={register}
       />
-      {errors.name && <FormError error={errorMessages.name} />}
-      <div className="image-submission-form__file-upload">
+      {errors?.name && <FormError error={errorMessages.name} />}
+      <div className={styles.imageSubmissionForm__fileUpload}>
         <FileUpload buttonText="Upload Image" onFileUpload={handleFileUpload} />
         {rawFile && isValidFileType && (
           <span>Image Uploaded Successfully!</span>
@@ -105,14 +99,14 @@ const ImageSubmissionForm = () => {
       </div>
       {!isValidFileType && <FormError error={errorMessages.fileType} />}
       <textarea
-        className="image-submission-form__message"
+        className={styles.imageSubmissionForm__message}
         name="message"
         placeholder="Is there anything extra you'd like to tell us?"
         ref={register}
         rows="4"
       />
       <input
-        className="image-submission-form__button"
+        className={styles.imageSubmissionForm__button}
         disabled={
           isSendButtonDisabled ||
           !watch("name") ||

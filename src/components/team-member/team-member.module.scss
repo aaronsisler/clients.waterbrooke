@@ -1,0 +1,64 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+//Small screens - MOBILE
+@media only screen {
+  .teamMember {
+    display: flex;
+    flex-flow: column;
+    &__image {
+      width: 100%;
+      margin-bottom: $SMALL;
+    }
+    &__content {
+      margin-bottom: $MEDIUM;
+      text-align: center;
+      &Name {
+        @include font-type($MAIN_FONT, $MIDLARGE, bold);
+      }
+      &Title {
+        @include font-type($MAIN_FONT, $MEDIUM, 200);
+      }
+    }
+  }
+}
+
+//Medium screens - TABLET
+@media only screen and (min-width: $MEDIUM_SCREEN) {
+  .teamMember {
+    flex-flow: row;
+    margin-bottom: $MIDLARGE;
+    &__image {
+      width: 30rem;
+      margin-right: $LARGE;
+      margin-bottom: 0;
+      object-fit: scale-down;
+    }
+    &__content {
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      text-align: left;
+      &Name {
+        @include font-type($MAIN_FONT, $MIDLARGE, bold);
+
+        margin-right: $SMALL;
+      }
+      &Title {
+        @include font-type($MAIN_FONT, $MEDIUM);
+      }
+    }
+  }
+}
+
+//Large screens - DESKTOP
+@media only screen and (min-width: $LARGE_SCREEN) {
+}
+
+//XLarge screens
+@media only screen and (min-width: $XLARGE_SCREEN) {
+}
+
+//XXLarge screens
+@media only screen and (min-width: $XXLARGE_SCREEN) {
+}

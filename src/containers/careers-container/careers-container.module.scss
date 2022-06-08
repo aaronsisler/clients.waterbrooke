@@ -1,0 +1,77 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+//Small screens - MOBILE
+@media only screen {
+  .careersContainer {
+    display: grid;
+    &__header {
+      padding: 0 $MEDIUM;
+      text-align: center;
+      h1 {
+        @include font-type($MAIN_FONT, $LARGE, bold);
+
+        margin: $SMALL 0;
+      }
+      p {
+        margin-bottom: $SMALL;
+      }
+    }
+    &__content {
+      display: grid;
+      grid-gap: $MEDIUM;
+      padding: $MEDIUM $MEDIUM $XLARGE;
+      &-link {
+        @include button();
+      }
+    }
+    &__form {
+      &Title {
+        @include font-type($MAIN_FONT, $MIDLARGE, bold);
+
+        margin: $SMALL 0;
+        text-align: center;
+      }
+    }
+  }
+}
+
+//Medium screens - TABLET
+@media only screen and (min-width: $MEDIUM_SCREEN) {
+  .careersContainer {
+    &__splash {
+      &Image {
+        @include headerImage(0 20%);
+      }
+    }
+    &__header,
+    &__content {
+      padding-right: 20%;
+      padding-left: 20%;
+    }
+  }
+}
+
+//Large screens - DESKTOP
+@media only screen and (min-width: $LARGE_SCREEN) {
+  .careersContainer {
+    &__splash {
+      &Image {
+        padding: 0;
+      }
+    }
+    &__header,
+    &__content {
+      padding-right: 30%;
+      padding-left: 30%;
+    }
+  }
+}
+
+//XLarge screens
+@media only screen and (min-width: $XLARGE_SCREEN) {
+}
+
+//XXLarge screens
+@media only screen and (min-width: $XXLARGE_SCREEN) {
+}

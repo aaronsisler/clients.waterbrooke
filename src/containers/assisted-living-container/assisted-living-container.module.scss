@@ -1,0 +1,93 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+//Small screens - MOBILE
+@media only screen {
+  .assistedLivingContainer {
+    &__splash {
+      &Image {
+        height: 100%;
+      }
+    }
+    &__content {
+      padding: 0 $MEDIUM $LARGE;
+      p {
+        margin: $SMALL 0 0;
+      }
+      hr {
+        margin: $MEDIUM 0 $SMALL 0;
+      }
+    }
+    &__title {
+      @include font-type($MAIN_FONT, $LARGE, bold);
+
+      margin-top: $MEDIUM;
+    }
+    &__secTitle {
+      @include font-type($MAIN_FONT, $MIDLARGE, bold);
+
+      margin-top: $MEDIUM;
+    }
+    &__imagesTitle {
+      @include font-type($MAIN_FONT, $MIDLARGE, bold);
+
+      margin: $MEDIUM 0;
+    }
+    &__modelImages {
+      display: flex;
+      flex-flow: column;
+    }
+    &__modelImage {
+      width: 100%;
+      margin-bottom: $SMALL;
+      object-fit: scale-down;
+    }
+    &__listTitle {
+      @include font-type($MAIN_FONT, $MIDLARGE, bold);
+
+      margin-bottom: $SMALL;
+    }
+    &__list {
+      margin-left: $MEDIUM;
+      &Item {
+        @include font-type($MAIN_FONT, $MEDIUM);
+
+        margin-bottom: $SMALL;
+      }
+    }
+  }
+}
+
+//Medium screens - TABLET
+@media only screen and (min-width: $MEDIUM_SCREEN) {
+  .assistedLivingContainer {
+    &__splash {
+      &Image {
+        @include headerImage(0 15%);
+      }
+    }
+    &__content {
+      padding: 0 15% $XLARGE;
+    }
+    &__modelImage {
+      max-height: 350px;
+    }
+  }
+}
+
+//Large screens - DESKTOP
+@media only screen and (min-width: $LARGE_SCREEN) {
+  .assisted-livingContainer {
+    &__content {
+      padding: 0 25% $XLARGE;
+    }
+  }
+}
+
+//XLarge screens
+@media only screen and (min-width: $XLARGE_SCREEN) {
+}
+
+//XXLarge screens
+@media only screen and (min-width: $XXLARGE_SCREEN) {
+}

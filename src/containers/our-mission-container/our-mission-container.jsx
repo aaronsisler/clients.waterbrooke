@@ -1,22 +1,25 @@
 import React from "react";
-import Image from "../../atoms/image";
+import { Image } from "../../atoms/image";
 import Hyperlink from "../../atoms/hyperlink";
 import { getCdnUrl } from "../../utils";
 
-import "./our-mission-container.scss";
+import styles from "./our-mission-container.module.scss";
 
 const CDN_URL = getCdnUrl("/our-mission");
 
 const headerImage = {
-  altText: "Staff member hugging a resident",
-  src: `${CDN_URL}/our-mission-container.jpg`
+  alt: "Staff member hugging a resident",
+  src: `${CDN_URL}/our-mission-container.jpg`,
 };
 
 const OurMissionContainer = () => (
-  <div className="our-mission-container">
-    <Image className="our-mission-container__header-image" {...headerImage} />
-    <div className="our-mission-container__content">
-      <h1 className="our-mission-container__title">
+  <div className={styles.ourMissionContainer}>
+    <Image
+      className={styles.ourMissionContainer__headerImage}
+      {...headerImage}
+    />
+    <div className={styles.ourMissionContainer__content}>
+      <h1 className={styles.ourMissionContainer__title}>
         Our mission is caring for you.
       </h1>
       <p>
@@ -32,7 +35,9 @@ const OurMissionContainer = () => (
         independence possible.&nbsp;
         <Hyperlink href="/leadership" title="Meet our team" />
       </p>
-      <h2 className="our-mission-container__sec-title">Leading by example</h2>
+      <h2 className={styles.ourMissionContainer__secTitle}>
+        Leading by example
+      </h2>
       <p>
         We take pride in the fact that our staff within memory care do not just
         simply meet state minimum requirements for training. It is Waterbrooke’s
