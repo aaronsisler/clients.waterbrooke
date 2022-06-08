@@ -27,6 +27,7 @@
     &__emailSent {
       @include font-type($MAIN_FONT, $MIDLARGE);
 
+      align-self: center;
       max-width: 30vw;
       margin: 0 auto;
       text-align: center;

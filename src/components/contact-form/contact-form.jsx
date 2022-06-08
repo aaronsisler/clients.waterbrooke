@@ -30,7 +30,12 @@ const ContactForm = () => {
   const [isSendButtonDisabled, setIsSendButtonDisabled] = useState(false);
   const [emailSent, setEmailSent] = useState(false);
   const [sendButtonText, setSendButtonText] = useState("Send It");
-  const { register, handleSubmit, watch, errors } = useForm({
+  const {
+    register,
+    handleSubmit,
+    watch,
+    errors = {},
+  } = useForm({
     mode: "onBlur",
     validationSchema: ContactSchema,
   });

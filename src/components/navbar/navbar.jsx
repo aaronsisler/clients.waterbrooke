@@ -35,8 +35,9 @@ class Navbar extends React.Component {
         </div>
         <div className={cn(styles.navbar__linksMobile, menuToggledClass)}>
           <div className={cn(styles.navbar__linksContent)}>
-            {navigationLinks.map((navLink) => (
+            {navigationLinks.map((navLink, index) => (
               <AccordionMobile
+                key={index}
                 onContentClick={this.handleMenuToggle}
                 {...navLink}
               />
@@ -44,8 +45,8 @@ class Navbar extends React.Component {
           </div>
         </div>
         <div className={cn(styles.navbar__linksDesktop, menuToggledClass)}>
-          {navigationLinks.map((navLink) => (
-            <AccordionDesktop {...navLink} />
+          {navigationLinks.map((navLink, index) => (
+            <AccordionDesktop key={index} {...navLink} />
           ))}
         </div>
       </nav>
