@@ -18,11 +18,15 @@ const outdoorImage = {
 
 const LandingContainer = () => (
   <div className={styles.landingContainer}>
-    <Image className={styles.landingContainer__splashImage} {...splashImage} />
+    <Image
+      className={styles.landingContainer__splashImage}
+      alt={splashImage.alt}
+      src={splashImage.src}
+    />
     <div className={styles.landingContainer__banner}>
       <p>Voted Best Senior Care Facility</p>
-      <p>2021 Winner: Best of the Albemarle Award</p>
-      <p>2020 Winner: The Daily Advance Readers' Choice</p>
+      <p>2021 &amp; 2022 Winner: Best of the Albemarle Award</p>
+      <p>2020 Winner: The Daily Advance Readers&apos; Choice</p>
     </div>
     <div className={styles.landingContainer__content}>
       <h1 className={styles.landingContainer__contentTitle}>
@@ -41,7 +45,11 @@ const LandingContainer = () => (
         <Hyperlink href="/daily-life" title="learning more here." />
       </p>
     </div>
-    <Image className={styles.landingContainer__secondImage} {...outdoorImage} />
+    <Image
+      className={styles.landingContainer__secondImage}
+      alt={outdoorImage.alt}
+      src={outdoorImage.src}
+    />
     <div className={styles.landingContainer__content}>
       <h2 className={styles.landingContainer__contentSecTitle}>
         Not sure where to begin?

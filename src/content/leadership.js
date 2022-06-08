@@ -6,48 +6,28 @@ const teamMembers = [
   {
     imgSrc: `${CDN_URL}/dana_rabon.jpg`,
     name: "Dana Rabon",
-    title: "RPh Executive Director"
+    title: "RPh Executive Director",
   },
   {
     imgSrc: `${CDN_URL}/rhonda_boyd_todd.jpg`,
     name: "Rhonda Boyd Todd",
-    title: "Administrator"
-  },
-  // {
-  //   // imgSrc: `${CDN_URL}/nicki_cowell.jpg`,
-  //   name: "Nicki Cowell",
-  //   title: "Resident Care Director"
-  // },
-  {
-    imgSrc: `${CDN_URL}/glen_needham.jpg`,
-    name: "Glen Needham",
-    title: "Clinical Supervising RN"
-  },
-  {
-    imgSrc: `${CDN_URL}/marie_bell.jpg`,
-    name: "Marie Bell",
-    title: "Transportation Director"
+    title: "Administrator",
   },
   {
     imgSrc: `${CDN_URL}/audrey_clark.jpg`,
     name: "Audrey Clark",
-    title: "Admission/Marketing Director"
+    title: "Asst. Administrator/Special Care Unit Director",
+  },
+  {
+    imgSrc: `${CDN_URL}/marie_bell.jpg`,
+    name: "Marie Bell",
+    title: "Transportation Director",
   },
   {
     imgSrc: `${CDN_URL}/suzie_nixon.jpg`,
     name: "Suzie Nixon",
-    title: "Human Resource Director"
+    title: "Human Resource Director",
   },
-  {
-    imgSrc: `${CDN_URL}/adela_pena.jpg`,
-    name: "Adela Pena",
-    title: "Quality Assurance Director"
-  },
-  {
-    imgSrc: `${CDN_URL}/jennifer_white.jpg`,
-    name: "Jennifer White",
-    title: "Activity Director"
-  }
 ];
 
 export default teamMembers;
